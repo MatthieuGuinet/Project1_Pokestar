@@ -1,0 +1,75 @@
+:root{
+    --common-color : #282828;
+}
+
+* {
+  margin: 0;
+}
+
+/* legend section design  */
+
+#legend-top {
+  height: 10vw;
+  background-image: url(./assets/legend_section/legend_section_background_top.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+#legend-middle {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
+  align-items: center;
+  color: #ffffff;
+  background-color: #282828;
+  background-size: 100%;
+}
+
+#legend p,
+h1 {
+  margin-left: 6vw;
+  margin-right: 8vw;
+  font-size: 20pt;
+}
+
+#legend h2 {
+  margin-top: 30px;
+}
+
+#legend p {
+  margin-top: 43px;
+  width: 83vw;
+  height: 440px;
+  overflow: hidden;
+  font-family: "Voces";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 150.02%;
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0) 95.91%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+#legend-deployment {
+  width: 200px;
+  height: 50px;
+  background-color: #d1a473;
+  margin-bottom: 14px;
+  border-radius: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 12pt;
+}
+
+#legend-bottom {
+  height: 47px;
+  background-image: url(./assets/legend_section/legend_section_background_bottom.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
