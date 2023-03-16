@@ -9,3 +9,58 @@
     --main-color-vaporeon : #879CC6;
     --secondary-color-vaporeon : #3A5D83;
 }
+
+body{
+    background-color : var(--main-color-eevee);
+    box-sizing: border-box;
+    margin : 0;
+    font-size: 1.5rem ;
+}
+
+#caracteristics{
+    background-color : var(--common-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#caracteristics>h2 {
+    font-size: 4vw;
+    text-align: center;
+    color : white;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+}
+
+#caracteristics > p{
+    color: white;
+    width: 70%;
+    text-indent: 2rem;
+    margin: 1rem
+}
+
+#stats{
+    display: flex;
+    padding : 2rem;
+    width : 70%;
+}
+
+#chart{
+    width : 50%;
+}
+
+.Type_Weakness_Attacks{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.Type_Weakness_Attacks p{
+    font-size: 2rem;
+    color: white;
+}
+
+.type_weakness{
+    display: flex;
+}
+
