@@ -96,7 +96,7 @@ h1 {
 @media screen and (min-width: 764px) {
   /* media queries legend section  */
 
-  /* modification de la hauteur de texte blur affiché au chargement initial de la page  */
+  /* diminution of the div revealed text height  */
   #legend p {
     height: 150px;
   }
