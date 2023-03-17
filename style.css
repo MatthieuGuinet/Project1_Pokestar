@@ -30,16 +30,15 @@
 #legend-middle {
   display: flex;
   flex-direction: column;
-  border: 1px solid red;
   align-items: center;
   color: #ffffff;
   background-color: #282828;
   background-size: 100%;
-}
+  }
 
 #legend p,
 h1 {
-  margin-left: 6vw;
+  margin-left: 8vw;
   margin-right: 8vw;
   font-size: 20pt;
 }
@@ -78,8 +77,26 @@ h1 {
 }
 
 #legend-bottom {
-  height: 47px;
+  height: 10vw;
   background-image: url(./assets/legend_section/legend_section_background_bottom.svg);
   background-size: 100%;
   background-repeat: no-repeat;
+}
+
+/* media queries legend section  */
+
+@media screen and (min-width: 680px) {
+/* modification de la hauteur de texte blur affiché au chargement initial de la page  */
+#legend p {
+  height : 150px;
+}
+}
+
+@media screen and (min-width: 680px) {
+#legend-top {
+  background-image: url(./assets/legend_section/legend_section_background_top_desktop.svg);
+}
+#legend-bottom {
+  background-image: url(./assets/legend_section/legend_section_background_bottom_desktop.svg);
+}
 }
