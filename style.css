@@ -1,9 +1,21 @@
-:root{
-    --common-color : #282828;
+:root {
+  --common-color: #282828;
+  --main-color-eevee: #3a3129;
+  --secondary-color-eevee: #c5915d;
+  --main-color-jolteon: #e9bc2e;
+  --secondary-color-jolteon: #b9812b;
+  --main-color-flareon: #ffa948;
+  --secondary-color-flareon: #fb7c26;
+  --main-color-vaporeon: #879cc6;
+  --secondary-color-vaporeon: #3a5d83;
 }
 
 * {
+  background-color: var(--main-color-eevee);
   margin: 0;
+  box-sizing: border-box;
+  font-family: "Voces";
+
 }
 
 /* legend section design  */
@@ -33,15 +45,14 @@ h1 {
 }
 
 #legend h2 {
-  margin-top: 30px;
+  margin-top: 43px;
 }
 
 #legend p {
   margin-top: 43px;
   width: 83vw;
   height: 440px;
-  overflow: hidden;
-  font-family: "Voces";
+  overflow: hidden; 
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -54,14 +65,13 @@ h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
- 
 }
 
 #legend-deployment {
   width: 200px;
   height: 50px;
   background-color: #d1a473;
-  margin-bottom: 14px;
+  margin-bottom: 25px;
   border-radius: 10px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 12pt;
