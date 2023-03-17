@@ -57,8 +57,13 @@ body {
 /* the color must be changed */
 #header-type {
     order: -1;
-    background-color: saddlebrown;
+    background-color: rgba(139, 69, 19, 0.547);
     border-radius: 10px;
+    padding:3px 15px;
+}
+
+#header-type > p {
+    margin:0;
 }
 
 /* adjusting paragraph style on the description text */
