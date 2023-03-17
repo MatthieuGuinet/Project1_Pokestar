@@ -79,7 +79,8 @@ body {
 @media screen and (min-width: 768px) {
   /* position elements of header centered and define an height */
   header {
-    height: 600px;
+    min-height: 600px;
+    max-height:1000px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -93,6 +94,7 @@ body {
   #desktop-header-band {
     display: flex;
     background: #000;
+    position:relative;
   }
 
   #desktop-header-band > svg {
@@ -108,16 +110,25 @@ body {
     margin-left: 5px;
   }
 
-  svg>path:hover{
+  #desktop-header-band>svg>path:hover{
     fill: blue;
     cursor: pointer;
   }
-  /* #right_button>path:hover{ 
-    fill: blue;
+
+  #desktop-header-band>p {
+    position:absolute;
+    font-size:1.5rem;
+    margin-top: 15px;
+    cursor:pointer;
   }
-  #left_button>path:hover {
-    fill: blue;
-  } */
+
+  #pokemon_left {
+    left:35%;
+  }
+
+  #pokemon_right{
+    right:35%;
+  }
 
   /* displaying elements on a grid */
   #hero {
@@ -130,7 +141,7 @@ body {
   /* adjusting each elements in the grid */
   #little-description {
     grid-area: 4 / 1 / 5 / 2;
-    font-size: 2rem;
+    font-size: clamp(1rem,2vw,2rem);
     line-height: 35px;
 }
 
@@ -139,7 +150,7 @@ body {
   }
   #header-type {
     grid-area: 3 / 1 / 4 /2;
-    font-size: 1.5rem;
+    font-size: clamp(0.5rem,2vw,1.5rem);
   }
 
   #hero > h1 {
