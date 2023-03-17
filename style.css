@@ -15,16 +15,20 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Voces";
-
 }
 
 /* legend section design  */
 
 #legend-top {
-  height: 10vw;
-  background-image: url(./assets/legend_section/legend_section_background_top.svg);
-  background-size: 100%;
-  background-repeat: no-repeat;
+  height: 9vw;
+}
+
+#legend-top-smartphone {
+  fill: var(--common-color);
+}
+
+#legend-top-desktop {
+  display: none;
 }
 
 #legend-middle {
@@ -32,9 +36,9 @@
   flex-direction: column;
   align-items: center;
   color: #ffffff;
-  background-color: #282828;
+  background-color: var(--common-color);
   background-size: 100%;
-  }
+}
 
 #legend p,
 h1 {
@@ -45,13 +49,14 @@ h1 {
 
 #legend h2 {
   margin-top: 43px;
+  background-color: var(--common-color);
 }
 
 #legend p {
   margin-top: 43px;
   width: 83vw;
   height: 440px;
-  overflow: hidden; 
+  overflow: hidden;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -77,26 +82,36 @@ h1 {
 }
 
 #legend-bottom {
-  height: 10vw;
-  background-image: url(./assets/legend_section/legend_section_background_bottom.svg);
-  background-size: 100%;
-  background-repeat: no-repeat;
+  height: 9vw;
 }
 
-/* media queries legend section  */
-
-@media screen and (min-width: 680px) {
-/* modification de la hauteur de texte blur affiché au chargement initial de la page  */
-#legend p {
-  height : 150px;
-}
+#legend-bottom-smartphone {
+  fill: var(--common-color);
 }
 
-@media screen and (min-width: 680px) {
-#legend-top {
-  background-image: url(./assets/legend_section/legend_section_background_top_desktop.svg);
+#legend-bottom-desktop {
+  display: none;
 }
-#legend-bottom {
-  background-image: url(./assets/legend_section/legend_section_background_bottom_desktop.svg);
-}
+
+@media screen and (min-width: 764px) {
+  /* media queries legend section  */
+
+  /* modification de la hauteur de texte blur affiché au chargement initial de la page  */
+  #legend p {
+    height: 150px;
+  }
+
+  /* legend band picture modification */
+  #legend-top-desktop {
+    display: initial;
+  }
+  #legend-top-smartphone {
+    display: none;
+  }
+  #legend-bottom-desktop {
+    display: initial;
+  }
+  #legend-bottom-smartphone {
+    display: none;
+  }
 }
