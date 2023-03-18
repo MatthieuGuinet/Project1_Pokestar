@@ -1,25 +1,26 @@
-let _startX = 0,
-    _startY = 0,
-    _scrollTop = 0,
-    _scrollLeft = 0;
+let startX = 0,
+    startY = 0,
+    scrollTop = 0,
+    scrollLeft = 0;
 
 const scrollableMap = document.getElementById("scrollable_map");
-const wrapper = document.getElementById("map_wrapper")
+const wrapper = document.getElementById("map_wrapper");
 scrollableMap.onmousedown = mouseDown;
 scrollableMap.onmouseup = mouseUp;
 
+
 function mouseDown(event) {
     scrollableMap.onmousemove = mouseMove;
-    _startX = event.clientX;
-    _startY = event.clientY;
-    _scrollTop = wrapper.scrollTop;
-    _scrollLeft = wrapper.scrollLeft;
+    startX = event.clientX;
+    startY = event.clientY;
+    scrollTop = wrapper.scrollTop;
+    scrollLeft = wrapper.scrollLeft;
 }
 
 function mouseMove(event){
     wrapper.scrollTo({
-        left: _scrollLeft + (_startX - event.clientX),
-        top: _scrollTop + (_startY - event.clientY)
+        left: scrollLeft + (startX - event.clientX),
+        top: scrollTop + (startY - event.clientY)
     })
 }
 function mouseUp() {
