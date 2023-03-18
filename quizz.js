@@ -1,5 +1,3 @@
-// function to define the "suivant" button effect in the quizz
-
 // getting nodes of the question and answers
 const quizzQuestion = document.getElementById("quizz-question");
 const answer1 = document.getElementById("quizz-answer1");
@@ -37,33 +35,46 @@ let question3 = {
 // defining the var counting number of "suivant" clicks, value is the current question
 let suivantCount = 0;
 
+// function to define the "suivant" button effect in the quizz
+
 export default function nextQuestion() {
-    // controls that an answer is effectively chosen, then adds 1 to the suivantCount
-    if(answer1.classList.contains("isChosen") || answer2.classList.contains("isChosen") || answer3.classList.contains("isChosen") || answer4.classList.contains("isChosen")){
-        suivantCount+=1 ;
-         }
-        //  controls that all the questions aren't answered yet 
-         switch (suivantCount) {
-            case 1:
-                quizzQuestion.innerText = question2.question;
-                answer1.innerText = question2.answer1 ;
-                answer2.innerText = question2.answer2 ;
-                answer3.innerText = question2.answer3 ;
-                answer4.innerText = question2.answer4 ;
+  // controls that an answer is effectively chosen, then adds 1 to the suivantCount
+  if (
+    answer1.classList.contains("isChosen") ||
+    answer2.classList.contains("isChosen") ||
+    answer3.classList.contains("isChosen") ||
+    answer4.classList.contains("isChosen")
+  ) {
+    suivantCount += 1;
+    let allAnswers = document.getElementsByClassName ("quizz-answer");
+    for (let i = 0; i < allAnswers.length; i++) {
+      if (allAnswers[i].classList.contains("isChosen")) {
+        allAnswers[i].classList.toggle("isChosen");
+      }
+      //  controls that all the questions aren't answered yet
+      switch (suivantCount) {
+        case 1:
+          quizzQuestion.innerText = question2.question;
+          answer1.innerText = question2.answer1;
+          answer2.innerText = question2.answer2;
+          answer3.innerText = question2.answer3;
+          answer4.innerText = question2.answer4;
 
-                break;
+          break;
 
-            case 2:
-                quizzQuestion.innerText = question3.question;
-                answer1.innerText = question3.answer1 ;
-                answer2.innerText = question3.answer2 ;
-                answer3.innerText = question3.answer3 ;
-                answer4.innerText = question3.answer4 ;
+        case 2:
+          quizzQuestion.innerText = question3.question;
+          answer1.innerText = question3.answer1;
+          answer2.innerText = question3.answer2;
+          answer3.innerText = question3.answer3;
+          answer4.innerText = question3.answer4;
 
-                break;
-            case 3:
-         
-            default:
-                break;
-         }
+          break;
+        case 3:
+
+        default:
+          break;
+      }
+    }
+  }
 }

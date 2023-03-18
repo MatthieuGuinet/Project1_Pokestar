@@ -199,6 +199,11 @@
   margin-bottom: 30px;
 }
 
+/* display of the chosen answer */
+.isChosen {
+  text-decoration: underline;
+}
+
 @media screen and (min-width: 764px) {
   /* media queries legend section  */
 
