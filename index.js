@@ -16,7 +16,6 @@ nextButton.addEventListener("click",()=>{nextQuestion()}) ;
 
 const allAnswers = document.getElementsByClassName("quizz-answer");
 
-
 for (let i = 0; i < allAnswers.length; i++) {
   allAnswers[i].addEventListener("click", function () {
     if (allAnswers[i].classList.contains("isChosen")) {

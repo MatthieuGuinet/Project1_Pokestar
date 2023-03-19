@@ -57,6 +57,7 @@ export default function nextQuestion() {
     // takes into account the answer for the final result
 
     let chosenAnswer = document.getElementsByClassName("isChosen");
+    
     if (chosenAnswer[0].classList.contains("eevee")) {
       eeveeCount += 1;
     }

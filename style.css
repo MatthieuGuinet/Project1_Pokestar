@@ -94,6 +94,7 @@
   flex-direction: column;
   align-items: center;
   color: white;
+
 }
 
 #quizz-section h2 {
@@ -105,10 +106,10 @@
   margin-top: 43px;
   width: 70vw;
   height: 82px;
-  background: #000000;
+  
   border-radius: 20px;
   text-align: center;
-  color: white;
+  
   font-size: 1.1em;
   display: flex;
   justify-content: center;
@@ -118,12 +119,13 @@
 
 #quizz-container {
   width: 85vw;
-  background: #000000;
+  background-color: #000000;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  justify-content: center;
 }
 
 #quizz-question {
@@ -137,10 +139,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
+  }
 
 #quizz-answers-container {
-  background: #000000;
+  background-color: #000000;
   color: white;
   width: 70vw;
   display: flex;
@@ -149,7 +151,7 @@
   align-items: center;
 }
 
-#quizz-answer1 {
+#quizz-answer1, #quizz-answer2, #quizz-answer3, #quizz-answer4 {
   width: 70vw;
   border-radius: 15px;
   display: flex;
@@ -158,37 +160,6 @@
   align-items: center;
   height: 34px;
   margin-bottom: 22px;
-}
-
-#quizz-answer2 {
-  width: 70vw;
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  height: 34px;
-  margin-bottom: 22px;
-}
-#quizz-answer3 {
-  width: 70vw;
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  height: 34px;
-  margin-bottom: 22px;
-}
-#quizz-answer4 {
-  width: 70vw;
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  height: 34px;
-  margin-bottom: 35px;
 }
 
 #quizz-button-next {
@@ -197,11 +168,27 @@
   height: 27px;
   background-color: var(--secondary-color-eevee);
   margin-bottom: 30px;
+  margin-top : 20px;
+}
+
+#quizz-replay-button {
+  display : none;
 }
 
 /* display of the chosen answer */
 .isChosen {
   text-decoration: underline;
+}
+
+#quizz-result-container {
+  /* display: none; */
+  width : 70vw;
+  background-color: #000000;
+}
+
+#quizz-result-img {
+  height : 300px;
+  background-color: #000000;
 }
 
 @media screen and (min-width: 764px) {
