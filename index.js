@@ -14,22 +14,19 @@ nextButton.addEventListener("click", () => {
   quizzFunctions.nextQuestion();
 });
 
-// Section "quizz". toggling an isChosen class for the chosen item
+// Section "quizz". adding an isChosen class to the chosen item, removing all others
 
 const allAnswers = document.getElementsByClassName("quizz-answer");
 
-for (let i = 0; i < allAnswers.length; i++) {
+for (let i=0 ; i<allAnswers.length;i++){
   allAnswers[i].addEventListener("click", function () {
-    if (allAnswers[i].classList.contains("isChosen")) {
-      allAnswers[i].classList.toggle("isChosen");
-    } else {
-      const isChosen = document.getElementsByClassName("isChosen");
-      for (let j = isChosen.length - 1; j >= 0; j--) {
-        isChosen[j].classList.toggle("isChosen");
-      }
-      allAnswers[i].classList.toggle("isChosen");
-    }
-  });
+    // deleting all "isChosen" classes among the answers 
+    for (let j=0; j<allAnswers.length;j++){
+    allAnswers[j].classList.remove("isChosen");
+  }
+    // adding "isChosen" to the allAnswers[i] clicked
+    allAnswers[i].classList.add("isChosen");
+  })
 }
 
 // adding addeventListener function to replay button

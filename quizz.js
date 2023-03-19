@@ -201,7 +201,7 @@ function nextQuestion() {
       // all the questions have been answered, let's display some result depending on the previous choices associated to some pokemon
 
       case 6:
-        // establishing the max score obtained 
+        // establishing the max score obtained
         pokemonMaxCount = Math.max(
           eeveeCount,
           flareonCount,
@@ -216,13 +216,13 @@ function nextQuestion() {
 
         document.getElementById("quizz-replay-button").style.display =
           "initial";
-        
-          // removing the answers display 
+
+        // removing the answers display
         for (let i = 0; i < allAnswers.length; i++) {
           allAnswers[i].style.display = "none";
         }
-        
-        //comparing each pokemon score to the best score. If winning, then displaying new title, new image of the winning pokemon by giving the div the correct source 
+
+        //comparing each pokemon score to the best score. If winning, then displaying new title, new image of the winning pokemon by giving the div the correct source
 
         if (eeveeCount === pokemonMaxCount) {
           quizzQuestion.innerText = "EVOLI !!!!";
@@ -245,9 +245,6 @@ function nextQuestion() {
             "./assets/quizz_section/vaporeon_quizz_result.png";
         }
 
-        // in case of desktop display, removing the grid display into a flex display 
-        // document.getElementById("quizz-answers-container").style.display = "flex";
-    
       default:
         break;
         mod;
@@ -263,7 +260,6 @@ function replay() {
   vaporeonCount = 0;
   flareonCount = 0;
   suivantCount = 0;
-
 
   // insertion of the first question which was already displayed on first opening of the website
 
@@ -288,9 +284,8 @@ function replay() {
 
   //   removing the quizz-replay button
 
- quizzResultImg.style.display = "none";
- document.getElementById("quizz-replay-button").style.display = "none";
-
+  quizzResultImg.style.display = "none";
+  document.getElementById("quizz-replay-button").style.display = "none";
 }
 
 //exporting the two quizz functions to index.js
