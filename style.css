@@ -4,100 +4,183 @@ body {
     box-sizing: border-box;
 }
 
-/* Barre de nagigation */
+/* Barre de navigation -> header */
+/* Mobile first */
 #nav_header {
     background: black;
     color: white;
+    height: 60px;
+    position: fixed;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    height: 80px;
-
 }
 
 #logo_and_title {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding-left: 10px;
-
+    flex-grow: 1;
 }
 
 #logo_and_title .logo {
-    height: 70px;
+    padding-inline: 10px;
+    height: 50px;
 }
 
-#logo_title {
-    padding-left: 10px;
-    font-weight: bold;
+/* Lien de navigation menu burger */
+#nav_links a {
+    text-decoration: none;
+    color: rgb(252, 252, 252);
 }
 
+#nav_links a:hover {
+    color: darkgrey;
+}
 
 #nav_links ul {
     list-style: none;
-    display: grid;
-    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr;
-
-    justify-items: center;
 
 }
 
 #nav_links li {
-    /* text-align: center; */
-}
-
-
-
-#nav_links a {
-    border-radius: 15px;
-    padding: 10px 30px;
-    height: 200px;
-    text-decoration: none;
-    color: white;
+    padding: 15px;
 
 }
 
-
-#nav_links a:hover {
-    background-color: rgba(255, 255, 255, 0.237);
-
+/* Apparence du menu burger ouvert */
+/* Le menu est fermé par defaut */
+#nav_links {
+    background-color: rgb(33, 32, 32);
+    opacity: 0.8;
+    border-radius: 0px 0px 0px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50px;
+    z-index: 100;
+    min-width: 50vw;
+    max-width: 80vw;
+    min-height: 30vh;
+    width: 300px;
+    transition: right 1s;
 }
 
-#burger {
-    display: none;
+.burger_close {
+    right: -400px;
 }
 
-@media screen and (max-width: 768px) {
+/* Icone du menu burger */
+#burger_icon span {
+    display: inline-block;
+    width: 35px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    margin-bottom: 6px;
+    position: relative;
+}
 
-    /* Barre de nagigation => menu burger*/
-    #nav_links {
-        display: none
+/* Animation du menu burger */
+#burger_icon span::before,
+#burger_icon span::after {
+    content: '';
+    width: 35px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    display: inline-block;
+    position: absolute;
+    transform-origin: center;
+    transition: all 0.5s ease;
+}
+
+#burger_icon span::before {
+    top: -8px;
+}
+
+#burger_icon span::after {
+    top: 8px;
+}
+
+/* animationBurger -> class ajouté en JS */
+#burger.animationOpen {
+    background: transparent;
+}
+
+#burger.animationOpen::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+#burger.animationOpen::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+#burger_icon {
+    padding-right: 10px;
+}
+
+/* Position du menu burger ouvert */
+.burger_open {
+    position: fixed;
+    right: 0px;
+}
+
+@media screen and (min-width: 768px) {
+    #burger_icon {
+        display: none;
     }
-
 
     #nav_header {
-        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
     }
+
 
     #logo_and_title .logo {
-        height: 50px;
+        height: 70px;
     }
 
-    label {
-        font-size: xx-large;
-        padding-right: 10px;
+    #logo_title {
+        /* padding-left: 10px; */
+        font-weight: bold;
+    }
+
+
+    #nav_links ul {
+        display: flex;
+        flex-direction: row;
+        padding-right: 30px;
+    }
+
+    #nav_links {
+        position: initial;
+        align-items: end;
+        width: auto;
+        height: 80px;
+        min-height: auto;
+        background-color: transparent;
+        opacity: 1;
+    }
+
+    #nav_links li {
+        padding: 0px;
+    }
+
+    #nav_links a {
+        border-radius: 15px;
+        padding: 10px 30px;
+        height: 200px;
 
     }
 
-    #burger_link {
-
-        text-decoration: none;
-        color: white;
+    #nav_links a:hover {
+        background-color: rgba(255, 255, 255, 0.237);
 
     }
 
-    #burger {
-        display: initial;
-
-    }
 }
