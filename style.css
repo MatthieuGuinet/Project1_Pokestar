@@ -104,9 +104,9 @@
 
 #quizz-title {
   margin-top: 43px;
-  width: 70vw;
+  width: 45%;
   height: 82px;
-  
+  background-color : black;
   border-radius: 20px;
   text-align: center;
   
@@ -114,7 +114,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 12px;
+  margin-bottom: 20px;
 }
 
 #quizz-container {
@@ -130,7 +130,7 @@
 
 #quizz-question {
   margin: 20px 0 29px 0;
-  width: 77vw;
+  width: 90%;
   height: 58px;
   border-radius: 10px;
   font-size: 1.3rem;
@@ -144,7 +144,7 @@
 #quizz-answers-container {
   background-color: #000000;
   color: white;
-  width: 70vw;
+  width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -152,7 +152,7 @@
 }
 
 #quizz-answer1, #quizz-answer2, #quizz-answer3, #quizz-answer4 {
-  width: 70vw;
+  width: 80%;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -181,14 +181,24 @@
 }
 
 #quizz-result-container {
-  /* display: none; */
-  width : 70vw;
+  width : 100%;
   background-color: #000000;
 }
 
 #quizz-result-img {
+  display : none;
   height : 300px;
   background-color: #000000;
+}
+
+#quizz-replay-button {
+  border-radius: 10px;
+  width: 150px;
+  height: 40px;
+  background-color: var(--secondary-color-eevee);
+  margin-bottom: 30px;
+  margin-top : 40px;
+  font-weight: bold;
 }
 
 @media screen and (min-width: 764px) {
@@ -212,4 +222,11 @@
   #legend-bottom-smartphone {
     display: none;
   }
+
+  /* quizz desktop display  */
+
+  #quizz-container {
+    width : 60vw ;
+  }
+
 }

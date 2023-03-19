@@ -4,6 +4,7 @@ const answer1 = document.getElementById("quizz-answer1");
 const answer2 = document.getElementById("quizz-answer2");
 const answer3 = document.getElementById("quizz-answer3");
 const answer4 = document.getElementById("quizz-answer4");
+let quizzResultImg = document.getElementById("quizz-result-img");
 
 // defining the questions objects. COuld later be done using a constructor
 //question 1 already exists in the index.html
@@ -114,8 +115,43 @@ export default function nextQuestion() {
 
       // all the questions have been answered, let's display some result depending on the previous choices associated to some pokemon
       case 3:
-      
+        let pokemonMaxCount = 0;
+        pokemonMaxCount = Math.max(eeveeCount, flareonCount, jolteonCount, vaporeonCount) ;
 
+        // modif du bouton
+        let nextButton = document.getElementById("quizz-button-next");
+        nextButton.style.display = "none" ;
+        for (let i=0; i<allAnswers.length ; i++){
+        allAnswers[i].style.display = "none" ;
+        }
+        document.getElementById("quizz-replay-button").style.display = "initial";
+
+        //suppression des questions
+
+        if (eeveeCount === pokemonMaxCount)
+        {          
+          quizzQuestion.innerText = "EVOLI !!!!";
+          quizzResultImg.style.display = "initial";
+          quizzResultImg.src = "./assets/quizz_section/eevee_quizz_result.png";
+        }
+        else if (flareonCount === pokemonMaxCount){
+          quizzQuestion.innerText = "FLAREON !!!!";
+          quizzResultImg.style.display = "initial";
+          quizzResultImg.src = "./assets/quizz_section/flareon_quizz_result.png";
+        }
+        else if (jolteonCount === pokemonMaxCount){
+          quizzQuestion.innerText = "JOLTEON !!!!";
+          quizzResultImg.style.display = "initial";
+          quizzResultImg.src = "./assets/quizz_section/jolteon_quizz_result.png";
+        }
+        else if (vaporeonCount === pokemonMaxCount){
+          quizzQuestion.innerText = "VAPOREON !!!!";
+          quizzResultImg.style.display = "initial";
+          quizzResultImg.src = "./assets/quizz_section/vaporeon_quizz_result.png";
+        }
+     
+
+//  si replay, img result en display none 
 
       default:
         break;
