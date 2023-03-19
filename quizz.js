@@ -113,10 +113,12 @@ export default function nextQuestion() {
 
       // all the questions have been answered, let's display some result depending on the previous choices associated to some pokemon
       case 3:
-        console.log(eeveeCount);
+      
+
 
       default:
         break;
+        mod;
     }
   }
 }
