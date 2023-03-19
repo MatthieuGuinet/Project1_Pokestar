@@ -193,12 +193,13 @@
 
 #quizz-replay-button {
   border-radius: 10px;
-  width: 150px;
-  height: 40px;
+  width: auto;
+  height: 50px;
   background-color: var(--secondary-color-eevee);
   margin-bottom: 30px;
   margin-top : 40px;
-  font-weight: bold;
+  font-size : 1.5rem;
+  padding: 0 30px ;
 }
 
 @media screen and (min-width: 764px) {

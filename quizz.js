@@ -9,6 +9,18 @@ let quizzResultImg = document.getElementById("quizz-result-img");
 // defining the questions objects. COuld later be done using a constructor
 //question 1 already exists in the index.html
 
+let question1 = {
+  question: "Quelle est ton activité préférée ?",
+  answer1: "La nature",
+  answer2: "La pêche",
+  answer3: "Le bricolage",
+  answer4: "Un livre au coin du feu",
+  answer1class: "eevee",
+  answer2class: "vaporeon",
+  answer3class: "jolteon",
+  answer4class: "flareon",
+};
+
 let question2 = {
   question: "Quelle est ta couleur préférée ?",
   answer1: "bleu",
@@ -158,4 +170,36 @@ export default function nextQuestion() {
         mod;
     }
   }
+}
+
+export function replay() {
+
+  // maxcount a zéro / suivantcount
+pokemonMaxCount = 0;
+suivantCount = 0 ;
+
+  // création de la première question 
+
+  quizzQuestion.innerText = question1.question;
+        answer1.innerText = question1.answer1;
+        answer2.innerText = question1.answer2;
+        answer3.innerText = question1.answer3;
+        answer4.innerText = question1.answer4;
+        answer1.classList.add(question1.answer1class);
+        answer2.classList.add(question1.answer2class);
+        answer3.classList.add(question1.answer3class);
+        answer4.classList.add(question1.answer4class);
+
+        let nextButton = document.getElementById("quizz-button-next");
+        nextButton.style.display = "initial" ;
+
+        for (let i=0; i<allAnswers.length ; i++){
+        allAnswers[i].style.display = "initial" ;
+        }
+
+//   Image, bouton, etc. disparaissent pour laisser place à l'affichage initial
+
+    quizzResultImg.style.display = "none";
+    document.getElementById("quizz-replay-button").style.display = "none";
+
 }
