@@ -1,7 +1,6 @@
 //import of the displayText function to unwrap the legend section test
 import displayText from "./displayText.js";
-import nextQuestion from "./quizz.js";
-import replay from "./quizz.js";
+import { quizzFunctions } from "./quizz.js";
 
 // Section "legend", button "poursuivre l'aventure"
 let legendButton = document.getElementById("legend-deployment");
@@ -12,7 +11,7 @@ legendButton.addEventListener("click", () => {
 // Section "quizz" button "suivant"
 let nextButton = document.getElementById("quizz-button-next");
 nextButton.addEventListener("click", () => {
-  nextQuestion();
+  quizzFunctions.nextQuestion();
 });
 
 // Section "quizz". toggling an isChosen class for the chosen item
@@ -37,5 +36,5 @@ for (let i = 0; i < allAnswers.length; i++) {
 
 const replayButton = document.getElementById("quizz-replay-button");
 replayButton.addEventListener("click", () => {
-  replay();
+  quizzFunctions.replay();
 });

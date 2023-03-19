@@ -5,6 +5,7 @@ const answer2 = document.getElementById("quizz-answer2");
 const answer3 = document.getElementById("quizz-answer3");
 const answer4 = document.getElementById("quizz-answer4");
 let quizzResultImg = document.getElementById("quizz-result-img");
+const allAnswers = document.getElementsByClassName("quizz-answer");
 
 // defining the questions objects. COuld later be done using a constructor
 //question 1 already exists in the index.html
@@ -54,10 +55,13 @@ let flareonCount = 0;
 let jolteonCount = 0;
 let vaporeonCount = 0;
 
+// defining the maxCount gathered 
+let pokemonMaxCount = 0;
+
 // function to define the "suivant" button effect in the quizz
 
-export default function nextQuestion() {
-  let allAnswers = document.getElementsByClassName("quizz-answer");
+function nextQuestion() {
+  
   // controls that an answer is effectively chosen, then adds 1 to the suivantCount
   if (
     answer1.classList.contains("isChosen") ||
@@ -127,7 +131,7 @@ export default function nextQuestion() {
 
       // all the questions have been answered, let's display some result depending on the previous choices associated to some pokemon
       case 3:
-        let pokemonMaxCount = 0;
+        
         pokemonMaxCount = Math.max(eeveeCount, flareonCount, jolteonCount, vaporeonCount) ;
 
         // modif du bouton
@@ -172,7 +176,7 @@ export default function nextQuestion() {
   }
 }
 
-export function replay() {
+function replay() {
 
   // maxcount a zéro / suivantcount
 pokemonMaxCount = 0;
@@ -194,12 +198,16 @@ suivantCount = 0 ;
         nextButton.style.display = "initial" ;
 
         for (let i=0; i<allAnswers.length ; i++){
-        allAnswers[i].style.display = "initial" ;
+        allAnswers[i].style.display = "flex" ;
         }
 
 //   Image, bouton, etc. disparaissent pour laisser place à l'affichage initial
 
     quizzResultImg.style.display = "none";
     document.getElementById("quizz-replay-button").style.display = "none";
+}
 
+export let quizzFunctions= {
+  nextQuestion: nextQuestion,
+  replay: replay
 }
