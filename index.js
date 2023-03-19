@@ -14,13 +14,12 @@ function scrollTheMap(){
 // méthode 'onmousedown' crée une interaction lorsque le clic gauche est maintenu;
 
 // le paramètre event est un objet "natif" de JS contenant diverses données : par exemple "event.clientX" donne la coordonnée sur l'axe X du pointeur de la souris
-scrollableMap.onmousedown = function mouseDown(event) {
+scrollableMap.onmousedown = function mouseDown(event){
     startX = event.clientX;
     startY = event.clientY;
     scrollTop = wrapper.scrollTop;
     scrollLeft = wrapper.scrollLeft;
 }
-
 // méthode 'onmousemove' crée une interaction lorsque l'on bouge le curseur avec le clic gauche enfoncé
 
 // on donne les instructions afin que le scroll suive le curseur

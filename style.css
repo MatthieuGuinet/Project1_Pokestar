@@ -8,9 +8,22 @@
     box-shadow: rgba(0,0,0 50%) 0 0 10px 5px;
 }
 
-#scrollable_map>img{
+#scrollable_map{
+    position:relative;
     width: 200%;
 }
+
+#map-image{
+    width: 100%; 
+}
+
+#pokemon-pin{
+    position: absolute;
+    width: 10%;
+    top : 5%;
+    left : 80%
+}
+
 
 #localisation-flex{
     display: flex;
@@ -23,7 +36,6 @@
 
 @media screen and (min-width: 768px) {
     #map_wrapper{
-    overflow: hidden;
     width :500px;
     height: 500px;
     border-radius: 10px;
