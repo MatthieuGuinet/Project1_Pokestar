@@ -2,7 +2,9 @@
 import displayText from "./displayText.js";
 import { quizzFunctions } from "./quizz.js";
 //import hoverButton to use the hovering on the buttons a the top of the pokemon
-import hoverButton from './header_button.js'
+import hoverButton from './header_button.js';
+import {options} from './chart.js';
+
 
 // ouverture et fermeture du menu burger + animation de l'icone
 const burgerIcon = document.getElementById("burger_icon");
@@ -27,6 +29,7 @@ for (let i = 0; i < navElement.length; i++) {
     })
 }
 
+//Hover on desktop header band
 const textButtons = document.querySelectorAll(".text_button");
 const svgButtons = document.querySelectorAll(".lr_buttons");
 hoverButton(textButtons);
@@ -82,6 +85,10 @@ scrollableMap.onmouseup = function mouseUp() {
 // création d'un 'addeventlistener' appelant la fonction principale lorsque le clic gauche est enfoncé
 scrollableMap.addEventListener("mousedown",scrollTheMap)
 
+
+//Chart 
+let chart = new ApexCharts(document.querySelector("#chart"), options);
+chart.render();
 
 // Section "quizz" button "suivant"
 let nextButton = document.getElementById("quizz-button-next");

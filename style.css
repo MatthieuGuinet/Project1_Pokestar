@@ -362,6 +362,13 @@ header {
   gap: 20px;
 }
 
+/*Chart*/
+
+#chart {
+  width : clamp(300px, 50vw, 600px);
+  margin: 35px auto;
+}
+
 /* quizz section design  */
 
 #quizz {
