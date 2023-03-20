@@ -25,7 +25,6 @@ body {
   box-sizing: border-box;
 }
 
-
 /* Barre de navigation -> header */
 /* Mobile first */
 #nav_header {
@@ -672,109 +671,105 @@ body {
   }
 }
 
-
 /* style sectionc #caracteristics */
 
-#caracteristics{
-    background-color : var(--common-color);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 50px;
+#caracteristics {
+  background-color: var(--common-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 50px;
 }
 
-#caracteristics>h2 {
-    font-size: 2.5rem;
-    text-align: center;
-    color : white;
-    margin-top: 4rem;
-    margin-bottom: 1rem;
+#caracteristics > h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: white;
+  margin-top: 4rem;
+  margin-bottom: 1rem;
 }
 
-#caracteristics > p{
-    color: white;
-    width: 80%;
-    margin: 1rem;
-    
+#caracteristics > p {
+  color: white;
+  width: 80%;
+  margin: 1rem;
 }
 
-#stats{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+#stats {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
-#chart{
-    width: 100%;
-    height: 300px
+#chart {
+  width: 100%;
+  height: 300px;
 }
 
 /* flex type et faiblesse */
-.type_weakness{
-    
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-around;
-    color: white;
-    font-size: 1.6rem;
-    text-align: center;
+.type_weakness {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  font-size: 1.6rem;
+  text-align: center;
 }
 
-.type_weakness svg{
-    width: 80%;
+.type_weakness svg {
+  width: 80%;
 }
 
-.type_weakness p{
-    margin-bottom: 1rem;
-    text-align: start;
-    margin-left: 10%;
+.type_weakness p {
+  margin-bottom: 1rem;
+  text-align: start;
+  margin-left: 10%;
 }
 
 /* flex attaques */
 
-#attacks{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    row-gap: 5px ;
-    color: white;
-    font-size: 1.6rem;
+#attacks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  row-gap: 5px;
+  color: white;
+  font-size: 1.6rem;
 }
-#attacks>p{
-    margin-bottom: 1rem;
-    text-align: center;
-    width:100%;
-    grid-area: 1/1/2/3;
+#attacks > p {
+  margin-bottom: 1rem;
+  text-align: center;
+  width: 100%;
+  grid-area: 1/1/2/3;
 }
-#attacks>svg{
-    width: 80%;
-    margin : 0 auto;
+#attacks > svg {
+  width: 80%;
+  margin: 0 auto;
 }
 
+@media screen and (min-width: 768px) {
+  #stats {
+    display: flex;
+    flex-direction: initial;
+    margin: 0 auto;
+    justify-content: center;
+    gap: 1.5rem;
+  }
 
-@media screen and (min-width :768px) {
-    
-    #stats{
-        display: flex;
-        flex-direction: initial;
-        margin: 0 auto;
-        justify-content: center;
-        gap : 1.5rem
-    }
+  #chart {
+    width: 45%;
+  }
 
-    #chart{
-        width: 45%;
-    }
+  .Type_Weakness_Attacks {
+    width: 45%;
+  }
 
-    .Type_Weakness_Attacks{
-        width: 45%
-    }
+  .type_weakness p,
+  #attacks > p {
+    font-size: 2rem;
+  }
 
-    .type_weakness p, #attacks>p{
-        font-size: 2rem;
-    }
-
-    #caracteristics>p{
-        margin-bottom: 3rem;
-    }
+  #caracteristics > p {
+    margin-bottom: 3rem;
+  }
 }
