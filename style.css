@@ -226,15 +226,15 @@ body {
 
 /* legend section design  */
 
-#legend-top {
+.section-top {
   height: 9vw;
 }
 
-#legend-top-smartphone {
+.section-top-smartphone {
   fill: var(--common-color);
 }
 
-#legend-top-desktop {
+.section-top-desktop {
   display: none;
 }
 
@@ -282,15 +282,15 @@ body {
   font-size: 12pt;
 }
 
-#legend-bottom {
+.section-bottom {
   height: 9vw;
 }
 
-#legend-bottom-smartphone {
+.section-bottom-smartphone {
   fill: var(--common-color);
 }
 
-#legend-bottom-desktop {
+.section-bottom-desktop {
   display: none;
 }
 
@@ -624,16 +624,16 @@ body {
   }
 
   /* legend band picture modification */
-  #legend-top-desktop {
+  .section-top-desktop {
     display: initial;
   }
-  #legend-top-smartphone {
+  .section-top-smartphone {
     display: none;
   }
-  #legend-bottom-desktop {
+  .section-bottom-desktop {
     display: initial;
   }
-  #legend-bottom-smartphone {
+  .section-bottom-smartphone {
     display: none;
   }
 
@@ -678,7 +678,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 50px;
+  /* padding-bottom: 50px; */
 }
 
 #caracteristics > h2 {
