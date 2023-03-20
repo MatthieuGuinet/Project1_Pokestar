@@ -1,11 +1,11 @@
 // getting nodes of the question and answers
-const quizzQuestion = document.getElementById("quizz-question");
-const answer1 = document.getElementById("quizz-answer1");
-const answer2 = document.getElementById("quizz-answer2");
-const answer3 = document.getElementById("quizz-answer3");
-const answer4 = document.getElementById("quizz-answer4");
-let quizzResultImg = document.getElementById("quizz-result-img");
-const allAnswers = document.getElementsByClassName("quizz-answer");
+const quizQuestion = document.getElementById("quiz-question");
+const answer1 = document.getElementById("quiz-answer1");
+const answer2 = document.getElementById("quiz-answer2");
+const answer3 = document.getElementById("quiz-answer3");
+const answer4 = document.getElementById("quiz-answer4");
+let quizResultImg = document.getElementById("quiz-result-img");
+const allAnswers = document.getElementsByClassName("quiz-answer");
 
 // defining the questions objects. COuld later be done using a constructor
 //question 1 already exists in the index.html
@@ -94,7 +94,7 @@ let vaporeonCount = 0;
 // defining the maxCount gathered
 let pokemonMaxCount = 0;
 
-// function to define the "suivant" button effect in the quizz
+// function to define the "suivant" button effect in the quiz
 
 function nextQuestion() {
   // controls that an answer is effectively chosen, then adds 1 to the suivantCount
@@ -125,7 +125,7 @@ function nextQuestion() {
 
     // removes the isChosen class  from all the items before switching to the next question
 
-    // let allAnswers = document.getElementsByClassName("quizz-answer");
+    // let allAnswers = document.getElementsByClassName("quiz-answer");
 
     for (let i = 0; i < allAnswers.length; i++) {
       allAnswers[i].classList.remove("isChosen");
@@ -140,7 +140,7 @@ function nextQuestion() {
     //  controls that all the questions aren't answered yet and displays answers for the right question
     switch (suivantCount) {
       case 1:
-        quizzQuestion.innerText = question2.question;
+        quizQuestion.innerText = question2.question;
         answer1.innerText = question2.answer1;
         answer2.innerText = question2.answer2;
         answer3.innerText = question2.answer3;
@@ -152,7 +152,7 @@ function nextQuestion() {
         break;
 
       case 2:
-        quizzQuestion.innerText = question3.question;
+        quizQuestion.innerText = question3.question;
         answer1.innerText = question3.answer1;
         answer2.innerText = question3.answer2;
         answer3.innerText = question3.answer3;
@@ -165,7 +165,7 @@ function nextQuestion() {
         break;
 
       case 3:
-        quizzQuestion.innerText = question4.question;
+        quizQuestion.innerText = question4.question;
         answer1.innerText = question4.answer1;
         answer2.innerText = question4.answer2;
         answer3.innerText = question4.answer3;
@@ -176,7 +176,7 @@ function nextQuestion() {
         answer4.classList.add(question4.answer4class);
         break;
       case 4:
-        quizzQuestion.innerText = question5.question;
+        quizQuestion.innerText = question5.question;
         answer1.innerText = question5.answer1;
         answer2.innerText = question5.answer2;
         answer3.innerText = question5.answer3;
@@ -187,7 +187,7 @@ function nextQuestion() {
         answer4.classList.add(question5.answer4class);
         break;
       case 5:
-        quizzQuestion.innerText = question6.question;
+        quizQuestion.innerText = question6.question;
         answer1.innerText = question6.answer1;
         answer2.innerText = question6.answer2;
         answer3.innerText = question6.answer3;
@@ -211,38 +211,34 @@ function nextQuestion() {
 
         // removing the "suivant" button, displaying the next button
 
-        let nextButton = document.getElementById("quizz-button-next");
+        let nextButton = document.getElementById("quiz-button-next");
         nextButton.style.display = "none";
 
-        document.getElementById("quizz-replay-button").style.display =
-          "initial";
+        document.getElementById("quiz-replay-button").style.display = "initial";
 
         // removing the answers display
         for (let i = 0; i < allAnswers.length; i++) {
           allAnswers[i].style.display = "none";
         }
 
-        //comparing each pokemon score to the best score. If winning, then displays new title, new image of the winning pokemon by giving the quizzResultImg the correct source
+        //comparing each pokemon score to the best score. If winning, then displays new title, new image of the winning pokemon by giving the quizResultImg the correct source
 
         if (eeveeCount === pokemonMaxCount) {
-          quizzQuestion.innerText = "EVOLI !!!!";
-          quizzResultImg.style.display = "initial";
-          quizzResultImg.src = "./assets/quizz_section/eevee_quizz_result.png";
+          quizQuestion.innerText = "EVOLI !!!!";
+          quizResultImg.style.display = "initial";
+          quizResultImg.src = "./assets/quiz_section/eevee_quiz_result.png";
         } else if (flareonCount === pokemonMaxCount) {
-          quizzQuestion.innerText = "FLAREON !!!!";
-          quizzResultImg.style.display = "initial";
-          quizzResultImg.src =
-            "./assets/quizz_section/flareon_quizz_result.png";
+          quizQuestion.innerText = "FLAREON !!!!";
+          quizResultImg.style.display = "initial";
+          quizResultImg.src = "./assets/quiz_section/flareon_quiz_result.png";
         } else if (jolteonCount === pokemonMaxCount) {
-          quizzQuestion.innerText = "JOLTEON !!!!";
-          quizzResultImg.style.display = "initial";
-          quizzResultImg.src =
-            "./assets/quizz_section/jolteon_quizz_result.png";
+          quizQuestion.innerText = "JOLTEON !!!!";
+          quizResultImg.style.display = "initial";
+          quizResultImg.src = "./assets/quiz_section/jolteon_quiz_result.png";
         } else if (vaporeonCount === pokemonMaxCount) {
-          quizzQuestion.innerText = "VAPOREON !!!!";
-          quizzResultImg.style.display = "initial";
-          quizzResultImg.src =
-            "./assets/quizz_section/vaporeon_quizz_result.png";
+          quizQuestion.innerText = "VAPOREON !!!!";
+          quizResultImg.style.display = "initial";
+          quizResultImg.src = "./assets/quiz_section/vaporeon_quiz_result.png";
         }
 
       default:
@@ -263,7 +259,7 @@ function replay() {
 
   // insertion of the first question which was already displayed on first opening of the website
 
-  quizzQuestion.innerText = question1.question;
+  quizQuestion.innerText = question1.question;
   answer1.innerText = question1.answer1;
   answer2.innerText = question1.answer2;
   answer3.innerText = question1.answer3;
@@ -273,9 +269,9 @@ function replay() {
   answer3.classList.add(question1.answer3class);
   answer4.classList.add(question1.answer4class);
 
-  // displaying back "suivant" button 
+  // displaying back "suivant" button
 
-  let nextButton = document.getElementById("quizz-button-next");
+  let nextButton = document.getElementById("quiz-button-next");
   nextButton.style.display = "initial";
 
   //as all answers have been removed by using "display none", let's give them back the flex value
@@ -284,15 +280,15 @@ function replay() {
     allAnswers[i].style.display = "flex";
   }
 
-  //   removing the quizz-replay button
+  //   removing the quiz-replay button
 
-  quizzResultImg.style.display = "none";
-  document.getElementById("quizz-replay-button").style.display = "none";
+  quizResultImg.style.display = "none";
+  document.getElementById("quiz-replay-button").style.display = "none";
 }
 
-//exporting the two quizz functions to index.js
+//exporting the two quiz functions to index.js
 
-export let quizzFunctions = {
+export let quizFunctions = {
   nextQuestion: nextQuestion,
   replay: replay,
 };

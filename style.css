@@ -363,21 +363,21 @@ body {
   gap: 20px;
 }
 
-/* quizz section design  */
+/* quiz section design  */
 
-#quizz {
+#quiz {
   display: flex;
   flex-direction: column;
   align-items: center;
   color: white;
 }
 
-#quizz h2 {
+#quiz h2 {
   margin-top: 43px;
   font-size: 2.5rem;
 }
 
-#quizz-title {
+#quiz-title {
   margin-top: 43px;
   width: 45%;
   height: 82px;
@@ -392,7 +392,7 @@ body {
   margin-bottom: 20px;
 }
 
-#quizz-container {
+#quiz-container {
   width: 85vw;
   background-color: #000000;
   border-radius: 15px;
@@ -403,7 +403,7 @@ body {
   justify-content: center;
 }
 
-#quizz-question {
+#quiz-question {
   margin: 20px 0 29px 0;
   width: 90%;
   height: 58px;
@@ -416,7 +416,7 @@ body {
   align-items: center;
 }
 
-#quizz-answers-container {
+#quiz-answers-container {
   background-color: #000000;
   color: white;
   width: 90%;
@@ -426,10 +426,10 @@ body {
   align-items: center;
 }
 
-#quizz-answer1,
-#quizz-answer2,
-#quizz-answer3,
-#quizz-answer4 {
+#quiz-answer1,
+#quiz-answer2,
+#quiz-answer3,
+#quiz-answer4 {
   width: 70%;
   border-radius: 15px;
   display: flex;
@@ -440,7 +440,7 @@ body {
   margin-bottom: 22px;
 }
 
-#quizz-button-next {
+#quiz-button-next {
   border-radius: 10px;
   width: 106px;
   height: 35px;
@@ -449,7 +449,7 @@ body {
   margin-top: 20px;
 }
 
-#quizz-replay-button {
+#quiz-replay-button {
   display: none;
 }
 
@@ -458,19 +458,19 @@ body {
   filter: brightness(160%);
 }
 
-#quizz-result-container {
+#quiz-result-container {
   width: 100%;
   background-color: #000000;
 }
 
-#quizz-result-img {
+#quiz-result-img {
   display: none;
   max-height: 300px;
   max-width: 100%;
   background-color: #000000;
 }
 
-#quizz-replay-button {
+#quiz-replay-button {
   border-radius: 10px;
   width: auto;
   height: 50px;
@@ -657,16 +657,16 @@ body {
     justify-content: space-evenly;
   }
 
-  /* quizz desktop display  */
+  /* quiz desktop display  */
 
-  #quizz-container {
+  #quiz-container {
     width: 60vw;
   }
 
-  #quizz-answer1,
-  #quizz-answer2,
-  #quizz-answer3,
-  #quizz-answer4 {
+  #quiz-answer1,
+  #quiz-answer2,
+  #quiz-answer3,
+  #quiz-answer4 {
     height: 50px;
   }
 }
