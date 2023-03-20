@@ -77,10 +77,10 @@ body{
 /* flex attaques */
 
 #attacks{
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 5px ;
     color: white;
     font-size: 1.6rem;
 }
@@ -88,10 +88,12 @@ body{
     margin-bottom: 1rem;
     text-align: center;
     width:100%;
+    grid-area: 1/1/2/3;
 }
 #attacks>svg{
-    width: 45%;
-margin : 0.5rem}
+    width: 80%;
+    margin : 0 auto;
+}
 
 
 @media screen and (min-width :768px) {
