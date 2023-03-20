@@ -50,6 +50,7 @@ body {
 /* Apparence du menu burger ouvert */
 /* Le menu est fermé par defaut */
 #nav_links {
+
     background-color: rgb(33, 32, 32);
     opacity: 0.8;
     border-radius: 0px 0px 0px 10px;
@@ -68,6 +69,7 @@ body {
 }
 
 .burger_close {
+
     right: -400px;
 }
 
@@ -125,6 +127,7 @@ body {
 
 /* Position du menu burger ouvert */
 .burger_open {
+    margin-top: 10px;
     position: fixed;
     right: 0px;
 }
