@@ -7,80 +7,48 @@ const answer4 = document.getElementById("quiz-answer4");
 let quizResultImg = document.getElementById("quiz-result-img");
 const allAnswers = document.getElementsByClassName("quiz-answer");
 
-// defining the questions objects. COuld later be done using a constructor
+// defining the questions objects using a constructor. COuld later be done using a constructor
 //question 1 already exists in the index.html
 
-let question1 = {
-  question: "Quelle est ton activité préférée ?",
-  answer1: "La nature",
-  answer2: "La pêche",
-  answer3: "Le bricolage",
-  answer4: "Un livre au coin du feu",
-  answer1class: "eevee",
-  answer2class: "vaporeon",
-  answer3class: "jolteon",
-  answer4class: "flareon",
-};
+class Question {
+  constructor(question, answer1, answer1class, answer2, answer2class, answer3, answer3class, answer4, answer4class){
+    this.question = question;
+    this.answer1 = answer1;
+    this.answer1class = answer1class;
+    this.answer2=answer2;
+    this.answer2class=answer2class;
+    this.answer3=answer3;
+    this.answer3class=answer3class;
+    this.answer4=answer4;
+    this.answer4class=answer4class;
+  }
+}
 
-let question2 = {
-  question: "Quelle est ta couleur préférée ?",
-  answer1: "Bleu",
-  answer2: "Jaune",
-  answer3: "Beige",
-  answer4: "Rouge",
-  answer1class: "vaporeon",
-  answer2class: "jolteon",
-  answer3class: "eevee",
-  answer4class: "flareon",
-};
+let question1 = new Question("Quelle est ton activité préférée ?","La nature","eevee","La pêche","vaporeon","Le bricolage","jolteon","Un livre au coin du feu","flareon");
 
-let question3 = {
-  question: "Tu es plutôt d'humeur ?",
-  answer1: "Douce et apaisée",
-  answer2: "Sanguine et massacrante",
-  answer3: "Electrique",
-  answer4: "Lisse et facile",
-  answer1class: "eevee",
-  answer2class: "flareon",
-  answer3class: "jolteon",
-  answer4class: "vaporeon",
-};
+let question2 = new Question("Quelle est ta couleur préférée ?","Bleu","vaporeon","Jaune","jolteon","Beige","eevee","Rouge","flareon");
 
-let question4 = {
-  question: "Quel est ton dessin-animé préféré ?",
-  answer1: "La petite sirène",
-  answer2: "Moi, moche et méchant",
-  answer3: "Bambi",
-  answer4: "Dragons",
-  answer1class: "vaporeon",
-  answer2class: "jolteon",
-  answer3class: "eevee",
-  answer4class: "flareon",
-};
+let question3 = new Question("Tu es plutôt d'humeur...", "Douce et apaisée","eevee","Sanguine et massacrante","flareon", "Electrique","jolteon","Lisse et facile","vaporeon");
 
-let question5 = {
-  question: "En soirée, tu es plutôt ?",
-  answer1: "Shooters enflammés",
-  answer2: "Tek'Paf",
-  answer3: "Grand verre d'eau",
-  answer4: "Jus detox",
-  answer1class: "flareon",
-  answer2class: "jolteon",
-  answer3class: "vaporeon",
-  answer4class: "eevee",
-};
+let question4 = new Question("Quel est ton dessin animé préféré ?","La petite sirène","vaporeon","Moi, moche et méchant","jolteon","Bambi","eevee","Dragons","flareon");
 
-let question6 = {
-  question: "En musique, tu écoutes ?",
-  answer1: "Beethoven",
-  answer2: "Céline Dion",
-  answer3: "Johnny Haliday",
-  answer4: "Michael Jackson",
-  answer1class: "eevee",
-  answer2class: "vaporeon",
-  answer3class: "flareon",
-  answer4class: "jolteon",
-};
+let question5 = new Question("En soirée, tu es plutôt ?","Shooters enflammés","flareon","Tek' Paf","jolteon","Grand verre d'eau","vaporeon","Jus détox","eevee")
+
+let question6 = new Question("En musique, tu écoutes ?","Beethoven","eevee","Céline Dion","vaporeon","Johnny Haliday","flareon","Michael Jackson","jolteon")
+
+// function fillQuiz to fill the quizz-container 
+
+   function fillQuiz(questionNumberX){
+    quizQuestion.innerText = questionNumberX.question;
+      answer1.innerText = questionNumberX.answer1;
+      answer2.innerText = questionNumberX.answer2;
+      answer3.innerText = questionNumberX.answer3;
+      answer4.innerText = questionNumberX.answer4;
+      answer1.classList.add(questionNumberX.answer1class);
+      answer2.classList.add(questionNumberX.answer2class);
+      answer3.classList.add(questionNumberX.answer3class);
+      answer4.classList.add(questionNumberX.answer4class);
+  }
 
 // defining the var counting number of "suivant" clicks, value is the current question
 let suivantCount = 0;
@@ -123,79 +91,28 @@ function nextQuestion() {
       vaporeonCount += 1;
     }
 
-    // removes the isChosen class  from all the items before switching to the next question
+    // removes the isChosen and pokemon classes  from all the items before switching to the next question
 
-    // let allAnswers = document.getElementsByClassName("quiz-answer");
-
-    for (let i = 0; i < allAnswers.length; i++) {
-      allAnswers[i].classList.remove("isChosen");
-      allAnswers[i].classList.remove("eevee");
-      allAnswers[i].classList.remove("flareon");
-      allAnswers[i].classList.remove("jolteon");
-      allAnswers[i].classList.remove("vaporeon");
+     for (let i = 0; i < allAnswers.length; i++) {
+      allAnswers[i].classList.remove("isChosen","eevee","flareon","jolteon","vaporeon");
     }
-
-    //removes the pokemon named class
 
     //  controls that all the questions aren't answered yet and displays answers for the right question
     switch (suivantCount) {
       case 1:
-        quizQuestion.innerText = question2.question;
-        answer1.innerText = question2.answer1;
-        answer2.innerText = question2.answer2;
-        answer3.innerText = question2.answer3;
-        answer4.innerText = question2.answer4;
-        answer1.classList.add(question2.answer1class);
-        answer2.classList.add(question2.answer2class);
-        answer3.classList.add(question2.answer3class);
-        answer4.classList.add(question2.answer4class);
+        fillQuiz(question2);
         break;
-
       case 2:
-        quizQuestion.innerText = question3.question;
-        answer1.innerText = question3.answer1;
-        answer2.innerText = question3.answer2;
-        answer3.innerText = question3.answer3;
-        answer4.innerText = question3.answer4;
-        answer1.classList.add(question3.answer1class);
-        answer2.classList.add(question3.answer2class);
-        answer3.classList.add(question3.answer3class);
-        answer4.classList.add(question3.answer4class);
-
+        fillQuiz(question3);
         break;
-
       case 3:
-        quizQuestion.innerText = question4.question;
-        answer1.innerText = question4.answer1;
-        answer2.innerText = question4.answer2;
-        answer3.innerText = question4.answer3;
-        answer4.innerText = question4.answer4;
-        answer1.classList.add(question4.answer1class);
-        answer2.classList.add(question4.answer2class);
-        answer3.classList.add(question4.answer3class);
-        answer4.classList.add(question4.answer4class);
+        fillQuiz(question4);
         break;
       case 4:
-        quizQuestion.innerText = question5.question;
-        answer1.innerText = question5.answer1;
-        answer2.innerText = question5.answer2;
-        answer3.innerText = question5.answer3;
-        answer4.innerText = question5.answer4;
-        answer1.classList.add(question5.answer1class);
-        answer2.classList.add(question5.answer2class);
-        answer3.classList.add(question5.answer3class);
-        answer4.classList.add(question5.answer4class);
+       fillQuiz(question5);
         break;
       case 5:
-        quizQuestion.innerText = question6.question;
-        answer1.innerText = question6.answer1;
-        answer2.innerText = question6.answer2;
-        answer3.innerText = question6.answer3;
-        answer4.innerText = question6.answer4;
-        answer1.classList.add(question6.answer1class);
-        answer2.classList.add(question6.answer2class);
-        answer3.classList.add(question6.answer3class);
-        answer4.classList.add(question6.answer4class);
+        fillQuiz(question6);
         break;
 
       // all the questions have been answered, let's display some result depending on the previous choices associated to some pokemon
@@ -259,15 +176,7 @@ function replay() {
 
   // insertion of the first question which was already displayed on first opening of the website
 
-  quizQuestion.innerText = question1.question;
-  answer1.innerText = question1.answer1;
-  answer2.innerText = question1.answer2;
-  answer3.innerText = question1.answer3;
-  answer4.innerText = question1.answer4;
-  answer1.classList.add(question1.answer1class);
-  answer2.classList.add(question1.answer2class);
-  answer3.classList.add(question1.answer3class);
-  answer4.classList.add(question1.answer4class);
+  fillQuiz(question1);
 
   // displaying back "suivant" button
 
