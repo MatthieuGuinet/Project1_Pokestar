@@ -6,6 +6,7 @@
     height: 300px;
     border-radius: 10px;
     box-shadow: rgba(0,0,0 50%) 0 0 10px 5px;
+    
 }
 
 #scrollable_map{
@@ -17,11 +18,15 @@
     width: 100%; 
 }
 
-#pokemon-pin{
+#pin-div{
     position: absolute;
     width: 10%;
     top : 5%;
     left : 80%
+}
+
+#pokemon-pin{
+    width: 100%;
 }
 
 
@@ -38,8 +43,6 @@
     #map_wrapper{
     width :500px;
     height: 500px;
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 50%) 0 0 10px 5px;
 }
 
 

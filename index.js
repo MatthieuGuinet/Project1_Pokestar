@@ -40,3 +40,4 @@ scrollableMap.onmouseup = function mouseUp() {
 
 // création d'un 'addeventlistener' appelant la fonction principale lorsque le clic gauche est enfoncé
 scrollableMap.addEventListener("mousedown",scrollTheMap)
+
