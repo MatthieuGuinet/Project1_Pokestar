@@ -1,15 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 
-:root{
-    --common-color : #282828;
-    --main-color-eevee : #3A3129;
-    --secondary-color-eevee : #C5915D;
-    --main-color-jolteon : #E9BC2E;
-    --secondary-color-jolteon : #B9812B;
-    --main-color-flareon : #FFA948;
-    --secondary-color-flareon : #FB7C26;
-    --main-color-vaporeon : #879CC6;
-    --secondary-color-vaporeon : #3A5D83;
+:root {
+  --common-color: #282828;
+  --main-color-eevee: #3a3129;
+  --secondary-color-eevee: #c5915d;
+  --main-color-jolteon: #e9bc2e;
+  --secondary-color-jolteon: #b9812b;
+  --main-color-flareon: #ffa948;
+  --secondary-color-flareon: #fb7c26;
+  --main-color-vaporeon: #879cc6;
+  --secondary-color-vaporeon: #3a5d83;
 }
 
 * {
@@ -20,140 +20,134 @@
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Barre de navigation -> header */
 /* Mobile first */
 #nav_header {
-    background: black;
-    color: white;
-    height: 60px;
-    position: fixed;
-    width: 100%;
-    display: flex;
-    align-items: center;
+  background: black;
+  color: white;
+  height: 60px;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 
 #logo_and_title {
-    display: flex;
-    align-items: center;
-    flex-grow: 1;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
 }
 
 #logo_and_title .logo {
-    padding-inline: 10px;
-    height: 50px;
+  padding-inline: 10px;
+  height: 50px;
 }
 
 /* Lien de navigation menu burger */
 #nav_links a {
-    text-decoration: none;
-    color: rgb(252, 252, 252);
+  text-decoration: none;
+  color: rgb(252, 252, 252);
 }
 
 #nav_links a:hover {
-    color: darkgrey;
+  color: darkgrey;
 }
 
 #nav_links ul {
-    list-style: none;
-
+  list-style: none;
 }
 
 #nav_links li {
-    padding: 15px;
-
+  padding: 15px;
 }
 
 /* Apparence du menu burger ouvert */
 /* Le menu est fermé par defaut */
 #nav_links {
-
-    background-color: rgb(33, 32, 32);
-    opacity: 0.8;
-    border-radius: 0px 0px 0px 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 50px;
-    z-index: 100;
-    min-width: 50vw;
-    max-width: 80vw;
-    min-height: 30vh;
-    width: 300px;
-    transition: right 1s;
+  background-color: rgb(33, 32, 32);
+  opacity: 0.8;
+  border-radius: 0px 0px 0px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50px;
+  z-index: 100;
+  min-width: 50vw;
+  max-width: 80vw;
+  min-height: 30vh;
+  width: 300px;
+  transition: right 1s;
 }
 
 .burger_close {
-
-    right: -400px;
+  right: -400px;
 }
 
 /* Icone du menu burger */
 #burger_icon span {
-    display: inline-block;
-    width: 35px;
-    height: 3px;
-    background-color: white;
-    border-radius: 3px;
-    margin-bottom: 6px;
-    position: relative;
+  display: inline-block;
+  width: 35px;
+  height: 3px;
+  background-color: white;
+  border-radius: 3px;
+  margin-bottom: 6px;
+  position: relative;
 }
 
 /* Animation du menu burger */
 #burger_icon span::before,
 #burger_icon span::after {
-    content: '';
-    width: 35px;
-    height: 3px;
-    background-color: white;
-    border-radius: 3px;
-    display: inline-block;
-    position: absolute;
-    transform-origin: center;
-    transition: all 0.5s ease;
+  content: "";
+  width: 35px;
+  height: 3px;
+  background-color: white;
+  border-radius: 3px;
+  display: inline-block;
+  position: absolute;
+  transform-origin: center;
+  transition: all 0.5s ease;
 }
 
 #burger_icon span::before {
-    top: -8px;
+  top: -8px;
 }
 
 #burger_icon span::after {
-    top: 8px;
+  top: 8px;
 }
 
 /* animationBurger -> class ajouté en JS */
 #burger.animationOpen {
-    background: transparent;
+  background: transparent;
 }
 
 #burger.animationOpen::before {
-    transform: rotate(45deg);
-    top: 0;
+  transform: rotate(45deg);
+  top: 0;
 }
 
 #burger.animationOpen::after {
-    transform: rotate(-45deg);
-    top: 0;
+  transform: rotate(-45deg);
+  top: 0;
 }
 
 #burger_icon {
-    padding-right: 10px;
+  padding-right: 10px;
 }
 
 /* Position du menu burger ouvert */
 .burger_open {
-    margin-top: 10px;
-    position: fixed;
-    right: 0px;
+  margin-top: 10px;
+  position: fixed;
+  right: 0px;
 }
-
-
 
 /* remove browser auto margin and padding, define a font family and the box sizing */
 body {
@@ -300,6 +294,75 @@ body {
   display: none;
 }
 
+/*style localisation */
+
+#map_wrapper {
+  overflow: hidden;
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0 50%) 0 0 10px 5px;
+}
+
+#scrollable_map {
+  position: relative;
+  width: 200%;
+}
+
+#map-image {
+  width: 100%;
+}
+
+#pin-div {
+  position: absolute;
+  width: 10%;
+  top: 5%;
+  left: 80%;
+}
+
+#pokemon-pin {
+  width: 100%;
+}
+
+#pin-div:hover,
+#pin-div:focus {
+  color: black;
+}
+#pin-div > span {
+  position: absolute;
+  top: 100px;
+  right: -60px;
+  margin-top: 20px;
+  font-size: 1.4rem;
+  width: 200px;
+  color: antiquewhite;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 2px rgba(0, 0, 0 50%);
+  transform: scale(1) rotate(-15deg);
+  transition: all 0.25s;
+  opacity: 0;
+  z-index: 2;
+}
+
+#pin-div:hover > span,
+#pin-div:focus > span {
+  transform: scale(1) rotate(0);
+  opacity: 1;
+}
+
+#localisation-flex {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10%;
+  gap: 20px;
+}
+
 /* quizz section design  */
 
 #quizz-section {
@@ -418,63 +481,59 @@ body {
   padding: 0 30px;
 }
 @media screen and (min-width: 768px) {
-    #burger_icon {
-        display: none;
-    }
+  #burger_icon {
+    display: none;
+  }
 
-    #nav_header {
-        display: flex;
-        justify-content: space-between;
-        height: 80px;
-    }
+  #nav_header {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+  }
 
+  #logo_and_title .logo {
+    height: 70px;
+  }
 
-    #logo_and_title .logo {
-        height: 70px;
-    }
+  #logo_title {
+    /* padding-left: 10px; */
+    font-weight: bold;
+  }
 
-    #logo_title {
-        /* padding-left: 10px; */
-        font-weight: bold;
-    }
+  #nav_links ul {
+    display: flex;
+    flex-direction: row;
+    padding-right: 30px;
+  }
 
+  #nav_links {
+    position: initial;
+    align-items: end;
+    width: auto;
+    height: 80px;
+    min-height: auto;
+    background-color: transparent;
+    opacity: 1;
+  }
 
-    #nav_links ul {
-        display: flex;
-        flex-direction: row;
-        padding-right: 30px;
-    }
+  #nav_links li {
+    padding: 0px;
+  }
 
-    #nav_links {
-        position: initial;
-        align-items: end;
-        width: auto;
-        height: 80px;
-        min-height: auto;
-        background-color: transparent;
-        opacity: 1;
-    }
+  #nav_links a {
+    border-radius: 15px;
+    padding: 10px 30px;
+    height: 200px;
+  }
 
-    #nav_links li {
-        padding: 0px;
-    }
-
-    #nav_links a {
-        border-radius: 15px;
-        padding: 10px 30px;
-        height: 200px;
-
-    }
-
-    #nav_links a:hover {
-        background-color: rgba(255, 255, 255, 0.237);
-
-    }
+  #nav_links a:hover {
+    background-color: rgba(255, 255, 255, 0.237);
+  }
 
   /* position elements of header centered and define an height */
   header {
     min-height: 600px;
-    max-height:1000px;
+    max-height: 1000px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -488,12 +547,12 @@ body {
   #desktop-header-band {
     display: flex;
     background: #000;
-    position:relative;
+    position: relative;
   }
 
   #desktop-header-band > svg {
-    width : 50%;
-    height:100px;
+    width: 50%;
+    height: 100px;
   }
 
   #left_button {
@@ -509,19 +568,19 @@ body {
     cursor: pointer;
   } */
 
-  #desktop-header-band>p {
-    position:absolute;
-    font-size:1.5rem;
+  #desktop-header-band > p {
+    position: absolute;
+    font-size: 1.5rem;
     margin-top: 15px;
     /* cursor:pointer; */
   }
 
   #pokemon_left {
-    left:35%;
+    left: 35%;
   }
 
-  #pokemon_right{
-    right:35%;
+  #pokemon_right {
+    right: 35%;
   }
 
   /* displaying elements on a grid */
@@ -535,16 +594,16 @@ body {
   /* adjusting each elements in the grid */
   #little-description {
     grid-area: 4 / 1 / 5 / 2;
-    font-size: clamp(1rem,2vw,2rem);
+    font-size: clamp(1rem, 2vw, 2rem);
     line-height: 35px;
-}
+  }
 
   #hero > img {
     grid-area: 1 / 2 / 6 /3;
   }
   #header-type {
     grid-area: 3 / 1 / 4 /2;
-    font-size: clamp(0.5rem,2vw,1.5rem);
+    font-size: clamp(0.5rem, 2vw, 1.5rem);
   }
 
   #hero > h1 {
@@ -553,7 +612,7 @@ body {
     margin: 5px;
     grid-area: 2 / 1 / 3 / 2;
   }
-  
+
   /* media queries legend section  */
 
   /* diminution of the div revealed text height  */
@@ -573,6 +632,26 @@ body {
   }
   #legend-bottom-smartphone {
     display: none;
+  }
+
+  /* localisation */
+
+  #map_wrapper {
+    width: 500px;
+    height: 500px;
+  }
+
+  #localisation-flex {
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 10%;
+    gap: 10%;
+  }
+
+  #localisation-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
   }
 
   /* quizz desktop display  */
