@@ -1,6 +1,8 @@
 //import of the displayText function to unwrap the legend section test
 import displayText from "./displayText.js";
 import { quizzFunctions } from "./quizz.js";
+//import hoverButton to use the hovering on the buttons a the top of the pokemon
+import hoverButton from './header_button.js'
 
 // ouverture et fermeture du menu burger + animation de l'icone
 const burgerIcon = document.getElementById("burger_icon");
@@ -25,51 +27,11 @@ for (let i = 0; i < navElement.length; i++) {
     })
 }
 
-
-// import hoverButton from './header_button.js'
-
-// const textButtons = document.querySelectorAll(".text_button");
-// const svgButtons = document.querySelectorAll(".lr_buttons");
-
-// hoverButton(textButtons);
-// hoverButton(svgButtons);
-
-const buttonPokemon = document.querySelectorAll(".button_pokemon");
 const textButtons = document.querySelectorAll(".text_button");
 const svgButtons = document.querySelectorAll(".lr_buttons");
+hoverButton(textButtons);
+hoverButton(svgButtons);
 
-// // textButtons.map((button, index) => {
-// //     return button.addEventListener("mouseover", () => {
-// //     console.log("ça marche !");
-// //     // svgButtons[index].style.fill = "blue";
-// //     // svgButtons[index].style.cursor = "pointer";
-// //     // button[index].style.fill = "blue";
-// //     // button[index].style.cursor = "pointer";
-// // })});
-
-for (let i = 0; i < textButtons.length; i++) {
-    const element = textButtons[i];
-    element.addEventListener("mouseover", () => {
-        textButtons[i].style.cursor = "pointer";
-        svgButtons[i].style.fill = "#949494";
-        svgButtons[i].style.cursor = "pointer";
-    });
-    element.addEventListener("mouseout", () => {
-        svgButtons[i].style.fill="white";
-    })
-}
-
-for (let i = 0; i < svgButtons.length; i++) {
-    const element = svgButtons[i];
-    element.addEventListener("mouseover", () => {
-        textButtons[i].style.cursor = "pointer";
-        svgButtons[i].style.fill = "#949494";
-        svgButtons[i].style.cursor = "pointer";
-    });
-    element.addEventListener("mouseout", () => {
-        svgButtons[i].style.fill="white";
-    })
-}
 
 // Section "legend", button "poursuivre l'aventure"
 let legendButton = document.getElementById("legend-deployment");
