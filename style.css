@@ -1,3 +1,16 @@
+
+:root{
+    --common-color : #282828;
+    --main-color-eevee : #3A3129;
+    --secondary-color-eevee : #C5915D;
+    --main-color-jolteon : #E9BC2E;
+    --secondary-color-jolteon : #B9812B;
+    --main-color-flareon : #FFA948;
+    --secondary-color-flareon : #FB7C26;
+    --main-color-vaporeon : #879CC6;
+    --secondary-color-vaporeon : #3A5D83;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -187,3 +200,4 @@ body {
     }
 
 }
+
