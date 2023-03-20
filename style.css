@@ -18,7 +18,7 @@
     width: 100%; 
 }
 
-#pin-div{
+#pin-link{
     position: absolute;
     width: 10%;
     top : 5%;
@@ -27,6 +27,34 @@
 
 #pokemon-pin{
     width: 100%;
+}
+
+#pin-link:hover, #pin-link:focus{
+    color: black;
+}
+#pin-link>span{
+    position: absolute;
+    top: 100px;
+    right: -60px;
+    margin-top: 20px;
+    font-size: 1.4rem;
+    width: 200px;
+    color: antiquewhite;
+    text-align: center;
+    background-color: rgba(0,0,0,0.8);
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 2px rgba(0,0,0 50%);
+    transform: scale(1) rotate(-15deg);
+    transition : all 0.25s;
+    opacity: 0;
+    z-index: 2;
+}
+
+#pin-link:hover>span, #pin-link:focus>span{
+    transform: scale(1) rotate(0);
+    opacity:1;
 }
 
 
