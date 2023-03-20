@@ -1,150 +1,159 @@
 <!DOCTYPE html>
 <html lang="fr en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Pokestar</title>
-  </head>
-  <body>
-    <!-- barre de navigation  -->
-    <nav>
-      <img src="" alt="logo pokestar" class="logo" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Pokestar</title>
+</head>
+
+<body>
+  <!-- barre de navigation  -->
+  <nav id="nav_header">
+    <div id="logo_and_title">
+      <img src="assets/logo.png" alt="logo pokestar" class="logo" />
 
       <!-- titre pour la version desktop -->
       <p id="logo_title">POKESTAR</p>
+    </div>
 
-      <div id="nav_links">
-        <ul>
-          <li><a href="#legend">Légende</a></li>
-          <li><a href="#localisation">Localisation</a></li>
-          <li><a href="caracteristics">Caractéristiques</a></li>
-          <li><a href="quizz">Quizz</a></li>
-        </ul>
+    <!-- Menu burger -->
+    <span id="burger_icon">
+      <span id="burger"></span>
+    </span>
+    <!-- Liens de navigation vers sections -->
+    <div id="nav_links" class="burger_close">
+      <ul>
+        <li class="nav"><a href="#legend">Légende</a></li>
+        <li class="nav"><a href="#localisation">Localisation</a></li>
+        <li class="nav"><a href="#caracteristics">Caractéristiques</a></li>
+        <li class="nav"><a href="#quizz">Quizz</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header>
+    <!-- bandeau desktop  -->
+    <div id="desktop-header-band">
+      <svg></svg>
+      <svg></svg>
+
+      <!-- prévoir affichage dynamique du nom de deux autres pokemons en fonction de celui affiché (de manière carroussel) -->
+      <p></p>
+      <p></p>
+    </div>
+
+    <!-- bandeau mobile  -->
+    <div id="mobile-header-band">
+      <svg></svg>
+    </div>
+
+    <!-- commun aux deux versions  -->
+    <div id="hero">
+      <img src="" alt="header image pokemon" />
+      <h1 class="pokemon-name">EVOLI</h1>
+      <div id="header-type">
+        <p>Normal</p>
       </div>
-      <img src="" alt="burger" />
-    </nav>
-
-    <header>
-      <!-- bandeau desktop  -->
-      <div id="desktop-header-band">
-        <svg></svg>
-        <svg></svg>
-
-        <!-- prévoir affichage dynamique du nom de deux autres pokemons en fonction de celui affiché (de manière carroussel) -->
-        <p></p>
-        <p></p>
+      <div id="little-description">
+        <p>Brun, Yeux ébène</p>
+        <p>0.3m pour 6.5kg</p>
+        <p>Fourrure soyeuse</p>
       </div>
+    </div>
+  </header>
 
-      <!-- bandeau mobile  -->
-      <div id="mobile-header-band">
-        <svg></svg>
+  <main>
+    <section id="legend">
+      <h2>Légende</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+        distinctio explicabo harum eveniet quaerat dolor reiciendis odit? Aut
+        provident vero, maxime impedit quae iure quod sunt fuga deserunt quis
+        repellendus suscipit officia voluptate esse ipsa, soluta assumenda
+        accusamus nobis voluptas sequi. Accusantium quaerat consequatur
+        similique? Inventore praesentium, quam illo suscipit nesciunt ut modi
+        obcaecati voluptates explicabo quis quasi nulla, earum quod fuga?
+        Commodi veniam nemo tenetur laborum eum recusandae minus pariatur
+        vitae corporis ratione, doloremque consequuntur quo esse molestiae rem
+        debitis officia repellat dolore aspernatur qui facere, optio
+        laboriosam error. Eos neque quisquam veritatis perferendis dolorum
+        eius nihil praesentium? Assumenda maxime aliquid delectus sed repellat
+        sunt est accusantium optio sit, nisi temporibus non ipsa minus magnam
+        sequi blanditiis nemo et sapiente omnis ratione. Omnis quisquam
+        debitis, quidem officiis itaque dolor, dicta sint quam vel esse unde
+        atque ratione tenetur, odit harum facere voluptatem adipisci? Omnis
+        vitae quia accusamus dolorum illum.
+      </p>
+      <button id="legend-deployment">Poursuivre l'aventure</button>
+    </section>
+    <section id="localisation">
+      <h2>Localisation</h2>
+      <div id="map">
+        <!-- insert map here -->
       </div>
+    </section>
+    <section id="caracteristics">
+      <h2>Caractéristiques</h2>
 
-      <!-- commun aux deux versions  -->
-      <div id="hero">
-        <img src="" alt="header image pokemon" />
-        <h1 class="pokemon-name">EVOLI</h1>
-        <div id="header-type">
-          <p>Normal</p>
-        </div>
-        <div id="little-description">
-          <p>Brun, Yeux ébène</p>
-          <p>0.3m pour 6.5kg</p>
-          <p>Fourrure soyeuse</p>
-        </div>
-      </div>
-    </header>
-
-    <main>
-      <section id="legend">
-        <h2>Légende</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-          distinctio explicabo harum eveniet quaerat dolor reiciendis odit? Aut
-          provident vero, maxime impedit quae iure quod sunt fuga deserunt quis
-          repellendus suscipit officia voluptate esse ipsa, soluta assumenda
-          accusamus nobis voluptas sequi. Accusantium quaerat consequatur
-          similique? Inventore praesentium, quam illo suscipit nesciunt ut modi
-          obcaecati voluptates explicabo quis quasi nulla, earum quod fuga?
-          Commodi veniam nemo tenetur laborum eum recusandae minus pariatur
-          vitae corporis ratione, doloremque consequuntur quo esse molestiae rem
-          debitis officia repellat dolore aspernatur qui facere, optio
-          laboriosam error. Eos neque quisquam veritatis perferendis dolorum
-          eius nihil praesentium? Assumenda maxime aliquid delectus sed repellat
-          sunt est accusantium optio sit, nisi temporibus non ipsa minus magnam
-          sequi blanditiis nemo et sapiente omnis ratione. Omnis quisquam
-          debitis, quidem officiis itaque dolor, dicta sint quam vel esse unde
-          atque ratione tenetur, odit harum facere voluptatem adipisci? Omnis
-          vitae quia accusamus dolorum illum.
-        </p>
-        <button id="legend-deployment">Poursuivre l'aventure</button>
-      </section>
-      <section id="localisation">
-        <h2>Localisation</h2>
-        <div id="map">
-          <!-- insert map here -->
-        </div>
-      </section>
-      <section id="caracteristics">
-        <h2>Caractéristiques</h2>
-
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet
-          voluptatibus soluta molestiae suscipit magnam. Eos dolore facere velit
-          in iste dolores illo nostrum optio exercitationem placeat deserunt,
-          quia praesentium, sed consequatur, excepturi tempore obcaecati maiores
-          error. Doloribus quaerat illo perferendis iste assumenda nulla, magnam
-          eligendi harum mollitia laborum rem blanditiis unde nemo molestiae
-          fugit, sequi optio repellat animi reprehenderit quo. Ullam soluta fuga
-          corrupti, culpa, blanditiis repellendus doloremque explicabo velit
-          alias similique, illum qui officiis!
-        </p>
-        <section id="stats">
-          <div id="chart"></div>
-          <!-- voir le comportement des images en responsive et des textes, voir avec article -->
-          <div class="Type_Weakness_Attacks">
-            <div data-info="Type+Weakness">
-              <div data-info="Type">
-                <p>Type</p>
-                <img src="" alt="Type image" />
-              </div>
-              <div data-info="Weakness">
-                <p>Faiblesse</p>
-                <img src="" alt="Weakness image" />
-              </div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet
+        voluptatibus soluta molestiae suscipit magnam. Eos dolore facere velit
+        in iste dolores illo nostrum optio exercitationem placeat deserunt,
+        quia praesentium, sed consequatur, excepturi tempore obcaecati maiores
+        error. Doloribus quaerat illo perferendis iste assumenda nulla, magnam
+        eligendi harum mollitia laborum rem blanditiis unde nemo molestiae
+        fugit, sequi optio repellat animi reprehenderit quo. Ullam soluta fuga
+        corrupti, culpa, blanditiis repellendus doloremque explicabo velit
+        alias similique, illum qui officiis!
+      </p>
+      <section id="stats">
+        <div id="chart"></div>
+        <!-- voir le comportement des images en responsive et des textes, voir avec article -->
+        <div class="Type_Weakness_Attacks">
+          <div data-info="Type+Weakness">
+            <div data-info="Type">
+              <p>Type</p>
+              <img src="" alt="Type image" />
             </div>
-            <div data-info="Attacks">
-              <p>Attaques</p>
-              <img src="" alt="Attack 1 image" />
-              <img src="" alt="Attack 2 image" />
-              <img src="" alt="Attack 3 image" />
-              <img src="" alt="Attack 4 image" />
+            <div data-info="Weakness">
+              <p>Faiblesse</p>
+              <img src="" alt="Weakness image" />
             </div>
           </div>
-        </section>
+          <div data-info="Attacks">
+            <p>Attaques</p>
+            <img src="" alt="Attack 1 image" />
+            <img src="" alt="Attack 2 image" />
+            <img src="" alt="Attack 3 image" />
+            <img src="" alt="Attack 4 image" />
+          </div>
+        </div>
       </section>
-      <section id="quizz">
-        <h2>Quizz</h2>
-        <label>
-          <input />
-          <input />
-          <input />
-          <input />
-        </label>
-      </section>
-      <nav id="sticky-nav">
-        <ul>
-          <li><img src="" alt="icon-eevee" /></li>
-          <li><img src="" alt="icon-vaporeon" /></li>
-          <li><img src="" alt="icon-jolteon" /></li>
-          <li><img src="" alt="icon-flareon" /></li>
-        </ul>
-      </nav>
-    </main>
-    <footer></footer>
+    </section>
+    <section id="quizz">
+      <h2>Quizz</h2>
+      <label>
+        <input />
+        <input />
+        <input />
+        <input />
+      </label>
+    </section>
+    <nav id="sticky-nav">
+      <ul>
+        <li><img src="" alt="icon-eevee" /></li>
+        <li><img src="" alt="icon-vaporeon" /></li>
+        <li><img src="" alt="icon-jolteon" /></li>
+        <li><img src="" alt="icon-flareon" /></li>
+      </ul>
+    </nav>
+  </main>
+  <footer></footer>
 
-    <script src="index.js"></script>
-  </body>
+  <script src="index.js"></script>
+</body>
+
 </html>
