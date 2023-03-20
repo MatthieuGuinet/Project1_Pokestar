@@ -110,16 +110,16 @@ body {
     margin-left: 5px;
   }
 
-  #desktop-header-band>svg>path:hover{
+  /* #desktop-header-band>svg>path:hover{
     fill: blue;
     cursor: pointer;
-  }
+  } */
 
   #desktop-header-band>p {
     position:absolute;
     font-size:1.5rem;
     margin-top: 15px;
-    cursor:pointer;
+    /* cursor:pointer; */
   }
 
   #pokemon_left {

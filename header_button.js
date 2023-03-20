@@ -1,6 +1,15 @@
-const text_pokemon_buttons = document.querySelectorAll(".text_pokemon_buttons");
-const pokemon_buttons = document.querySelectorAll(".lr_button");
-
-text_pokemon_buttons.addEventListener('mouseover', function () {
-    pokemon_buttons.style.background = "blue";
-});
+export default function hoverButton(myArr) {
+  const textButtons = document.querySelectorAll(".text_button");
+  const svgButtons = document.querySelectorAll(".lr_buttons");
+  for (let i = 0; i < myArr.length; i++) {
+    const element = myArr[i];
+    element.addEventListener("mouseover", () => {
+      textButtons[i].style.cursor = "pointer";
+      svgButtons[i].style.fill = "blue";
+      svgButtons[i].style.cursor = "pointer";
+    });
+    element.addEventListener("mouseout", () => {
+      svgButtons[i].style.fill = "white";
+    });
+  }
+}
