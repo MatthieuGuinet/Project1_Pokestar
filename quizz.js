@@ -71,7 +71,7 @@ let question5 = {
 };
 
 let question6 = {
-  question: "En musique, tu es plutôt ?",
+  question: "En musique, tu écoutes ?",
   answer1: "Beethoven",
   answer2: "Céline Dion",
   answer3: "Johnny Haliday",
@@ -222,7 +222,7 @@ function nextQuestion() {
           allAnswers[i].style.display = "none";
         }
 
-        //comparing each pokemon score to the best score. If winning, then displaying new title, new image of the winning pokemon by giving the div the correct source
+        //comparing each pokemon score to the best score. If winning, then displays new title, new image of the winning pokemon by giving the quizzResultImg the correct source
 
         if (eeveeCount === pokemonMaxCount) {
           quizzQuestion.innerText = "EVOLI !!!!";
@@ -272,6 +272,8 @@ function replay() {
   answer2.classList.add(question1.answer2class);
   answer3.classList.add(question1.answer3class);
   answer4.classList.add(question1.answer4class);
+
+  // displaying back "suivant" button 
 
   let nextButton = document.getElementById("quizz-button-next");
   nextButton.style.display = "initial";
