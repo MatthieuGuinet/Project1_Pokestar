@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 
 :root{
     --common-color : #282828;
@@ -145,6 +146,82 @@ body {
     right: 0px;
 }
 
+
+
+/* remove browser auto margin and padding, define a font family and the box sizing */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+/* no display header desktop on mobile first */
+#desktop-header-band {
+  display: none;
+}
+
+/* definition of the header img on mobile first */
+#mobile-header-band > img {
+  width: 100%;
+  height: 100px;
+}
+
+/* displaying the header img and pokemon name on row direction and centered on mobile first and fixing the position to add text on it */
+#mobile-header-band {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+/* displaying the name of the pokemon on the img on mobile first */
+.pokemon-name-mobile {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* displaying elements under the header bar as a column */
+#hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* defining the pokemon image resizing */
+#hero > img {
+  width: clamp(150px, 50vw, 600px);
+}
+
+/* display off on pokemon name on mobile first */
+.pokemon-name {
+  display: none;
+}
+
+/* adjusting position of pokemon type on top of the pokemon img */
+/* the color must be changed */
+#header-type {
+  order: -1;
+  background-color: rgba(139, 69, 19, 0.547);
+  border-radius: 10px;
+  padding: 3px 15px;
+}
+
+/* removing margin auto */
+#header-type > p {
+  margin: 0;
+}
+
+/* adjusting paragraph style on the description text */
+#little-description {
+  margin: 0;
+  padding: 4px 15px;
+  line-height: 22px;
+  font-size: 1.5rem;
+}
 @media screen and (min-width: 768px) {
     #burger_icon {
         display: none;
@@ -199,5 +276,88 @@ body {
 
     }
 
+  /* position elements of header centered and define an height */
+  header {
+    min-height: 600px;
+    max-height:1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* display off on header band mobile */
+  #mobile-header-band {
+    display: none;
+  }
+
+  #desktop-header-band {
+    display: flex;
+    background: #000;
+    position:relative;
+  }
+
+  #desktop-header-band > svg {
+    width : 50%;
+    height:100px;
+  }
+
+  #left_button {
+    margin-right: 5px;
+  }
+
+  #rigth_button {
+    margin-left: 5px;
+  }
+
+  /* #desktop-header-band>svg>path:hover{
+    fill: blue;
+    cursor: pointer;
+  } */
+
+  #desktop-header-band>p {
+    position:absolute;
+    font-size:1.5rem;
+    margin-top: 15px;
+    /* cursor:pointer; */
+  }
+
+  #pokemon_left {
+    left:35%;
+  }
+
+  #pokemon_right{
+    right:35%;
+  }
+
+  /* displaying elements on a grid */
+  #hero {
+    max-width: 1200px;
+    display: grid;
+    grid-template: 25% auto auto 3fr 25% / 300px 1fr;
+    justify-items: center;
+  }
+
+  /* adjusting each elements in the grid */
+  #little-description {
+    grid-area: 4 / 1 / 5 / 2;
+    font-size: clamp(1rem,2vw,2rem);
+    line-height: 35px;
 }
+
+  #hero > img {
+    grid-area: 1 / 2 / 6 /3;
+  }
+  #header-type {
+    grid-area: 3 / 1 / 4 /2;
+    font-size: clamp(0.5rem,2vw,1.5rem);
+  }
+
+  #hero > h1 {
+    display: initial;
+    font-size: clamp(1rem, 5vw, 5rem);
+    margin: 5px;
+    grid-area: 2 / 1 / 3 / 2;
+  }
+}
+
 
