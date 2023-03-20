@@ -365,14 +365,14 @@ body {
 
 /* quizz section design  */
 
-#quizz-section {
+#quizz {
   display: flex;
   flex-direction: column;
   align-items: center;
   color: white;
 }
 
-#quizz-section h2 {
+#quizz h2 {
   margin-top: 43px;
   font-size: 2.5rem;
 }
