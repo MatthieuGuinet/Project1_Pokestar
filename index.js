@@ -51,7 +51,7 @@ for (let i = 0; i < textButtons.length; i++) {
     const element = textButtons[i];
     element.addEventListener("mouseover", () => {
         textButtons[i].style.cursor = "pointer";
-        svgButtons[i].style.fill = "blue";
+        svgButtons[i].style.fill = "#949494";
         svgButtons[i].style.cursor = "pointer";
     });
     element.addEventListener("mouseout", () => {
@@ -63,7 +63,7 @@ for (let i = 0; i < svgButtons.length; i++) {
     const element = svgButtons[i];
     element.addEventListener("mouseover", () => {
         textButtons[i].style.cursor = "pointer";
-        svgButtons[i].style.fill = "blue";
+        svgButtons[i].style.fill = "#949494";
         svgButtons[i].style.cursor = "pointer";
     });
     element.addEventListener("mouseout", () => {
