@@ -29,7 +29,7 @@ for (let i=0 ; i<allAnswers.length;i++){
   })
 }
 
-// adding addeventListener function to replay button
+// Section "quizz" adding addeventListener function to replay button
 
 const replayButton = document.getElementById("quizz-replay-button");
 replayButton.addEventListener("click", () => {
