@@ -18,7 +18,7 @@
     width: 100%; 
 }
 
-#pin-link{
+#pin-div{
     position: absolute;
     width: 10%;
     top : 5%;
@@ -29,10 +29,10 @@
     width: 100%;
 }
 
-#pin-link:hover, #pin-link:focus{
+#pin-div:hover, #pin-div:focus{
     color: black;
 }
-#pin-link>span{
+#pin-div>span{
     position: absolute;
     top: 100px;
     right: -60px;
@@ -52,7 +52,7 @@
     z-index: 2;
 }
 
-#pin-link:hover>span, #pin-link:focus>span{
+#pin-div:hover>span, #pin-div:focus>span{
     transform: scale(1) rotate(0);
     opacity:1;
 }
