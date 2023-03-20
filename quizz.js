@@ -36,7 +36,7 @@ let question2 = {
 
 let question3 = {
   question: "Tu es plutôt d'humeur ?",
-  answer1: "Douce et apaiséé",
+  answer1: "Douce et apaisée",
   answer2: "Sanguine et massacrante",
   answer3: "Electrique",
   answer4: "Lisse et facile",
