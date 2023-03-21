@@ -10,10 +10,10 @@
   --secondary-color-flareon: #fb7c26;
   --main-color-vaporeon: #879cc6;
   --secondary-color-vaporeon: #3a5d83;
+  --black-color : #000000;
 }
 
 * {
-  background-color: var(--main-color-eevee);
   margin: 0;
   box-sizing: border-box;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -23,13 +23,16 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: raleway;
+  font-size: 1.3rem;
+  color: white;
+  background-color: var(--main-color-eevee);
 }
 
 /* Barre de navigation -> header */
 /* Mobile first */
 #nav_header {
-  background: black;
-  color: white;
+  background: var(--black-color);
   height: 60px;
   position: fixed;
   width: 100%;
@@ -42,17 +45,20 @@ body {
   display: flex;
   align-items: center;
   flex-grow: 1;
+  
 }
 
 #logo_and_title .logo {
   padding-inline: 10px;
   height: 50px;
+  
 }
 
 /* Lien de navigation menu burger */
 #nav_links a {
   text-decoration: none;
-  color: rgb(252, 252, 252);
+  color: rgb(252, 252, 252)
+  
 }
 
 #nav_links a:hover {
@@ -61,40 +67,38 @@ body {
 
 #nav_links ul {
   list-style: none;
+  width: 90%;
 }
 
 #nav_links li {
-  padding: 15px;
+  text-align: center;
+
 }
 
 /* Apparence du menu burger ouvert */
 /* Le menu est fermé par defaut */
 #nav_links {
-  background-color: rgb(33, 32, 32);
-  opacity: 0.8;
+  background-color: rgba(0,0,0, 0.9);
   border-radius: 0px 0px 0px 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 50px;
-  z-index: 100;
-  min-width: 50vw;
-  max-width: 80vw;
-  min-height: 30vh;
-  width: 300px;
-  transition: right 1s;
+  top: 60px;
+  z-index: 2;
+  width: 70vw;
+  transition: right 1s;;
 }
 
 .burger_close {
-  right: -400px;
+  right: -800px;
 }
 
 /* Icone du menu burger */
 #burger_icon span {
   display: inline-block;
-  width: 35px;
+  width: 30px;
   height: 3px;
   background-color: white;
   border-radius: 3px;
@@ -106,7 +110,7 @@ body {
 #burger_icon span::before,
 #burger_icon span::after {
   content: "";
-  width: 35px;
+  width: 30px;
   height: 3px;
   background-color: white;
   border-radius: 3px;
@@ -117,11 +121,11 @@ body {
 }
 
 #burger_icon span::before {
-  top: -8px;
+  top: -10px;
 }
 
 #burger_icon span::after {
-  top: 8px;
+  top: 10px;
 }
 
 /* animationBurger -> class ajouté en JS */
@@ -145,9 +149,12 @@ body {
 
 /* Position du menu burger ouvert */
 .burger_open {
-  margin-top: 10px;
   position: fixed;
   right: 0px;
+}
+
+.burger_open li, .burger_close li{
+  padding: 7% 0;
 }
 
 header {
@@ -163,6 +170,7 @@ header {
 #mobile-header-band > img {
   width: 100%;
   height: 100px;
+  margin-top: 40px;
 }
 
 /* displaying the header img and pokemon name on row direction and centered on mobile first and fixing the position to add text on it */
@@ -178,9 +186,11 @@ header {
 .pokemon-name-mobile {
   position: absolute;
   top: 30%;
-  left: 50%;
+  left: 51%;
   transform: translate(-50%, -50%);
-  background-color: rgba(255, 255, 255, 0);
+  margin-top:42px;
+  font-size : 2rem;
+  letter-spacing: 1rem;
 }
 
 /* displaying elements under the header bar as a column */
@@ -192,7 +202,7 @@ header {
 
 /* defining the pokemon image resizing */
 #hero > img {
-  width: clamp(150px, 50vw, 600px);
+  width: clamp(150px, 80%, 450px);
   margin-bottom: 15px;
 }
 
@@ -221,8 +231,8 @@ header {
 #little-description {
   margin: 0;
   padding: 4px 15px;
-  line-height: 22px;
-  font-size: 1.5rem;
+  text-align: center;
+  line-height : 1.6rem;
 }
 
 /* legend section design  */
@@ -497,6 +507,10 @@ header {
     display: none;
   }
 
+  body{
+    font-size: 1.5rem;
+  }
+
   #nav_header {
     display: flex;
     justify-content: space-between;
@@ -504,18 +518,17 @@ header {
   }
 
   #logo_and_title .logo {
-    height: 70px;
+    height: 60px;
   }
 
   #logo_title {
-    /* padding-left: 10px; */
+    padding-left: 10px;
     font-weight: bold;
   }
 
   #nav_links ul {
     display: flex;
-    flex-direction: row;
-    padding-right: 30px;
+    margin-right: 10%;
   }
 
   #nav_links {
@@ -526,20 +539,20 @@ header {
     min-height: auto;
     background-color: transparent;
     opacity: 1;
+     margin-right: 2%;
   }
 
-  #nav_links li {
-    padding: 0px;
-  }
+  
 
   #nav_links a {
-    border-radius: 15px;
-    padding: 10px 30px;
+   
     height: 200px;
+    padding: 10px 15px;
   }
-
+  
   #nav_links a:hover {
     background-color: rgba(255, 255, 255, 0.237);
+    border-radius: 15px;
   }
 
   /* position elements of header centered and define an height */
@@ -579,16 +592,18 @@ header {
   #desktop-header-band > p {
     position: absolute;
     font-size: 1.5rem;
-    margin-top: 15px;
+    letter-spacing: 1rem;
+    margin-top: 22px;
     background-color:rgba(0, 0, 0, 0);
+    text-align: center;
   }
 
   #pokemon_left {
-    left: 35%;
+    right: 54.5%;
   }
 
   #pokemon_right {
-    right: 35%;
+    left: 55%;
   }
 
   /* displaying elements on a grid */
