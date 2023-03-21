@@ -4,6 +4,18 @@ const options = {
       name: "Evoli",
       data: [67, 34, 38, 35, 90],
     },
+    {
+      name: "Voltali",
+      data: [34, 93, 42, 89, 37],
+    },
+    {
+      name: "Pyroli",
+      data: [56, 78, 54, 74, 56],
+    },
+    {
+      name: "Aquali",
+      data: [65, 60, 89, 53, 40],
+    },
   ],
   xaxis: {
     categories: ["Intelligence", "Strength", "Defense", "Speed", "Cuteness"],
@@ -20,7 +32,7 @@ const options = {
   yaxis: {
     show: false,
   },
-  colors: ["#C08C5B"],
+  colors: ["#C08C5B", "#E9BC2E", "#FFA948", "#879CC6"],
   chart: {
     height: 500,
     type: "radar",
