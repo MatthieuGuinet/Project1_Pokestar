@@ -5,7 +5,7 @@ export default function hoverButton(myArr) {
     const element = myArr[i];
     element.addEventListener("mouseover", () => {
       textButtons[i].style.cursor = "pointer";
-      svgButtons[i].style.fill = "blue";
+      svgButtons[i].style.fill = "#949494";
       svgButtons[i].style.cursor = "pointer";
     });
     element.addEventListener("mouseout", () => {
