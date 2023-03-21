@@ -35,6 +35,7 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
+  z-index: 3;
 }
 
 #logo_and_title {
@@ -160,6 +161,7 @@ body {
 /* no display header desktop on mobile first */
 #desktop-header-band {
   display: none;
+  margin-top: 60px;
 }
 
 /* definition of the header img on mobile first */
@@ -540,6 +542,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
   }
 
   /* display off on header band mobile */
@@ -551,6 +554,7 @@ body {
     display: flex;
     background: #000;
     position: relative;
+    margin-top: 90px;
   }
 
   #desktop-header-band > svg {
