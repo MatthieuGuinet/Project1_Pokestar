@@ -35,7 +35,7 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
-  z-index: 3;
+  z-index: 2;
 }
 
 #logo_and_title {
@@ -150,14 +150,9 @@ body {
   right: 0px;
 }
 
-/* remove browser auto margin and padding, define a font family and the box sizing */
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Raleway", sans-serif;
+header {
+  margin-top: 0px;
 }
-
 /* no display header desktop on mobile first */
 #desktop-header-band {
   display: none;
@@ -182,9 +177,10 @@ body {
 /* displaying the name of the pokemon on the img on mobile first */
 .pokemon-name-mobile {
   position: absolute;
-  top: 15%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0);
 }
 
 /* displaying elements under the header bar as a column */
@@ -197,6 +193,7 @@ body {
 /* defining the pokemon image resizing */
 #hero > img {
   width: clamp(150px, 50vw, 600px);
+  margin-bottom: 15px;
 }
 
 /* display off on pokemon name on mobile first */
@@ -208,14 +205,16 @@ body {
 /* the color must be changed */
 #header-type {
   order: -1;
-  background-color: rgba(139, 69, 19, 0.547);
+  background-color: #180d04a9;
   border-radius: 10px;
   padding: 3px 15px;
+  margin-bottom: 15px;
 }
 
 /* removing margin auto */
 #header-type > p {
   margin: 0;
+  background-color:rgba(255, 255, 255, 0);
 }
 
 /* adjusting paragraph style on the description text */
@@ -363,6 +362,14 @@ body {
   align-items: center;
   margin: 10%;
   gap: 20px;
+}
+
+
+/*Chart*/
+
+#chart {
+  width : clamp(300px, 50vw, 600px);
+  margin: 35px auto;
 }
 
 /* quiz section design  */
@@ -538,7 +545,7 @@ body {
   /* position elements of header centered and define an height */
   header {
     min-height: 600px;
-    max-height: 1000px;
+    max-height: 1200px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -552,14 +559,13 @@ body {
 
   #desktop-header-band {
     display: flex;
-    background: #000;
     position: relative;
     margin-top: 90px;
   }
 
   #desktop-header-band > svg {
     width: 50%;
-    height: 100px;
+    height: 120px;
   }
 
   #left_button {
@@ -570,16 +576,11 @@ body {
     margin-left: 5px;
   }
 
-  /* #desktop-header-band>svg>path:hover{
-    fill: blue;
-    cursor: pointer;
-  } */
-
   #desktop-header-band > p {
     position: absolute;
     font-size: 1.5rem;
     margin-top: 15px;
-    /* cursor:pointer; */
+    background-color:rgba(0, 0, 0, 0);
   }
 
   #pokemon_left {
@@ -601,7 +602,7 @@ body {
   /* adjusting each elements in the grid */
   #little-description {
     grid-area: 4 / 1 / 5 / 2;
-    font-size: clamp(1rem, 2vw, 2rem);
+    font-size: clamp(1rem, 2vw, 1.5rem);
     line-height: 35px;
   }
 

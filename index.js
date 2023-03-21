@@ -1,5 +1,11 @@
 //import of the displayText function to unwrap the legend section test
 import displayText from "./displayText.js";
+
+
+//import hoverButton to use the hovering on the buttons a the top of the pokemon
+import hoverButton from './header_button.js';
+import {options} from './chart.js';
+
 import { quizFunctions } from "./quiz.js";
 
 // ouverture et fermeture du menu burger + animation de l'icone
@@ -25,50 +31,12 @@ for (let i = 0; i < navElement.length; i++) {
   });
 }
 
-// import hoverButton from './header_button.js'
+//Hover on desktop header band
 
-// const textButtons = document.querySelectorAll(".text_button");
-// const svgButtons = document.querySelectorAll(".lr_buttons");
-
-// hoverButton(textButtons);
-// hoverButton(svgButtons);
-
-const buttonPokemon = document.querySelectorAll(".button_pokemon");
 const textButtons = document.querySelectorAll(".text_button");
 const svgButtons = document.querySelectorAll(".lr_buttons");
-
-// // textButtons.map((button, index) => {
-// //     return button.addEventListener("mouseover", () => {
-// //     console.log("ça marche !");
-// //     // svgButtons[index].style.fill = "blue";
-// //     // svgButtons[index].style.cursor = "pointer";
-// //     // button[index].style.fill = "blue";
-// //     // button[index].style.cursor = "pointer";
-// // })});
-
-for (let i = 0; i < textButtons.length; i++) {
-  const element = textButtons[i];
-  element.addEventListener("mouseover", () => {
-    textButtons[i].style.cursor = "pointer";
-    svgButtons[i].style.fill = "blue";
-    svgButtons[i].style.cursor = "pointer";
-  });
-  element.addEventListener("mouseout", () => {
-    svgButtons[i].style.fill = "white";
-  });
-}
-
-for (let i = 0; i < svgButtons.length; i++) {
-  const element = svgButtons[i];
-  element.addEventListener("mouseover", () => {
-    textButtons[i].style.cursor = "pointer";
-    svgButtons[i].style.fill = "blue";
-    svgButtons[i].style.cursor = "pointer";
-  });
-  element.addEventListener("mouseout", () => {
-    svgButtons[i].style.fill = "white";
-  });
-}
+hoverButton(textButtons);
+hoverButton(svgButtons);
 
 // Section "legend", button "poursuivre l'aventure"
 let legendButton = document.getElementById("legend-deployment");
@@ -118,8 +86,15 @@ function scrollTheMap() {
 // création d'un 'addeventlistener' appelant la fonction principale lorsque le clic gauche est enfoncé
 scrollableMap.addEventListener("mousedown", scrollTheMap);
 
+
+//Chart 
+let chart = new ApexCharts(document.querySelector("#chart"), options);
+chart.render();
+
+
 // Section "quiz" button "suivant"
 let nextButton = document.getElementById("quiz-button-next");
+
 nextButton.addEventListener("click", () => {
   quizFunctions.nextQuestion();
 });
