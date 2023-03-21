@@ -8,6 +8,9 @@ import {options} from './chart.js';
 
 import { quizFunctions } from "./quiz.js";
 
+// import modify content function 
+import { switchPokemon } from "./content_modification.js";
+
 // ouverture et fermeture du menu burger + animation de l'icone
 const burgerIcon = document.getElementById("burger_icon");
 const burgerMenu = document.getElementById("nav_links");
@@ -120,3 +123,9 @@ const replayButton = document.getElementById("quiz-replay-button");
 replayButton.addEventListener("click", () => {
   quizFunctions.replay();
 });
+
+//sticky-nav addEventListener
+
+let flareonNavButton = document.getElementById("flareon-nav-button");
+console.log(flareonNavButton);
+addEventListener("click", ()=>{switchPokemon.flareonContent.replaceContent()});
