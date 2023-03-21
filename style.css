@@ -24,9 +24,14 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: raleway;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: white;
   background-color: var(--main-color-eevee);
+}
+
+h2{
+  letter-spacing: 0.1rem;
+  font-size: 1.8rem;
 }
 
 /* Barre de navigation -> header */
@@ -41,6 +46,11 @@ body {
   z-index: 2;
 }
 
+#logo_title{
+  letter-spacing: 0.2rem;
+  font-weight: bold;
+}
+
 #logo_and_title {
   display: flex;
   align-items: center;
@@ -50,7 +60,7 @@ body {
 
 #logo_and_title .logo {
   padding-inline: 10px;
-  height: 50px;
+  height: 40px;
   
 }
 
@@ -99,7 +109,7 @@ body {
 #burger_icon span {
   display: inline-block;
   width: 30px;
-  height: 3px;
+  height: 2px;
   background-color: white;
   border-radius: 3px;
   margin-bottom: 6px;
@@ -111,7 +121,7 @@ body {
 #burger_icon span::after {
   content: "";
   width: 30px;
-  height: 3px;
+  height: 2px;
   background-color: white;
   border-radius: 3px;
   display: inline-block;
@@ -191,6 +201,7 @@ header {
   margin-top:42px;
   font-size : 2rem;
   letter-spacing: 1rem;
+  font-weight:800;
 }
 
 /* displaying elements under the header bar as a column */
@@ -218,7 +229,7 @@ header {
   background-color: var(--secondary-color-eevee);
   border-radius: 10px;
   padding: 3px 15px;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   color: var(--black-color);
 }
 
@@ -262,7 +273,6 @@ header {
 #legend h2 {
   margin-top: 43px;
   background-color: var(--common-color);
-  font-size: 2.5rem;
 }
 
 #legend p {
@@ -394,7 +404,6 @@ header {
 
 #quiz h2 {
   margin-top: 43px;
-  font-size: 2.5rem;
 }
 
 #quiz-title {
@@ -547,7 +556,7 @@ header {
 
   #nav_links a {
    
-    height: 200px;
+    /* height: 200px; */
     padding: 10px 15px;
   }
   
@@ -575,6 +584,7 @@ header {
     display: flex;
     position: relative;
     margin-top: 90px;
+    width: 100%;
   }
 
   #desktop-header-band > svg {
@@ -583,11 +593,11 @@ header {
   }
 
   #left_button {
-    margin-right: 5px;
+    margin-right: 2.5px;
   }
 
-  #rigth_button {
-    margin-left: 5px;
+  #right_button {
+    margin-left: 2.5px;
   }
 
   #desktop-header-band > p {
@@ -609,24 +619,25 @@ header {
 
   /* displaying elements on a grid */
   #hero {
-    max-width: 1200px;
+    /* width: 1200px; */
     display: grid;
-    grid-template: 25% auto auto 3fr 25% / 300px 1fr;
+    grid-template: 25% auto auto 3fr 25% / 1fr 1fr 1fr 1fr;
     justify-items: center;
   }
 
   /* adjusting each elements in the grid */
   #little-description {
-    grid-area: 4 / 1 / 5 / 2;
+    grid-area: 4 / 2 / 5 / 3;
     font-size: clamp(1rem, 2vw, 1.5rem);
     line-height: 35px;
   }
 
   #hero > img {
-    grid-area: 1 / 2 / 6 /3;
+    grid-area: 1 / 3 / 6 /4;
+    width:clamp(400px, 30vw,800px);
   }
   #header-type {
-    grid-area: 3 / 1 / 4 /2;
+    grid-area: 3 / 2 / 4 /3;
     font-size: clamp(0.5rem, 2vw, 1.5rem);
   }
 
@@ -635,7 +646,7 @@ header {
     letter-spacing: 0.6rem;
     font-size: clamp(1rem, 5vw, 5rem);
     margin: 5%;
-    grid-area: 2 / 1 / 3 / 2;
+    grid-area: 2 / 2 / 3 / 3;
   }
 
   /* media queries legend section  */
