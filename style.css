@@ -490,6 +490,11 @@ header {
   padding: 0 30px;
 }
 
+footer{
+  padding:10px 10px 10px 50px ;
+  background-color:var(--black-color);
+}
+
 /* media queries */
 
 @media screen and (min-width: 768px) {
@@ -561,6 +566,7 @@ header {
     display: flex;
     position: relative;
     margin-top: 90px;
+    width: 100%;
   }
 
   #desktop-header-band > svg {
