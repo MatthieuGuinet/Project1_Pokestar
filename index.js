@@ -1,40 +1,42 @@
 //import of the displayText function to unwrap the legend section test
 import displayText from "./displayText.js";
-import { quizzFunctions } from "./quizz.js";
+
+
 //import hoverButton to use the hovering on the buttons a the top of the pokemon
 import hoverButton from './header_button.js';
 import {options} from './chart.js';
 
+import { quizFunctions } from "./quiz.js";
 
 // ouverture et fermeture du menu burger + animation de l'icone
 const burgerIcon = document.getElementById("burger_icon");
 const burgerMenu = document.getElementById("nav_links");
-const burger = document.getElementById("burger")
+const burger = document.getElementById("burger");
 
 function closeNav() {
-    burgerMenu.classList.toggle("burger_open");
-    burger.classList.toggle("animationOpen");
+  burgerMenu.classList.toggle("burger_open");
+  burger.classList.toggle("animationOpen");
 }
 
-burgerIcon.addEventListener('click', function () {
-    closeNav()
-})
+burgerIcon.addEventListener("click", function () {
+  closeNav();
+});
 // fermeture du menu burger après click sur un lien
 const navElement = document.getElementsByClassName("nav");
 
 for (let i = 0; i < navElement.length; i++) {
-    const link = navElement[i];
-    link.addEventListener("click", () => {
-        closeNav()
-    })
+  const link = navElement[i];
+  link.addEventListener("click", () => {
+    closeNav();
+  });
 }
 
 //Hover on desktop header band
+
 const textButtons = document.querySelectorAll(".text_button");
 const svgButtons = document.querySelectorAll(".lr_buttons");
 hoverButton(textButtons);
 hoverButton(svgButtons);
-
 
 // Section "legend", button "poursuivre l'aventure"
 let legendButton = document.getElementById("legend-deployment");
@@ -42,7 +44,7 @@ legendButton.addEventListener("click", () => {
   displayText();
 });
 
-// déclaration des variables contenant les coordonnées de départ. On utilise "let" car les coordonnées vont être amenées à changer 
+// déclaration des variables contenant les coordonnées de départ. On utilise "let" car les coordonnées vont être amenées à changer
 let startX = 0;
 let startY = 0;
 let scrollTop = 0;
@@ -53,68 +55,68 @@ const scrollableMap = document.getElementById("scrollable_map");
 const wrapper = document.getElementById("map_wrapper");
 
 // fonction contenant l'ensemble des fonctions et instructions permettant le scroll
-function scrollTheMap(){
+function scrollTheMap() {
+  // méthode 'onmousedown' crée une interaction lorsque le clic gauche est maintenu;
 
-// méthode 'onmousedown' crée une interaction lorsque le clic gauche est maintenu;
-
-// le paramètre event est un objet "natif" de JS contenant diverses données : par exemple "event.clientX" donne la coordonnée sur l'axe X du pointeur de la souris
-scrollableMap.onmousedown = function mouseDown(event){
+  // le paramètre event est un objet "natif" de JS contenant diverses données : par exemple "event.clientX" donne la coordonnée sur l'axe X du pointeur de la souris
+  scrollableMap.onmousedown = function mouseDown(event) {
     startX = event.clientX;
     startY = event.clientY;
     scrollTop = wrapper.scrollTop;
     scrollLeft = wrapper.scrollLeft;
-}
-// méthode 'onmousemove' crée une interaction lorsque l'on bouge le curseur avec le clic gauche enfoncé
+  };
+  // méthode 'onmousemove' crée une interaction lorsque l'on bouge le curseur avec le clic gauche enfoncé
 
-// on donne les instructions afin que le scroll suive le curseur
-scrollableMap.onmousemove = function mouseMove(event){
+  // on donne les instructions afin que le scroll suive le curseur
+  scrollableMap.onmousemove = function mouseMove(event) {
     wrapper.scrollTo({
-        left: scrollLeft + (startX - event.clientX),
-        top: scrollTop + (startY - event.clientY)
-    })
-}
+      left: scrollLeft + (startX - event.clientX),
+      top: scrollTop + (startY - event.clientY),
+    });
+  };
 
-// méthode 'onmouseup' crée une interaction lorsque l'on relâche le clic gauche
+  // méthode 'onmouseup' crée une interaction lorsque l'on relâche le clic gauche
 
-// on veut que le scroll s'arrête
-scrollableMap.onmouseup = function mouseUp() {
-    scrollableMap.onmousemove = null
-}
+  // on veut que le scroll s'arrête
+  scrollableMap.onmouseup = function mouseUp() {
+    scrollableMap.onmousemove = null;
+  };
 }
 
 // création d'un 'addeventlistener' appelant la fonction principale lorsque le clic gauche est enfoncé
-scrollableMap.addEventListener("mousedown",scrollTheMap)
+scrollableMap.addEventListener("mousedown", scrollTheMap);
 
 
 //Chart 
 let chart = new ApexCharts(document.querySelector("#chart"), options);
 chart.render();
 
-// Section "quizz" button "suivant"
-let nextButton = document.getElementById("quizz-button-next");
+
+// Section "quiz" button "suivant"
+let nextButton = document.getElementById("quiz-button-next");
+
 nextButton.addEventListener("click", () => {
-  quizzFunctions.nextQuestion();
+  quizFunctions.nextQuestion();
 });
 
-// Section "quizz". adding an isChosen class to the chosen item, removing all others
+// Section "quiz". adding an isChosen class to the chosen item, removing all others
 
-const allAnswers = document.getElementsByClassName("quizz-answer");
+const allAnswers = document.getElementsByClassName("quiz-answer");
 
-for (let i=0 ; i<allAnswers.length;i++){
+for (let i = 0; i < allAnswers.length; i++) {
   allAnswers[i].addEventListener("click", function () {
-    // deleting all "isChosen" classes among the answers 
-    for (let j=0; j<allAnswers.length;j++){
-    allAnswers[j].classList.remove("isChosen");
-  }
+    // deleting all "isChosen" classes among the answers
+    for (let j = 0; j < allAnswers.length; j++) {
+      allAnswers[j].classList.remove("isChosen");
+    }
     // adding "isChosen" to the allAnswers[i] clicked
     allAnswers[i].classList.add("isChosen");
-  })
+  });
 }
 
-// Section "quizz" adding addeventListener function to replay button
+// Section "quiz" adding addeventListener function to replay button
 
-const replayButton = document.getElementById("quizz-replay-button");
+const replayButton = document.getElementById("quiz-replay-button");
 replayButton.addEventListener("click", () => {
-  quizzFunctions.replay();
+  quizFunctions.replay();
 });
-
