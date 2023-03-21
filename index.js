@@ -4,7 +4,7 @@ import displayText from "./displayText.js";
 
 //import hoverButton to use the hovering on the buttons a the top of the pokemon
 import hoverButton from './header_button.js';
-import {options} from './chart.js';
+import { options } from './chart.js';
 
 import { quizFunctions } from "./quiz.js";
 
@@ -119,4 +119,11 @@ for (let i = 0; i < allAnswers.length; i++) {
 const replayButton = document.getElementById("quiz-replay-button");
 replayButton.addEventListener("click", () => {
   quizFunctions.replay();
+});
+
+// Section sticky nav
+
+const stickyNavIcon = document.getElementsByClassName("sticky-nav-icon");
+stickyNavIcon.addEventListener("click", function () {
+  ;
 });
