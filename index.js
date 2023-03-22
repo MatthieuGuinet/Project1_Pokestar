@@ -2,8 +2,10 @@
 import displayText from "./displayText.js";
 
 //import hoverButton to use the hovering on the buttons a the top of the pokemon
+
 import hoverButton from "./header_button.js";
 import { options } from "./chart.js";
+
 
 import { quizFunctions } from "./quiz.js";
 
@@ -122,6 +124,8 @@ replayButton.addEventListener("click", () => {
   quizFunctions.replay();
 });
 
+
+
 //sticky-nav addEventListener
 
 let eeveeNavButton = document.getElementById("evee-nav-button");
@@ -141,3 +145,4 @@ let vaporeonNavButton = document.getElementById("vaporeon-nav-button");
 vaporeonNavButton.addEventListener("click", () => {
   switchPokemon.vaporeonContent.replaceContent();
 });
+
