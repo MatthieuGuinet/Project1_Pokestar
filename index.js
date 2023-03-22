@@ -1,14 +1,13 @@
 //import of the displayText function to unwrap the legend section test
 import displayText from "./displayText.js";
 
-
 //import hoverButton to use the hovering on the buttons a the top of the pokemon
-import hoverButton from './header_button.js';
-import {options} from './chart.js';
+import hoverButton from "./header_button.js";
+import { options } from "./chart.js";
 
 import { quizFunctions } from "./quiz.js";
 
-// import modify content function 
+// import modify content function
 import { switchPokemon } from "./content_modification.js";
 
 // ouverture et fermeture du menu burger + animation de l'icone
@@ -89,11 +88,9 @@ function scrollTheMap() {
 // création d'un 'addeventlistener' appelant la fonction principale lorsque le clic gauche est enfoncé
 scrollableMap.addEventListener("mousedown", scrollTheMap);
 
-
-//Chart 
+//Chart
 let chart = new ApexCharts(document.querySelector("#chart"), options);
 chart.render();
-
 
 // Section "quiz" button "suivant"
 let nextButton = document.getElementById("quiz-button-next");
@@ -126,6 +123,20 @@ replayButton.addEventListener("click", () => {
 
 //sticky-nav addEventListener
 
-let flareonNavButton = document.getElementById("flareon-nav-button");
-console.log(flareonNavButton);
-addEventListener("click", ()=>{switchPokemon.flareonContent.replaceContent()});
+const eeveeNavButton = document.getElementById("evee-nav-button");
+console.log(eeveeNavButton);
+// eeveeNavButton.addEventListener("click", () => {
+//   switchPokemon.eeveeContent.replaceContent();
+// });
+// let flareonNavButton = document.getElementById("flareon-nav-button");
+// flareonNavButton.addEventListener("click", () => {
+//   switchPokemon.flareonContent.replaceContent();
+// });
+// let jolteonNavButton = document.getElementById("jolteon-nav-button");
+// jolteonNavButton.addEventListener("click", () => {
+//   switchPokemon.jolteonContent.replaceContent();
+// });
+// let vaporeonNavButton = document.getElementById("vaporeon-nav-button");
+// vaporeonNavButton.addEventListener("click", () => {
+//   switchPokemon.vaporeonContent.replaceContent();
+// });

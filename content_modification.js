@@ -42,22 +42,25 @@ replaceContent(){
     // idem pour type, weakness, attacks, etc... mettre les bons IDs
     document.querySelector("header").style.backgroundColor = `${this.mainColorVarName}`;
     document.getElementById("hero").style.backgroundColor = `${this.mainColorVarName}`;
-    document.documentElement.style.setProperty('--main-color-eevee',`${this.mainColorVarName}`);
+    document.documentElement.style.setProperty('--main-color',`${this.mainColorVarName}`);
+    document.documentElement.style.setProperty('--secondary-color',`${this.secondaryColorVarName}`);
 }
 
 }
 
 // declaration of the four pokemon contents 
 
-// eeveeContent = new PokemonContent();
-const flareonContent = new PokemonContent("PYROLI","#fb7c26","--secondary-color-flareon","VOLTALI","EEVEE","FEU","Roux, les yeux bleus, pour 0.58m de brasier","assets\\Flareon-Transparent-Image.png","C'est un grand grand guerrier de l'apocalypse","Tu le trouveras en cherchant bien","assets\\aqua_nav.png", "Il a plein de caractéristiques super chouettes","assets\\pins map.png", "blabla","blabla","blabla","blabla","blabla");
-// jolteonContent = new PokemonContent();
-// vaporeonContent = new PokemonContent();
-
+const eeveeContent = new PokemonContent("EVOLI","#3a3129","#c5915d","AQUALI","PYROLI","FEU","Roux, les yeux bleus, pour 0.58m de brasier","assets\\Flareon-Transparent-Image.png","C'est un grand grand guerrier de l'apocalypse","Tu le trouveras en cherchant bien","assets\\aqua_nav.png", "Il a plein de caractéristiques super chouettes","assets\\pins map.png", "blabla","blabla","blabla","blabla","blabla");
+const flareonContent = new PokemonContent("PYROLI","#ffa948","#fb7c26","EVOLI","VOLTALI","FEU","Roux, les yeux bleus, pour 0.58m de brasier","assets\\Flareon-Transparent-Image.png","C'est un grand grand guerrier de l'apocalypse","Tu le trouveras en cherchant bien","assets\\aqua_nav.png", "Il a plein de caractéristiques super chouettes","assets\\pins map.png", "blabla","blabla","blabla","blabla","blabla");
+const jolteonContent = new PokemonContent("VOLTALI","#e9bc2e","#b9812b","PYROLI","AQUALI","ELECTRIQUE","Roux, les yeux bleus, pour 0.58m de brasier","assets\\Flareon-Transparent-Image.png","C'est un grand grand guerrier de l'apocalypse","Tu le trouveras en cherchant bien","assets\\aqua_nav.png", "Il a plein de caractéristiques super chouettes","assets\\pins map.png", "blabla","blabla","blabla","blabla","blabla");
+const vaporeonContent = new PokemonContent("AQUALI","#879cc6","#3a5d83","VOLTALI","EVOLI","EAU","Roux, les yeux bleus, pour 0.58m de brasier","assets\\Flareon-Transparent-Image.png","C'est un grand grand guerrier de l'apocalypse","Tu le trouveras en cherchant bien","assets\\aqua_nav.png", "Il a plein de caractéristiques super chouettes","assets\\pins map.png", "blabla","blabla","blabla","blabla","blabla");
 
 
 //A tous les endroits nécessaires, addEventListener(click, function(eeveeStyle,eeveeContent))
 
 export let switchPokemon = {
-     flareonContent: flareonContent,
+    eeveeContent,
+    flareonContent,
+    jolteonContent,
+    vaporeonContent,
     };
