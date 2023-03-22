@@ -32,16 +32,16 @@ replaceContent(){
     document.getElementsByClassName("pokemon-name")[0].textContent = `${this.pokemonNameCapitalCase}`;
     document.getElementById("pokemon_left").textContent = `${this.headerLeftName}`;
     document.getElementById("pokemon_right").textContent = `${this.headerRightName}`;  
-    document.getElementById("header-type").textContent = `${this.pokemonType}`;
-    document.getElementById("little-description").textContent = `${this.littleDescription}`;
-    document.getElementById("main-image").src = `${this.mainImgSrc}`;
-    document.getElementById("legend-text").textContent = `${this.legend}`;
-    document.getElementById("localisation-text").textContent = `${this.locationInstructions}`;
-    document.getElementById("map-image").src = `${this.mapImgSrc}`;
-    document.getElementById("caracteristics-text").textContent = `${this.caracteristics}`;
-    // idem pour type, weakness, attacks, etc... mettre les bons IDs
-    document.querySelector("header").style.backgroundColor = `${this.mainColorVarName}`;
-    document.getElementById("hero").style.backgroundColor = `${this.mainColorVarName}`;
+    // document.getElementById("header-type").textContent = `${this.pokemonType}`;
+    // document.getElementById("little-description").textContent = `${this.littleDescription}`;
+    // document.getElementById("main-image").src = `${this.mainImgSrc}`;
+    // document.getElementById("legend-text").textContent = `${this.legend}`;
+    // document.getElementById("localisation-text").textContent = `${this.locationInstructions}`;
+    // document.getElementById("map-image").src = `${this.mapImgSrc}`;
+    // document.getElementById("caracteristics-text").textContent = `${this.caracteristics}`;
+    // // idem pour type, weakness, attacks, etc... mettre les bons IDs
+    // document.querySelector("header").style.backgroundColor = `${this.mainColorVarName}`;
+    // document.getElementById("hero").style.backgroundColor = `${this.mainColorVarName}`;
     document.documentElement.style.setProperty('--main-color',`${this.mainColorVarName}`);
     document.documentElement.style.setProperty('--secondary-color',`${this.secondaryColorVarName}`);
 }

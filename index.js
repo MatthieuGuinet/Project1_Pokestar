@@ -124,7 +124,7 @@ replayButton.addEventListener("click", () => {
 
 //sticky-nav addEventListener
 
-let eeveeNavButton = document.getElementById("evee-nav-button");
+let eeveeNavButton = document.getElementById("eevee-nav-button");
 console.log(eeveeNavButton);
 eeveeNavButton.addEventListener("click", () => {
   switchPokemon.eeveeContent.replaceContent();
