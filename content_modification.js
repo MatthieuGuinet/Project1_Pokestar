@@ -39,7 +39,7 @@ replaceContent(){
     document.getElementById("pokemon_left").textContent = `${this.headerLeftName}`;
     document.getElementById("pokemon_right").textContent = `${this.headerRightName}`;  
     document.getElementById("header-type").textContent = `${this.pokemonType}`;
-    // document.getElementById("little-description").textContent = `${this.littleDescription}`;
+    document.getElementById("little-description").textContent = `${this.littleDescription}`;
     document.getElementById("hero-header-img").src = `${this.mainImgSrc}`;
     document.getElementById("legend-text").textContent = `${this.legend}`;
     document.getElementById("localisation-text").textContent = `${this.locationInstructions}`;
