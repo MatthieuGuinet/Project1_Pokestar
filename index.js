@@ -45,6 +45,12 @@ const svgButtons = document.querySelectorAll(".lr_buttons");
 headerFunctions.hoverButton(textButtons);
 headerFunctions.hoverButton(svgButtons);
 
+// click button to change pokemon
+const lbuttons = document.querySelectorAll(".lbutton");
+const rbuttons = document.querySelectorAll(".rbutton");
+headerFunctions.clickButtonL(lbuttons);
+headerFunctions.clickButtonR(rbuttons);
+
 // Section "legend", button "poursuivre l'aventure"
 let legendButton = document.getElementById("legend-deployment");
 legendButton.addEventListener("click", () => {
