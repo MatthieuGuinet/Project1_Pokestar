@@ -3,9 +3,8 @@ import displayText from "./displayText.js";
 
 //import hoverButton to use the hovering on the buttons a the top of the pokemon
 
-import hoverButton from "./header_button.js";
-import { options } from "./chart.js";
-
+import { headerFunctions } from "./header_button.js";
+import {options} from './chart.js';
 
 import { quizFunctions } from "./quiz.js";
 
@@ -39,8 +38,14 @@ for (let i = 0; i < navElement.length; i++) {
 
 const textButtons = document.querySelectorAll(".text_button");
 const svgButtons = document.querySelectorAll(".lr_buttons");
-hoverButton(textButtons);
-hoverButton(svgButtons);
+headerFunctions.hoverButton(textButtons);
+headerFunctions.hoverButton(svgButtons);
+
+// click button to change pokemon
+const lbuttons = document.querySelectorAll(".lbutton");
+const rbuttons = document.querySelectorAll(".rbutton");
+headerFunctions.clickButtonL(lbuttons);
+headerFunctions.clickButtonR(rbuttons);
 
 // Section "legend", button "poursuivre l'aventure"
 let legendButton = document.getElementById("legend-deployment");
@@ -91,8 +96,8 @@ function scrollTheMap() {
 scrollableMap.addEventListener("mousedown", scrollTheMap);
 
 //Chart
-// let chart = new ApexCharts(document.querySelector("#chart"), options);
-// chart.render();
+let chart = new ApexCharts(document.querySelector("#chart"), options);
+chart.render();
 
 // Section "quiz" button "suivant"
 let nextButton = document.getElementById("quiz-button-next");
@@ -114,6 +119,8 @@ for (let i = 0; i < allAnswers.length; i++) {
     }
     // adding "isChosen" to the allAnswers[i] clicked
     allAnswers[i].classList.add("isChosen");
+    document.getElementById("quiz-error").style.display = "none";
+    document.getElementById("quiz-button-next").style.marginBottom = "30px";
   });
 }
 
@@ -173,8 +180,7 @@ window.addEventListener('scroll', function () {
 
 //sticky-nav addEventListener
 
-let eeveeNavButton = document.getElementById("evee-nav-button");
-console.log(eeveeNavButton);
+let eeveeNavButton = document.getElementById("eevee-nav-button");
 eeveeNavButton.addEventListener("click", () => {
   switchPokemon.eeveeContent.replaceContent();
 });
@@ -190,4 +196,6 @@ let vaporeonNavButton = document.getElementById("vaporeon-nav-button");
 vaporeonNavButton.addEventListener("click", () => {
   switchPokemon.vaporeonContent.replaceContent();
 });
+
+
 
