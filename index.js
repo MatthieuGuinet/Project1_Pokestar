@@ -155,6 +155,21 @@ hoverIcon(icon);
 hoverIcon(circle);
 
 // sticky_nav scroll
+const stickyNav = document.getElementById("sticky-nav");
+let firstScrollPosition = window.pageYOffset
+// let windowWidth = window.innerWidth
+// if (windowWidth < 768) {
+window.addEventListener('scroll', function () {
+  let secondScrollPosition = window.pageYOffset
+  if (firstScrollPosition < secondScrollPosition) {
+    stickyNav.style.bottom = "-200px"
+  } else {
+    stickyNav.style.bottom = "0"
+  }
+  firstScrollPosition = secondScrollPosition;
+
+});
+// };
 
 //sticky-nav addEventListener
 
