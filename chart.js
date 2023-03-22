@@ -32,6 +32,12 @@ const options = {
   yaxis: {
     show: false,
   },
+  legend: {
+    fontFamily : "Raleway",
+    labels: {
+        colors: "white",
+    }
+  },
   colors: ["#C08C5B", "#E9BC2E", "#FFA948", "#879CC6"],
   chart: {
     height: 500,
