@@ -412,10 +412,10 @@ header {
   padding-top: 20px;
 }
 
-#caracteristics > h2 {
+.caracteristics-middle > h2 {
   text-align: center;
-  margin-top: 4rem;
-  margin-bottom: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .caracteristics-middle > p {
@@ -423,6 +423,7 @@ header {
   margin: 1rem;
   margin-bottom: 20px;
 }
+
 
 #stats {
   display: flex;
@@ -777,6 +778,7 @@ footer {
     letter-spacing: 0.6rem;
     font-size: clamp(1rem, 5vw, 5rem);
     margin: 5%;
+    margin-bottom: 10%;
     grid-area: 2 / 2 / 3 / 3;
   }
 
@@ -853,8 +855,11 @@ footer {
     font-size: 2rem;
   }
 
-  #caracteristics > p {
+  .caracteristics-middle > p {
     margin-bottom: 3rem;
+  }
+  .caracteristics-middle > p:last-of-type{
+    margin-bottom: 90px;
   }
 
   /* Section sticky nav desktop*/
