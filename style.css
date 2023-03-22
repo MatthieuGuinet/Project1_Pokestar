@@ -585,14 +585,12 @@ header {
 
 #quiz-result-container {
   width: 100%;
-  background-color: #000000;
 }
 
 #quiz-result-img {
   display: none;
   max-height: 300px;
   max-width: 100%;
-  background-color: #000000;
 }
 
 #quiz-replay-button {
