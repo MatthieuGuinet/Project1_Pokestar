@@ -56,8 +56,6 @@ const jolteonContent = new PokemonContent("VOLTALI","#e9bc2e","#b9812b","PYROLI"
 const vaporeonContent = new PokemonContent("AQUALI","#879cc6","#3a5d83","VOLTALI","EVOLI","EAU","Roux, les yeux bleus, pour 0.58m de brasier","assets\\Flareon-Transparent-Image.png","C'est un grand grand guerrier de l'apocalypse","Tu le trouveras en cherchant bien","assets\\aqua_nav.png", "Il a plein de caractéristiques super chouettes","assets\\pins map.png", "blabla","blabla","blabla","blabla","blabla");
 
 
-//A tous les endroits nécessaires, addEventListener(click, function(eeveeStyle,eeveeContent))
-
 export let switchPokemon = {
     eeveeContent:eeveeContent,
     flareonContent:flareonContent,
