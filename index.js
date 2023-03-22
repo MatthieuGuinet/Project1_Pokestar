@@ -11,6 +11,10 @@ import { quizFunctions } from "./quiz.js";
 // import modify content function
 import { switchPokemon } from "./content_modification.js";
 
+// initializing with evee 
+// switchPokemon.eeveeContent.replaceContent();
+
+
 // ouverture et fermeture du menu burger + animation de l'icone
 const burgerIcon = document.getElementById("burger_icon");
 const burgerMenu = document.getElementById("nav_links");
@@ -113,6 +117,8 @@ for (let i = 0; i < allAnswers.length; i++) {
     }
     // adding "isChosen" to the allAnswers[i] clicked
     allAnswers[i].classList.add("isChosen");
+    document.getElementById("quiz-error").style.display = "none";
+    document.getElementById("quiz-button-next").style.marginBottom = "30px";
   });
 }
 
@@ -128,7 +134,6 @@ replayButton.addEventListener("click", () => {
 //sticky-nav addEventListener
 
 let eeveeNavButton = document.getElementById("eevee-nav-button");
-console.log(eeveeNavButton);
 eeveeNavButton.addEventListener("click", () => {
   switchPokemon.eeveeContent.replaceContent();
 });
@@ -144,4 +149,6 @@ let vaporeonNavButton = document.getElementById("vaporeon-nav-button");
 vaporeonNavButton.addEventListener("click", () => {
   switchPokemon.vaporeonContent.replaceContent();
 });
+
+
 

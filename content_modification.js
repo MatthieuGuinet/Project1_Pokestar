@@ -1,4 +1,5 @@
 // constructor taking into account every text content, url and colors that we want to change 
+let lbuttons = document.getElementsByClassName("lbutton");
 
 class PokemonContent {
     constructor(pokemonNameCapitalCase, mainColorVarName, secondaryColorVarName, headerLeftName, headerRightName, pokemonType, littleDescription, mainImgSrc, legend, locationInstructions, mapImgSrc, caracteristics, typeImgSrc, weaknessImgSrc,attack1Src, attack2Src, attack3Src, attack4Src){
@@ -45,7 +46,6 @@ replaceContent(){
     document.documentElement.style.setProperty('--main-color',`${this.mainColorVarName}`);
     document.documentElement.style.setProperty('--secondary-color',`${this.secondaryColorVarName}`);
 }
-
 }
 
 // declaration of the four pokemon contents 

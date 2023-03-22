@@ -561,6 +561,13 @@ header {
   box-shadow: 0px 6px 10px 1px rgba(0, 0, 0, 0.5);
 }
 
+#quiz-error {
+  display: none ;
+  font-style: italic;
+  font-size : 0.8rem;
+  margin-bottom : 10px;
+}
+
 #quiz-replay-button {
   display: none;
   border: none;
