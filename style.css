@@ -2,14 +2,8 @@
 
 :root {
   --common-color: #282828;
-  --main-color-eevee: #3a3129;
-  --secondary-color-eevee: #c5915d;
-  --main-color-jolteon: #e9bc2e;
-  --secondary-color-jolteon: #b9812b;
-  --main-color-flareon: #ffa948;
-  --secondary-color-flareon: #fb7c26;
-  --main-color-vaporeon: #879cc6;
-  --secondary-color-vaporeon: #3a5d83;
+  --main-color: #3a3129;
+  --secondary-color: #c5915d;
   --black-color : #000000;
 }
 
@@ -26,7 +20,7 @@ body {
   font-family: raleway;
   font-size: 1.2rem;
   color: white;
-  background-color: var(--main-color-eevee);
+  background-color: var(--main-color);
 }
 
 h2{
@@ -54,25 +48,22 @@ h2{
 #logo_and_title {
   display: flex;
   align-items: center;
-  flex-grow: 1;
-  
+  flex-grow: 1; 
 }
 
 #logo_and_title .logo {
   padding-inline: 10px;
   height: 40px;
-  
 }
 
 /* Lien de navigation menu burger */
 #nav_links a {
   text-decoration: none;
-  color: rgb(252, 252, 252)
-  
+  color: rgb(252, 252, 252);
 }
 
 #nav_links a:hover {
-  color: darkgrey;
+    color: darkgrey;
 }
 
 #nav_links ul {
@@ -82,7 +73,6 @@ h2{
 
 #nav_links li {
   text-align: center;
-
 }
 
 /* Apparence du menu burger ouvert */
@@ -140,21 +130,21 @@ h2{
 
 /* animationBurger -> class ajouté en JS */
 #burger.animationOpen {
-  background: transparent;
+    background: transparent;
 }
 
 #burger.animationOpen::before {
-  transform: rotate(45deg);
-  top: 0;
+    transform: rotate(45deg);
+    top: 0;
 }
 
 #burger.animationOpen::after {
-  transform: rotate(-45deg);
-  top: 0;
+    transform: rotate(-45deg);
+    top: 0;
 }
 
 #burger_icon {
-  padding-right: 10px;
+    padding-right: 10px;
 }
 
 /* Position du menu burger ouvert */
@@ -168,12 +158,13 @@ h2{
 }
 
 header {
-  margin-top: 0px;
+    margin-top: 0px;
 }
+
 /* no display header desktop on mobile first */
 #desktop-header-band {
-  display: none;
-  margin-top: 60px;
+    display: none;
+    margin-top: 60px;
 }
 
 /* definition of the header img on mobile first */
@@ -185,11 +176,11 @@ header {
 
 /* displaying the header img and pokemon name on row direction and centered on mobile first and fixing the position to add text on it */
 #mobile-header-band {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  text-align: center;
-  color: white;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    color: white;
 }
 
 /* displaying the name of the pokemon on the img on mobile first */
@@ -206,9 +197,9 @@ header {
 
 /* displaying elements under the header bar as a column */
 #hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* defining the pokemon image resizing */
@@ -219,14 +210,14 @@ header {
 
 /* display off on pokemon name on mobile first */
 .pokemon-name {
-  display: none;
+    display: none;
 }
 
 /* adjusting position of pokemon type on top of the pokemon img */
 /* the color must be changed */
 #header-type {
   order: -1;
-  background-color: var(--secondary-color-eevee);
+  background-color: var(--secondary-color);
   border-radius: 10px;
   padding: 3px 15px;
   margin-bottom: 30px;
@@ -243,26 +234,31 @@ header {
 }
 
 /* legend section design  */
+#legend{
+  display: flex;
+  flex-direction: column;
+}
 
 .section-top {
   height: 6vw;
+  /* margin-top: 2vh; */
 }
 
 .section-top-smartphone {
-  fill: var(--common-color);
+    fill: var(--common-color);
 }
 
 .section-top-desktop {
-  display: none;
+    display: none;
 }
 
 #legend-middle {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #ffffff;
-  background-color: var(--common-color);
-  background-size: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+    background-color: var(--common-color);
+    background-size: 100%;
 }
 
 #legend h2 {
@@ -291,7 +287,7 @@ header {
 #legend-deployment {
   width: auto;
   height: 40px;
-  background-color: var(--secondary-color-eevee);
+  background-color: var(--secondary-color);
   margin-bottom: 25px;
   border-radius: 10px;
   /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
@@ -305,97 +301,98 @@ header {
 }
 
 .section-bottom-smartphone {
-  fill: var(--common-color);
+    fill: var(--common-color);
 }
 
 .section-bottom-desktop {
-  display: none;
+    display: none;
 }
 
 /*style localisation */
 
 #map_wrapper {
-  overflow: hidden;
-  width: 300px;
-  height: 300px;
-  border-radius: 10px;
-  box-shadow: rgba(0, 0, 0 50%) 0 0 10px 5px;
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0 50%) 0 0 10px 5px;
 }
 
 #scrollable_map {
-  position: relative;
-  width: 200%;
+    position: relative;
+    width: 200%;
 }
 
 #map-image {
-  width: 100%;
+    width: 100%;
 }
 
 #pin-div {
-  position: absolute;
-  width: 10%;
-  top: 5%;
-  left: 80%;
+    position: absolute;
+    width: 10%;
+    top: 5%;
+    left: 80%;
 }
 
 #pokemon-pin {
-  width: 100%;
+    width: 100%;
 }
 
 #pin-div:hover,
 #pin-div:focus {
-  color: black;
-}
-#pin-div > span {
-  position: absolute;
-  top: 100px;
-  right: -60px;
-  margin-top: 20px;
-  font-size: 1.4rem;
-  width: 200px;
-  color: antiquewhite;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(10px);
-  padding: 15px;
-  border-radius: 5px;
-  box-shadow: 0 0 2px rgba(0, 0, 0 50%);
-  transform: scale(1) rotate(-15deg);
-  transition: all 0.25s;
-  opacity: 0;
-  z-index: 2;
+    color: black;
 }
 
-#pin-div:hover > span,
-#pin-div:focus > span {
-  transform: scale(1) rotate(0);
-  opacity: 1;
+#pin-div>span {
+    position: absolute;
+    top: 100px;
+    right: -60px;
+    margin-top: 20px;
+    font-size: 1.4rem;
+    width: 200px;
+    color: antiquewhite;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 2px rgba(0, 0, 0 50%);
+    transform: scale(1) rotate(-15deg);
+    transition: all 0.25s;
+    opacity: 0;
+    z-index: 2;
+}
+
+#pin-div:hover>span,
+#pin-div:focus>span {
+    transform: scale(1) rotate(0);
+    opacity: 1;
 }
 
 #localisation-flex {
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: space-around;
-  align-items: center;
-  margin: 10%;
-  gap: 20px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10%;
+    gap: 20px;
 }
 
 
 /*Chart*/
 
 #chart {
-  width : clamp(300px, 50vw, 600px);
-  margin: 35px auto;
+    width: clamp(300px, 50vw, 600px);
+    margin: 35px auto;
 }
 
 /* quiz section design  */
 
 #quiz {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
 }
 
 #quiz h2 {
@@ -451,21 +448,21 @@ header {
 #quiz-answer2,
 #quiz-answer3,
 #quiz-answer4 {
-  width: 70%;
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  height: 34px;
-  margin-bottom: 22px;
+    width: 70%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 34px;
+    margin-bottom: 22px;
 }
 
 #quiz-button-next {
   border-radius: 10px;
   width: 106px;
   height: 35px;
-  background-color: var(--secondary-color-eevee);
+  background-color: var(--secondary-color);
   margin-bottom: 30px;
   margin-top: 20px;
   font-size: 1.1rem;
@@ -478,37 +475,68 @@ header {
   display: none;
   border : none;
   box-shadow: 0px 6px 10px 1px rgba(0, 0, 0 , 0.5);
-
 }
 
 /* display of the chosen answer */
 .isChosen {
-  filter: brightness(160%);
+    filter: brightness(160%);
 }
 
 #quiz-result-container {
-  width: 100%;
-  background-color: #000000;
+    width: 100%;
+    background-color: #000000;
 }
 
 #quiz-result-img {
-  display: none;
-  max-height: 300px;
-  max-width: 100%;
-  background-color: #000000;
+    display: none;
+    max-height: 300px;
+    max-width: 100%;
+    background-color: #000000;
 }
 
 #quiz-replay-button {
   border-radius: 10px;
   width: auto;
   height: 50px;
-  background-color: var(--secondary-color-eevee);
+  background-color: var(--secondary-color);
   margin-bottom: 30px;
   margin-top: 40px;
   font-size: 1.1rem;
   padding: 0 30px;
 }
+/* Section sticky nav mobile*/
 
+#sticky-nav {
+    background-color: #000000;
+    opacity: 0.8;
+    /* backdrop-filter: blur(100px); */
+     display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    position: sticky;
+    bottom: 0;
+    
+#sticky-nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 5px;
+
+    width: 80%;
+    max-width: 800px;
+}
+
+#sticky-nav li {
+    height: 40px;
+    width: 40px;
+}
+
+/* #sticky-nav circle:hover,
+#sticky-nav path:hover {
+    fill: rgb(233, 14, 14); 
+} */
+
+/* footer */
 footer{
   padding:10px 10px 10px 50px ;
   background-color:var(--black-color);
@@ -520,36 +548,28 @@ footer{
   body{
     font-size: 1.6rem;
   }
-
   h2{
     font-size: 2.5rem;
   }
-
   #burger_icon {
     display: none;
   }
-
-
   #nav_header {
     display: flex;
     justify-content: space-between;
     height: 80px;
   }
-
   #logo_and_title .logo {
     height: 60px;
   }
-
   #logo_title {
     padding-left: 10px;
     font-weight: bold;
   }
-
   #nav_links ul {
     display: flex;
     margin-right: 10%;
   }
-
   #nav_links {
     position: initial;
     align-items: end;
@@ -560,97 +580,79 @@ footer{
     opacity: 1;
      margin-right: 2%;
   }
-
-  
-
   #nav_links a {
-   
     /* height: 200px; */
     padding: 10px 15px;
   }
-  
   #nav_links a:hover {
     background-color: rgba(255, 255, 255, 0.237);
     border-radius: 15px;
   }
-
   /* position elements of header centered and define an height */
   header {
-    min-height: 600px;
-    max-height: 1200px;
+    /* min-height: 600px; */
+    /* max-height: 1200px; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    
   }
-
   /* display off on header band mobile */
   #mobile-header-band {
     display: none;
   }
-
   #desktop-header-band {
     display: flex;
     position: relative;
     margin-top: 90px;
     width: 100%;
   }
-
   #desktop-header-band > svg {
     width: 50%;
-    height: 120px;
+    height: 12vh;
   }
-
   #left_button {
     margin-right: 2.5px;
   }
-
   #right_button {
     margin-left: 2.5px;
   }
-
   #desktop-header-band > p {
     position: absolute;
     font-size: 1.5rem;
     letter-spacing: 1rem;
-    margin-top: 22px;
+    margin-top: 8px;
     background-color:rgba(0, 0, 0, 0);
     text-align: center;
   }
-
   #pokemon_left {
     right: 54.5%;
   }
-
   #pokemon_right {
     left: 55%;
   }
-
   /* displaying elements on a grid */
   #hero {
     /* width: 1200px; */
+    height: 100%;
     display: grid;
-    grid-template: 25% auto auto 3fr 25% / 0.6fr 1fr 100px 1fr 0.6fr;
+    grid-template: 15% auto auto 3fr 15% / 0.6fr 1fr 100px 1fr 0.6fr;
     justify-items: center;
   }
-
   /* adjusting each elements in the grid */
   #little-description {
     grid-area: 4 / 2 / 5 / 3;
     font-size: clamp(1rem, 2vw, 1.9rem);
-    line-height: 55px;
+    line-height: 45px;
     width: 100%
   }
-
   #hero > img {
     grid-area: 1 / 4 / 6 /5;
-    width:clamp(400px, 40vw,800px);
+    width:clamp(300px, 40vw,800px);
   }
   #header-type {
     grid-area: 3 / 2 / 4 /3;
     font-size: clamp(0.5rem, 2vw, 1.7rem);
   }
-
   #hero > h1 {
     display: initial;
     letter-spacing: 0.6rem;
@@ -658,14 +660,11 @@ footer{
     margin: 5%;
     grid-area: 2 / 2 / 3 / 3;
   }
-
   /* media queries legend section  */
-
   /* diminution of the div revealed text height  */
   #legend p {
     height: 150px;
   }
-
   /* legend band picture modification */
   .section-top-desktop {
     display: initial;
@@ -679,43 +678,53 @@ footer{
   .section-bottom-smartphone {
     display: none;
   }
-
   /* localisation */
-
   #map_wrapper {
-    width: 500px;
-    height: 500px;
+    width: clamp(300px, 50vw, 800px);
+    height: clamp(300px, 40vw, 800px);
   }
-
   #localisation-flex {
     flex-direction: row;
     justify-content: space-evenly;
     margin: 10%;
     gap: 10%;
   }
-
   #localisation-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+   width: 50%
   }
-
   /* quiz desktop display  */
-
   #quiz-container {
     width: 60vw;
   }
-
   #quiz-answer1,
   #quiz-answer2,
   #quiz-answer3,
   #quiz-answer4 {
     height: 50px;
   }
+  
+  /* Section sticky nav desktop*/
+    #sticky-nav {
+        width: 65px;
+        height: 300px;
+        border-radius: 15px;
+        margin: 10px;
+        bottom: 30%;
+    }
+
+    #sticky-nav ul {
+        /* display: flex; */
+        /* flex-direction: column; */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #sticky-nav li {
+        height: 50px;
+        width: 50px;
+    }
 }
-
 /* style sectionc #caracteristics */
-
 #caracteristics {
   background-color: var(--common-color);
   display: flex;
@@ -723,31 +732,26 @@ footer{
   align-items: center;
   /* padding-bottom: 50px; */
 }
-
 #caracteristics > h2 {
   text-align: center;
   color: white;
   margin-top: 4rem;
   margin-bottom: 1rem;
 }
-
 #caracteristics > p {
   color: white;
   width: 80%;
   margin: 1rem;
 }
-
 #stats {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
-
 #chart {
   width: 100%;
   height: 300px;
 }
-
 /* flex type et faiblesse */
 .type_weakness {
   margin: 0 auto;
@@ -756,19 +760,15 @@ footer{
   color: white;
   text-align: center;
 }
-
 .type_weakness svg {
   width: 80%;
 }
-
 .type_weakness p {
   margin-bottom: 1rem;
   text-align: start;
   margin-left: 10%;
 }
-
 /* flex attaques */
-
 #attacks {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -776,7 +776,6 @@ footer{
   row-gap: 10px;
   color: white;
 }
-
 #attacks > p {
   margin-bottom: 1rem;
   text-align: center;
@@ -787,7 +786,6 @@ footer{
   width: 80%;
   margin: 0 auto;
 }
-
 @media screen and (min-width: 768px) {
   #stats {
     display: flex;
@@ -796,20 +794,16 @@ footer{
     justify-content: center;
     gap: 1.5rem;
   }
-
   #chart {
     width: 45%;
   }
-
   .Type_Weakness_Attacks {
     width: 45%;
   }
-
   .type_weakness p,
   #attacks > p {
     font-size: 2rem;
   }
-
   #caracteristics > p {
     margin-bottom: 3rem;
   }
