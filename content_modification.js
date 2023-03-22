@@ -1,3 +1,8 @@
+//import external values of modified content
+
+import { legends } from "./legend_location_text_content.js";
+import { locations } from "./legend_location_text_content.js";
+
 // constructor taking into account every text content, url and colors that we want to change 
 
 class PokemonContent {

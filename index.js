@@ -11,10 +11,6 @@ import { quizFunctions } from "./quiz.js";
 // import modify content function
 import { switchPokemon } from "./content_modification.js";
 
-// initializing with evee 
-// switchPokemon.eeveeContent.replaceContent();
-
-
 // ouverture et fermeture du menu burger + animation de l'icone
 const burgerIcon = document.getElementById("burger_icon");
 const burgerMenu = document.getElementById("nav_links");
