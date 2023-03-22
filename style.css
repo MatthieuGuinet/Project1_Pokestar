@@ -220,7 +220,7 @@ header {
 /* the color must be changed */
 #header-type {
   order: -1;
-  background-color: var(--secondary-color-eevee);
+  background-color: var(--secondary-color);
   border-radius: 10px;
   padding: 3px 15px;
   margin-bottom: 30px;
@@ -290,7 +290,7 @@ header {
 #legend-deployment {
   width: auto;
   height: 40px;
-  background-color: var(--secondary-color-eevee);
+  background-color: var(--secondary-color);
   margin-bottom: 25px;
   border-radius: 10px;
   /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
@@ -464,7 +464,7 @@ header {
   border-radius: 10px;
   width: 106px;
   height: 35px;
-  background-color: var(--secondary-color-eevee);
+  background-color: var(--secondary-color);
   margin-bottom: 30px;
   margin-top: 20px;
   font-size: 1.1rem;
@@ -501,7 +501,7 @@ header {
   border-radius: 10px;
   width: auto;
   height: 50px;
-  background-color: var(--secondary-color-eevee);
+  background-color: var(--secondary-color);
   margin-bottom: 30px;
   margin-top: 40px;
   font-size: 1.1rem;
