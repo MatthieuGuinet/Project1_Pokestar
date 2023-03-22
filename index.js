@@ -146,5 +146,12 @@ vaporeonNavButton.addEventListener("click", () => {
   switchPokemon.vaporeonContent.replaceContent();
 });
 
+//some styling features to get backlines in document's specific places
+
+document.getElementById("caracteristics-text").setAttribute('style', 'white-space: pre-line;');
+document.getElementById("legend-text").setAttribute('style', 'white-space: pre-line;');
+document.getElementById("localisation-text").setAttribute('style', 'white-space: pre-line;');
+document.getElementById("little-description-text").setAttribute('style', 'white-space: pre-line;');
+
 
 
