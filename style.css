@@ -1,0 +1,847 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+
+:root {
+    --common-color: #282828;
+    --main-color-eevee: #3a3129;
+    --secondary-color-eevee: #c5915d;
+    --main-color-jolteon: #e9bc2e;
+    --secondary-color-jolteon: #b9812b;
+    --main-color-flareon: #ffa948;
+    --secondary-color-flareon: #fb7c26;
+    --main-color-vaporeon: #879cc6;
+    --secondary-color-vaporeon: #3a5d83;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: var(--main-color-eevee);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Barre de navigation -> header */
+/* Mobile first */
+#nav_header {
+    background: black;
+    color: white;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    position: sticky;
+    top: 0px;
+}
+
+#logo_and_title {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+#logo_and_title .logo {
+    padding-inline: 10px;
+    height: 50px;
+}
+
+/* Lien de navigation menu burger */
+#nav_links a {
+    text-decoration: none;
+    color: rgb(252, 252, 252);
+}
+
+#nav_links a:hover {
+    color: darkgrey;
+}
+
+#nav_links ul {
+    list-style: none;
+}
+
+#nav_links li {
+    padding: 15px;
+}
+
+/* Apparence du menu burger ouvert */
+/* Le menu est fermé par defaut */
+#nav_links {
+    background-color: rgb(33, 32, 32);
+    opacity: 0.8;
+    border-radius: 0px 0px 0px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50px;
+    z-index: 100;
+    min-width: 50vw;
+    max-width: 80vw;
+    min-height: 30vh;
+    width: 300px;
+    transition: right 1s;
+}
+
+.burger_close {
+    right: -400px;
+}
+
+/* Icone du menu burger */
+#burger_icon span {
+    display: inline-block;
+    width: 35px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    margin-bottom: 6px;
+    position: relative;
+}
+
+/* Animation du menu burger */
+#burger_icon span::before,
+#burger_icon span::after {
+    content: "";
+    width: 35px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    display: inline-block;
+    position: absolute;
+    transform-origin: center;
+    transition: all 0.5s ease;
+}
+
+#burger_icon span::before {
+    top: -8px;
+}
+
+#burger_icon span::after {
+    top: 8px;
+}
+
+/* animationBurger -> class ajouté en JS */
+#burger.animationOpen {
+    background: transparent;
+}
+
+#burger.animationOpen::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+#burger.animationOpen::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+#burger_icon {
+    padding-right: 10px;
+}
+
+/* Position du menu burger ouvert */
+.burger_open {
+    margin-top: 10px;
+    position: fixed;
+    right: 0px;
+}
+
+header {
+    margin-top: 0px;
+}
+
+/* no display header desktop on mobile first */
+#desktop-header-band {
+    display: none;
+    margin-top: 60px;
+}
+
+/* definition of the header img on mobile first */
+#mobile-header-band>img {
+    width: 100%;
+    height: 100px;
+}
+
+/* displaying the header img and pokemon name on row direction and centered on mobile first and fixing the position to add text on it */
+#mobile-header-band {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+/* displaying the name of the pokemon on the img on mobile first */
+.pokemon-name-mobile {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0);
+}
+
+/* displaying elements under the header bar as a column */
+#hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* defining the pokemon image resizing */
+#hero>img {
+    width: clamp(150px, 50vw, 600px);
+    margin-bottom: 15px;
+}
+
+/* display off on pokemon name on mobile first */
+.pokemon-name {
+    display: none;
+}
+
+/* adjusting position of pokemon type on top of the pokemon img */
+/* the color must be changed */
+#header-type {
+    order: -1;
+    background-color: #180d04a9;
+    border-radius: 10px;
+    padding: 3px 15px;
+    margin-bottom: 15px;
+}
+
+/* removing margin auto */
+#header-type>p {
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+/* adjusting paragraph style on the description text */
+#little-description {
+    margin: 0;
+    padding: 4px 15px;
+    line-height: 22px;
+    font-size: 1.5rem;
+}
+
+/* legend section design  */
+
+.section-top {
+    height: 9vw;
+}
+
+.section-top-smartphone {
+    fill: var(--common-color);
+}
+
+.section-top-desktop {
+    display: none;
+}
+
+#legend-middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+    background-color: var(--common-color);
+    background-size: 100%;
+}
+
+#legend h2 {
+    margin-top: 43px;
+    background-color: var(--common-color);
+    font-size: 2.5rem;
+}
+
+#legend p {
+    margin-top: 45px;
+    width: 83vw;
+    height: 440px;
+    overflow: hidden;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: 150.02%;
+    background: linear-gradient(180deg,
+            #ffffff 0%,
+            rgba(255, 255, 255, 0) 95.91%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+#legend-deployment {
+    width: 200px;
+    height: 50px;
+    background-color: #d1a473;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+    font-size: 12pt;
+}
+
+.section-bottom {
+    height: 8vw;
+}
+
+.section-bottom-smartphone {
+    fill: var(--common-color);
+}
+
+.section-bottom-desktop {
+    display: none;
+}
+
+/*style localisation */
+
+#map_wrapper {
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0 50%) 0 0 10px 5px;
+}
+
+#scrollable_map {
+    position: relative;
+    width: 200%;
+}
+
+#map-image {
+    width: 100%;
+}
+
+#pin-div {
+    position: absolute;
+    width: 10%;
+    top: 5%;
+    left: 80%;
+}
+
+#pokemon-pin {
+    width: 100%;
+}
+
+#pin-div:hover,
+#pin-div:focus {
+    color: black;
+}
+
+#pin-div>span {
+    position: absolute;
+    top: 100px;
+    right: -60px;
+    margin-top: 20px;
+    font-size: 1.4rem;
+    width: 200px;
+    color: antiquewhite;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 2px rgba(0, 0, 0 50%);
+    transform: scale(1) rotate(-15deg);
+    transition: all 0.25s;
+    opacity: 0;
+    z-index: 2;
+}
+
+#pin-div:hover>span,
+#pin-div:focus>span {
+    transform: scale(1) rotate(0);
+    opacity: 1;
+}
+
+#localisation-flex {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10%;
+    gap: 20px;
+}
+
+
+/*Chart*/
+
+#chart {
+    width: clamp(300px, 50vw, 600px);
+    margin: 35px auto;
+}
+
+/* quiz section design  */
+
+#quiz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+#quiz h2 {
+    margin-top: 43px;
+    font-size: 2.5rem;
+}
+
+#quiz-title {
+    margin-top: 43px;
+    width: 45%;
+    height: 82px;
+    background-color: black;
+    border-radius: 20px;
+    text-align: center;
+
+    font-size: 1.1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#quiz-container {
+    width: 85vw;
+    background-color: #000000;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+#quiz-question {
+    margin: 20px 0 29px 0;
+    width: 90%;
+    height: 58px;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    /* color has to be the same as the one used for changing pokemon buttons on header */
+    background: #6b655f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#quiz-answers-container {
+    background-color: #000000;
+    color: white;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#quiz-answer1,
+#quiz-answer2,
+#quiz-answer3,
+#quiz-answer4 {
+    width: 70%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 34px;
+    margin-bottom: 22px;
+}
+
+#quiz-button-next {
+    border-radius: 10px;
+    width: 106px;
+    height: 35px;
+    background-color: var(--secondary-color-eevee);
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+#quiz-replay-button {
+    display: none;
+}
+
+/* display of the chosen answer */
+.isChosen {
+    filter: brightness(160%);
+}
+
+#quiz-result-container {
+    width: 100%;
+    background-color: #000000;
+}
+
+#quiz-result-img {
+    display: none;
+    max-height: 300px;
+    max-width: 100%;
+    background-color: #000000;
+}
+
+#quiz-replay-button {
+    border-radius: 10px;
+    width: auto;
+    height: 50px;
+    background-color: var(--secondary-color-eevee);
+    margin-bottom: 30px;
+    margin-top: 40px;
+    font-size: 1.5rem;
+    padding: 0 30px;
+}
+
+/* Section sticky nav mobile*/
+
+#sticky-nav {
+    background-color: #000000;
+    opacity: 0.8;
+    /* backdrop-filter: blur(100px); */
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    position: sticky;
+    bottom: 0;
+
+
+}
+
+#sticky-nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 5px;
+
+    width: 80%;
+    max-width: 800px;
+
+}
+
+#sticky-nav li {
+    height: 40px;
+    width: 40px;
+}
+
+/* #sticky-nav circle:hover,
+#sticky-nav path:hover {
+    fill: rgb(233, 14, 14); 
+
+
+} */
+
+/* media queries */
+
+@media screen and (min-width: 768px) {
+    #burger_icon {
+        display: none;
+    }
+
+    #nav_header {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+    }
+
+    #logo_and_title .logo {
+        height: 70px;
+    }
+
+    #logo_title {
+        /* padding-left: 10px; */
+        font-weight: bold;
+    }
+
+    #nav_links ul {
+        display: flex;
+        flex-direction: row;
+        padding-right: 30px;
+    }
+
+    #nav_links {
+        position: initial;
+        align-items: end;
+        width: auto;
+        height: 80px;
+        min-height: auto;
+        background-color: transparent;
+        opacity: 1;
+    }
+
+    #nav_links li {
+        padding: 0px;
+    }
+
+    #nav_links a {
+        border-radius: 15px;
+        padding: 10px 30px;
+        height: 200px;
+    }
+
+    #nav_links a:hover {
+        background-color: rgba(255, 255, 255, 0.237);
+    }
+
+    /* position elements of header centered and define an height */
+    header {
+        min-height: 600px;
+        max-height: 1200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    /* display off on header band mobile */
+    #mobile-header-band {
+        display: none;
+    }
+
+    #desktop-header-band {
+        display: flex;
+        position: relative;
+        margin-top: 90px;
+    }
+
+    #desktop-header-band>svg {
+        width: 50%;
+        height: 120px;
+    }
+
+    #left_button {
+        margin-right: 5px;
+    }
+
+    #rigth_button {
+        margin-left: 5px;
+    }
+
+    #desktop-header-band>p {
+        position: absolute;
+        font-size: 1.5rem;
+        margin-top: 15px;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    #pokemon_left {
+        left: 35%;
+    }
+
+    #pokemon_right {
+        right: 35%;
+    }
+
+    /* displaying elements on a grid */
+    #hero {
+        max-width: 1200px;
+        display: grid;
+        grid-template: 25% auto auto 3fr 25% / 300px 1fr;
+        justify-items: center;
+    }
+
+    /* adjusting each elements in the grid */
+    #little-description {
+        grid-area: 4 / 1 / 5 / 2;
+        font-size: clamp(1rem, 2vw, 1.5rem);
+        line-height: 35px;
+    }
+
+    #hero>img {
+        grid-area: 1 / 2 / 6 /3;
+    }
+
+    #header-type {
+        grid-area: 3 / 1 / 4 /2;
+        font-size: clamp(0.5rem, 2vw, 1.5rem);
+    }
+
+    #hero>h1 {
+        display: initial;
+        font-size: clamp(1rem, 5vw, 5rem);
+        margin: 5px;
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    /* media queries legend section  */
+
+    /* diminution of the div revealed text height  */
+    #legend p {
+        height: 150px;
+    }
+
+    /* legend band picture modification */
+    .section-top-desktop {
+        display: initial;
+    }
+
+    .section-top-smartphone {
+        display: none;
+    }
+
+    .section-bottom-desktop {
+        display: initial;
+    }
+
+    .section-bottom-smartphone {
+        display: none;
+    }
+
+    /* localisation */
+
+    #map_wrapper {
+        width: 500px;
+        height: 500px;
+    }
+
+    #localisation-flex {
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 10%;
+        gap: 10%;
+    }
+
+    #localisation-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    /* quiz desktop display  */
+
+    #quiz-container {
+        width: 60vw;
+    }
+
+    #quiz-answer1,
+    #quiz-answer2,
+    #quiz-answer3,
+    #quiz-answer4 {
+        height: 50px;
+    }
+
+    /* Section sticky nav desktop*/
+    #sticky-nav {
+        width: 65px;
+        height: 300px;
+        border-radius: 15px;
+        margin: 10px;
+        bottom: 30%;
+    }
+
+    #sticky-nav ul {
+        /* display: flex; */
+        /* flex-direction: column; */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #sticky-nav li {
+        height: 50px;
+        width: 50px;
+    }
+
+}
+
+/* style sectionc #caracteristics */
+
+#caracteristics {
+    background-color: var(--common-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding-bottom: 50px; */
+}
+
+#caracteristics>h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: white;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+}
+
+#caracteristics>p {
+    color: white;
+    width: 80%;
+    margin: 1rem;
+}
+
+#stats {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#chart {
+    width: 100%;
+    height: 300px;
+}
+
+/* flex type et faiblesse */
+.type_weakness {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.type_weakness svg {
+    width: 80%;
+}
+
+.type_weakness p {
+    margin-bottom: 1rem;
+    text-align: start;
+    margin-left: 10%;
+}
+
+/* flex attaques */
+
+#attacks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 5px;
+    color: white;
+    font-size: 1.6rem;
+}
+
+#attacks>p {
+    margin-bottom: 1rem;
+    text-align: center;
+    width: 100%;
+    grid-area: 1/1/2/3;
+}
+
+#attacks>svg {
+    width: 80%;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+    #stats {
+        display: flex;
+        flex-direction: initial;
+        margin: 0 auto;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    #chart {
+        width: 45%;
+    }
+
+    .Type_Weakness_Attacks {
+        width: 45%;
+    }
+
+    .type_weakness p,
+    #attacks>p {
+        font-size: 2rem;
+    }
+
+    #caracteristics>p {
+        margin-bottom: 3rem;
+    }
+}
