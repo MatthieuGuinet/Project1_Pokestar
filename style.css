@@ -515,6 +515,7 @@ header {
     margin-top: 10px;
     position: sticky;
     bottom: 0;
+}
     
 #sticky-nav ul {
     display: flex;
