@@ -1,4 +1,4 @@
-export default function hoverButton(myArr) {
+function hoverButton(myArr) {
   const textButtons = document.querySelectorAll(".text_button");
   const svgButtons = document.querySelectorAll(".lr_buttons");
   for (let i = 0; i < myArr.length; i++) {
@@ -13,3 +13,19 @@ export default function hoverButton(myArr) {
     });
   }
 }
+
+function clickButton(myArray) {
+  const textButtons = document.querySelectorAll(".button_pokemon");
+  for (let i = 0; i < myArray.length; i++) {
+    const elem = myArray[i];
+    elem.addEventListener("click", () => {
+      pokemonToSwitch = document.querySelector("text_button").textContent;
+    })
+  }
+  return pokemonToSwitch
+}
+
+export let headerFunctions = {
+  hoverButton: hoverButton,
+  clickButton: clickButton,
+};

@@ -2,8 +2,9 @@
 import displayText from "./displayText.js";
 
 //import hoverButton to use the hovering on the buttons a the top of the pokemon
-import hoverButton from "./header_button.js";
-import { options } from "./chart.js";
+
+import { headerFunctions } from "./header_button.js";
+import {options} from './chart.js';
 
 import { quizFunctions } from "./quiz.js";
 
@@ -37,8 +38,8 @@ for (let i = 0; i < navElement.length; i++) {
 
 const textButtons = document.querySelectorAll(".text_button");
 const svgButtons = document.querySelectorAll(".lr_buttons");
-hoverButton(textButtons);
-hoverButton(svgButtons);
+headerFunctions.hoverButton(textButtons);
+headerFunctions.hoverButton(svgButtons);
 
 // Section "legend", button "poursuivre l'aventure"
 let legendButton = document.getElementById("legend-deployment");
@@ -122,6 +123,8 @@ replayButton.addEventListener("click", () => {
   quizFunctions.replay();
 });
 
+
+
 //sticky-nav addEventListener
 
 let eeveeNavButton = document.getElementById("eevee-nav-button");
@@ -141,3 +144,4 @@ let vaporeonNavButton = document.getElementById("vaporeon-nav-button");
 vaporeonNavButton.addEventListener("click", () => {
   switchPokemon.vaporeonContent.replaceContent();
 });
+
