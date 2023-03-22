@@ -12,9 +12,9 @@ import { quizFunctions } from "./quiz.js";
 import { switchPokemon } from "./content_modification.js";
 
 // loading eevee display when opening the website for the first time
-// window.addEventListener("load", ()=> {
-//   switchPokemon.eeveeContent.replaceContent();
-// });
+window.addEventListener("load", ()=> {
+  switchPokemon.eeveeContent.replaceContent();
+});
 
 // ouverture et fermeture du menu burger + animation de l'icone
 const burgerIcon = document.getElementById("burger_icon");
