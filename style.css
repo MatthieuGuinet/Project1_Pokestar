@@ -2,14 +2,8 @@
 
 :root {
   --common-color: #282828;
-  --main-color-eevee: #3a3129;
-  --secondary-color-eevee: #c5915d;
-  --main-color-jolteon: #e9bc2e;
-  --secondary-color-jolteon: #b9812b;
-  --main-color-flareon: #ffa948;
-  --secondary-color-flareon: #fb7c26;
-  --main-color-vaporeon: #879cc6;
-  --secondary-color-vaporeon: #3a5d83;
+  --main-color: #3a3129;
+  --secondary-color: #c5915d;
   --black-color : #000000;
 }
 
@@ -26,7 +20,7 @@ body {
   font-family: raleway;
   font-size: 1.2rem;
   color: white;
-  background-color: var(--main-color-eevee);
+  background-color: var(--main-color);
 }
 
 h2{
@@ -243,9 +237,14 @@ header {
 }
 
 /* legend section design  */
+#legend{
+  display: flex;
+  flex-direction: column;
+}
 
 .section-top {
   height: 6vw;
+  /* margin-top: 2vh; */
 }
 
 .section-top-smartphone {
@@ -571,8 +570,8 @@ header {
 
   /* position elements of header centered and define an height */
   header {
-    min-height: 600px;
-    max-height: 1200px;
+    /* min-height: 600px; */
+    /* max-height: 1200px; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -624,8 +623,9 @@ header {
   /* displaying elements on a grid */
   #hero {
     /* width: 1200px; */
+    height: 100%;
     display: grid;
-    grid-template: 25% auto auto 3fr 25% / 0.6fr 1fr 100px 1fr 0.6fr;
+    grid-template: 15% auto auto 3fr 15% / 0.6fr 1fr 100px 1fr 0.6fr;
     justify-items: center;
   }
 
@@ -633,13 +633,13 @@ header {
   #little-description {
     grid-area: 4 / 2 / 5 / 3;
     font-size: clamp(1rem, 2vw, 1.9rem);
-    line-height: 55px;
+    line-height: 45px;
     width: 100%
   }
 
   #hero > img {
     grid-area: 1 / 4 / 6 /5;
-    width:clamp(400px, 40vw,800px);
+    width:clamp(300px, 40vw,800px);
   }
   #header-type {
     grid-area: 3 / 2 / 4 /3;
