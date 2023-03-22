@@ -8,7 +8,6 @@
 }
 
 * {
-  margin: 0;
   box-sizing: border-box;
 }
 
@@ -407,6 +406,79 @@ header {
   margin: 35px auto;
 }
 
+/* style sectionc #caracteristics */
+
+ .caracteristics-middle {
+  background-color: var(--common-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 50px;
+  padding-top: 20px;
+}
+
+#caracteristics > h2 {
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+}
+
+.caracteristics-middle > p {
+  width: 80%;
+  margin: 1rem;
+  margin-bottom: 20px;
+}
+
+#stats {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#chart {
+  width: 100%;
+  height: 300px;
+}
+
+/* flex type et faiblesse */
+.type_weakness {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.type_weakness svg {
+  width: 80%;
+}
+
+.type_weakness p {
+  margin-bottom: 1rem;
+  text-align: start;
+  margin-left: 10%;
+}
+
+/* flex attaques */
+
+#attacks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  row-gap: 10px;
+  color: white;
+}
+
+#attacks > p {
+  margin-bottom: 1rem;
+  text-align: center;
+  width: 100%;
+  grid-area: 1/1/2/3;
+}
+#attacks > svg {
+  width: 80%;
+  margin: 0 auto;
+} 
+
 /* quiz section design  */
 
 #quiz {
@@ -732,83 +804,8 @@ footer{
   #quiz-answer4 {
     height: 50px;
   }
-}
 
-/* style sectionc #caracteristics */
 
-#caracteristics {
-  background-color: var(--common-color);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* padding-bottom: 50px; */
-}
-
-#caracteristics > h2 {
-  text-align: center;
-  color: white;
-  margin-top: 4rem;
-  margin-bottom: 1rem;
-}
-
-#caracteristics > p {
-  color: white;
-  width: 80%;
-  margin: 1rem;
-}
-
-#stats {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-#chart {
-  width: 100%;
-  height: 300px;
-}
-
-/* flex type et faiblesse */
-.type_weakness {
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
-  color: white;
-  text-align: center;
-}
-
-.type_weakness svg {
-  width: 80%;
-}
-
-.type_weakness p {
-  margin-bottom: 1rem;
-  text-align: start;
-  margin-left: 10%;
-}
-
-/* flex attaques */
-
-#attacks {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  row-gap: 10px;
-  color: white;
-}
-
-#attacks > p {
-  margin-bottom: 1rem;
-  text-align: center;
-  width: 100%;
-  grid-area: 1/1/2/3;
-}
-#attacks > svg {
-  width: 80%;
-  margin: 0 auto;
-}
-
-@media screen and (min-width: 768px) {
   #stats {
     display: flex;
     flex-direction: initial;
@@ -834,3 +831,4 @@ footer{
     margin-bottom: 3rem;
   }
 }
+
