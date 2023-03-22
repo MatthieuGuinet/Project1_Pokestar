@@ -10,7 +10,6 @@
 * {
   margin: 0;
   box-sizing: border-box;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body {
@@ -21,11 +20,15 @@ body {
   font-size: 1.2rem;
   color: white;
   background-color: var(--main-color);
+  line-height: 150%;
 }
 
 h2{
   letter-spacing: 0.1rem;
   font-size: 1.8rem;
+  text-align: center;
+  border: var(--secondary-color) solid ;
+  padding : 10px 3%;
 }
 
 /* Barre de navigation -> header */
@@ -173,7 +176,7 @@ header {
 /* definition of the header img on mobile first */
 #mobile-header-band > img {
   width: 100%;
-  height: 6vh;
+  height: 9vh;
   margin-top: 50px;
 }
 
@@ -193,7 +196,7 @@ header {
   left: 51%;
   transform: translate(-50%, -50%);
   margin-top:42px;
-  font-size : 1.7rem;
+  font-size : 1.5rem;
   letter-spacing: 0.8rem;
   font-weight:800;
 }
@@ -276,7 +279,6 @@ header {
   overflow: hidden;
   font-style: normal;
   font-weight: 400;
-  line-height: 150.02%;
   background: linear-gradient(
     180deg,
     #ffffff 0%,
@@ -313,12 +315,18 @@ header {
 
 /*style localisation */
 
+#localisation h2{
+  margin:0 auto;
+  margin-top: 20px;
+}
+
 #map_wrapper {
   overflow: hidden;
   width: 300px;
   height: 300px;
   border-radius: 10px;
-  box-shadow: rgba(0, 0, 0 50%) 0 0 10px 5px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 0 5px 5px;
+  margin-bottom: 20px;
 }
 
 #scrollable_map {
@@ -371,6 +379,11 @@ header {
   opacity: 1;
 }
 
+#localisation{
+  display: flex;
+  flex-direction: column;
+}
+
 #localisation-flex {
   display: flex;
   flex-direction: column-reverse;
@@ -378,6 +391,12 @@ header {
   align-items: center;
   margin: 10%;
   gap: 20px;
+}
+
+#localisation-text{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 
@@ -402,9 +421,9 @@ header {
 }
 
 #quiz-title {
-  margin-top: 43px;
-  width: 55%;
-  height: 82px;
+  margin-top: 30px;
+  width: 60%;
+  height: auto;
   background-color: rgba(0, 0, 0 , 0.5);
   border-radius: 20px;
   text-align: center;
@@ -412,7 +431,7 @@ header {
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
-  padding: 0 15px
+  padding: 15px 15px
 }
 
 #quiz-container {
@@ -428,6 +447,7 @@ header {
 
 #quiz-question {
   margin: 20px 0 20px 0;
+  padding: 0 15px;
   width: 90%;
   height: 58px;
   border-radius: 10px;
@@ -450,7 +470,7 @@ header {
 #quiz-answer2,
 #quiz-answer3,
 #quiz-answer4 {
-  width: 70%;
+  width: 80%;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -458,6 +478,8 @@ header {
   align-items: center;
   height: 34px;
   margin-bottom: 22px;
+  background-color: var(--main-color);
+  padding : 0 10px
 }
 
 #quiz-button-next {
@@ -597,7 +619,7 @@ footer{
 
   #desktop-header-band > svg {
     width: 50%;
-    height: 120px;
+    height: 12vh;
   }
 
   #left_button {
@@ -612,7 +634,7 @@ footer{
     position: absolute;
     font-size: 1.5rem;
     letter-spacing: 1rem;
-    margin-top: 22px;
+    margin-top: 8px;
     background-color:rgba(0, 0, 0, 0);
     text-align: center;
   }
@@ -683,8 +705,8 @@ footer{
   /* localisation */
 
   #map_wrapper {
-    width: 500px;
-    height: 500px;
+    width: clamp(300px, 50vw, 800px);
+    height: clamp(300px, 40vw, 800px);
   }
 
   #localisation-flex {
@@ -695,9 +717,7 @@ footer{
   }
 
   #localisation-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+   width: 50%
   }
 
   /* quiz desktop display  */
