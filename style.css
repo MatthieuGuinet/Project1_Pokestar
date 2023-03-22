@@ -1,65 +1,65 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 
 :root {
-  --common-color: #282828;
-  --main-color: #3a3129;
-  --secondary-color: #c5915d;
-  --black-color : #000000;
+    --common-color: #282828;
+    --main-color: #3a3129;
+    --secondary-color: #c5915d;
+    --black-color: #000000;
 }
 
 * {
-  margin: 0;
-  box-sizing: border-box;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: raleway;
-  font-size: 1.2rem;
-  color: white;
-  background-color: var(--main-color);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: raleway;
+    font-size: 1.2rem;
+    color: white;
+    background-color: var(--main-color);
 }
 
-h2{
-  letter-spacing: 0.1rem;
-  font-size: 1.8rem;
+h2 {
+    letter-spacing: 0.1rem;
+    font-size: 1.8rem;
 }
 
 /* Barre de navigation -> header */
 /* Mobile first */
 #nav_header {
-  background: var(--black-color);
-  height: 60px;
-  position: fixed;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  z-index: 2;
+    background: var(--black-color);
+    height: 60px;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 2;
 }
 
-#logo_title{
-  letter-spacing: 0.2rem;
-  font-weight: bold;
+#logo_title {
+    letter-spacing: 0.2rem;
+    font-weight: bold;
 }
 
 #logo_and_title {
-  display: flex;
-  align-items: center;
-  flex-grow: 1; 
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
 }
 
 #logo_and_title .logo {
-  padding-inline: 10px;
-  height: 40px;
+    padding-inline: 10px;
+    height: 40px;
 }
 
 /* Lien de navigation menu burger */
 #nav_links a {
-  text-decoration: none;
-  color: rgb(252, 252, 252);
+    text-decoration: none;
+    color: rgb(252, 252, 252);
 }
 
 #nav_links a:hover {
@@ -67,65 +67,66 @@ h2{
 }
 
 #nav_links ul {
-  list-style: none;
-  width: 90%;
+    list-style: none;
+    width: 90%;
 }
 
 #nav_links li {
-  text-align: center;
+    text-align: center;
 }
 
 /* Apparence du menu burger ouvert */
 /* Le menu est fermé par defaut */
 #nav_links {
-  background-color: rgba(0,0,0, 0.9);
-  border-radius: 0px 0px 0px 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 60px;
-  z-index: 2;
-  width: 70vw;
-  transition: right 1s;;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 0px 0px 0px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 60px;
+    z-index: 2;
+    width: 70vw;
+    transition: right 1s;
+    ;
 }
 
 .burger_close {
-  right: -800px;
+    right: -800px;
 }
 
 /* Icone du menu burger */
 #burger_icon span {
-  display: inline-block;
-  width: 30px;
-  height: 2px;
-  background-color: white;
-  border-radius: 3px;
-  margin-bottom: 6px;
-  position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    border-radius: 3px;
+    margin-bottom: 6px;
+    position: relative;
 }
 
 /* Animation du menu burger */
 #burger_icon span::before,
 #burger_icon span::after {
-  content: "";
-  width: 30px;
-  height: 2px;
-  background-color: white;
-  border-radius: 3px;
-  display: inline-block;
-  position: absolute;
-  transform-origin: center;
-  transition: all 0.5s ease;
+    content: "";
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    border-radius: 3px;
+    display: inline-block;
+    position: absolute;
+    transform-origin: center;
+    transition: all 0.5s ease;
 }
 
 #burger_icon span::before {
-  top: -10px;
+    top: -10px;
 }
 
 #burger_icon span::after {
-  top: 10px;
+    top: 10px;
 }
 
 /* animationBurger -> class ajouté en JS */
@@ -149,12 +150,13 @@ h2{
 
 /* Position du menu burger ouvert */
 .burger_open {
-  position: fixed;
-  right: 0px;
+    position: fixed;
+    right: 0px;
 }
 
-.burger_open li, .burger_close li{
-  padding: 7% 0;
+.burger_open li,
+.burger_close li {
+    padding: 7% 0;
 }
 
 header {
@@ -168,10 +170,10 @@ header {
 }
 
 /* definition of the header img on mobile first */
-#mobile-header-band > img {
-  width: 100%;
-  height: 6vh;
-  margin-top: 50px;
+#mobile-header-band>img {
+    width: 100%;
+    height: 6vh;
+    margin-top: 50px;
 }
 
 /* displaying the header img and pokemon name on row direction and centered on mobile first and fixing the position to add text on it */
@@ -185,14 +187,14 @@ header {
 
 /* displaying the name of the pokemon on the img on mobile first */
 .pokemon-name-mobile {
-  position: absolute;
-  top: 30%;
-  left: 51%;
-  transform: translate(-50%, -50%);
-  margin-top:42px;
-  font-size : 1.7rem;
-  letter-spacing: 0.8rem;
-  font-weight:800;
+    position: absolute;
+    top: 30%;
+    left: 51%;
+    transform: translate(-50%, -50%);
+    margin-top: 42px;
+    font-size: 1.7rem;
+    letter-spacing: 0.8rem;
+    font-weight: 800;
 }
 
 /* displaying elements under the header bar as a column */
@@ -203,9 +205,9 @@ header {
 }
 
 /* defining the pokemon image resizing */
-#hero > img {
-  width: clamp(150px, 80%, 450px);
-  margin-bottom: 15px;
+#hero>img {
+    width: clamp(150px, 80%, 450px);
+    margin-bottom: 15px;
 }
 
 /* display off on pokemon name on mobile first */
@@ -216,32 +218,32 @@ header {
 /* adjusting position of pokemon type on top of the pokemon img */
 /* the color must be changed */
 #header-type {
-  order: -1;
-  background-color: var(--secondary-color);
-  border-radius: 10px;
-  padding: 3px 15px;
-  margin-bottom: 30px;
-  color: var(--black-color);
+    order: -1;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    padding: 3px 15px;
+    margin-bottom: 30px;
+    color: var(--black-color);
 }
 
 
 /* adjusting paragraph style on the description text */
 #little-description {
-  margin: 0;
-  padding: 4px 15px;
-  text-align: center;
-  line-height : 1.6rem;
+    margin: 0;
+    padding: 4px 15px;
+    text-align: center;
+    line-height: 1.6rem;
 }
 
 /* legend section design  */
-#legend{
-  display: flex;
-  flex-direction: column;
+#legend {
+    display: flex;
+    flex-direction: column;
 }
 
 .section-top {
-  height: 6vw;
-  /* margin-top: 2vh; */
+    height: 6vw;
+    /* margin-top: 2vh; */
 }
 
 .section-top-smartphone {
@@ -262,42 +264,40 @@ header {
 }
 
 #legend h2 {
-  margin-top: 43px;
-  background-color: var(--common-color);
+    margin-top: 43px;
+    background-color: var(--common-color);
 }
 
 #legend p {
-  margin-top: 45px;
-  width: 83vw;
-  height: 440px;
-  overflow: hidden;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 150.02%;
-  background: linear-gradient(
-    180deg,
-    #ffffff 0%,
-    rgba(255, 255, 255, 0) 95.91%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+    margin-top: 45px;
+    width: 83vw;
+    height: 440px;
+    overflow: hidden;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150.02%;
+    background: linear-gradient(180deg,
+            #ffffff 0%,
+            rgba(255, 255, 255, 0) 95.91%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 #legend-deployment {
-  width: auto;
-  height: 40px;
-  background-color: var(--secondary-color);
-  margin-bottom: 25px;
-  border-radius: 10px;
-  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
-  font-size: 1.2rem;
-  border: none;
-  box-shadow: 0px 6px 10px 1px rgba(0, 0, 0 , 0.3);
+    width: auto;
+    height: 40px;
+    background-color: var(--secondary-color);
+    margin-bottom: 25px;
+    border-radius: 10px;
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+    font-size: 1.2rem;
+    border: none;
+    box-shadow: 0px 6px 10px 1px rgba(0, 0, 0, 0.3);
 }
 
 .section-bottom {
-  height: 6vw;
+    height: 6vw;
 }
 
 .section-bottom-smartphone {
@@ -396,52 +396,52 @@ header {
 }
 
 #quiz h2 {
-  margin-top: 43px;
+    margin-top: 43px;
 }
 
 #quiz-title {
-  margin-top: 43px;
-  width: 55%;
-  height: 82px;
-  background-color: rgba(0, 0, 0 , 0.5);
-  border-radius: 20px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
-  padding: 0 15px
+    margin-top: 43px;
+    width: 55%;
+    height: 82px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0 15px
 }
 
 #quiz-container {
-  width: 85vw;
-  background-color: rgba(0, 0, 0 , 0.5);
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
+    width: 85vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
 }
 
 #quiz-question {
-  margin: 20px 0 20px 0;
-  width: 90%;
-  height: 58px;
-  border-radius: 10px;
-  /* color has to be the same as the one used for changing pokemon buttons on header */
-  background: #6b655f;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    margin: 20px 0 20px 0;
+    width: 90%;
+    height: 58px;
+    border-radius: 10px;
+    /* color has to be the same as the one used for changing pokemon buttons on header */
+    background: #6b655f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #quiz-answers-container {
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
 #quiz-answer1,
@@ -459,22 +459,22 @@ header {
 }
 
 #quiz-button-next {
-  border-radius: 10px;
-  width: 106px;
-  height: 35px;
-  background-color: var(--secondary-color);
-  margin-bottom: 30px;
-  margin-top: 20px;
-  font-size: 1.1rem;
-  border : none;
-  box-shadow: 0px 6px 10px 1px rgba(0, 0, 0 , 0.5);
+    border-radius: 10px;
+    width: 106px;
+    height: 35px;
+    background-color: var(--secondary-color);
+    margin-bottom: 30px;
+    margin-top: 20px;
+    font-size: 1.1rem;
+    border: none;
+    box-shadow: 0px 6px 10px 1px rgba(0, 0, 0, 0.5);
 
 }
 
 #quiz-replay-button {
-  display: none;
-  border : none;
-  box-shadow: 0px 6px 10px 1px rgba(0, 0, 0 , 0.5);
+    display: none;
+    border: none;
+    box-shadow: 0px 6px 10px 1px rgba(0, 0, 0, 0.5);
 }
 
 /* display of the chosen answer */
@@ -495,35 +495,36 @@ header {
 }
 
 #quiz-replay-button {
-  border-radius: 10px;
-  width: auto;
-  height: 50px;
-  background-color: var(--secondary-color);
-  margin-bottom: 30px;
-  margin-top: 40px;
-  font-size: 1.1rem;
-  padding: 0 30px;
+    border-radius: 10px;
+    width: auto;
+    height: 50px;
+    background-color: var(--secondary-color);
+    margin-bottom: 30px;
+    margin-top: 40px;
+    font-size: 1.1rem;
+    padding: 0 30px;
 }
+
 /* Section sticky nav mobile*/
 
 #sticky-nav {
-    background-color: #000000;
+    background-color: var(--black-color);
     opacity: 0.8;
     /* backdrop-filter: blur(100px); */
-     display: flex;
+    display: flex;
     justify-content: center;
     margin-top: 10px;
     position: sticky;
     bottom: 0;
-    
+}
+
 #sticky-nav ul {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     padding: 5px;
+    width: 60%;
 
-    width: 80%;
-    max-width: 800px;
 }
 
 #sticky-nav li {
@@ -531,179 +532,209 @@ header {
     width: 40px;
 }
 
-/* #sticky-nav circle:hover,
-#sticky-nav path:hover {
-    fill: rgb(233, 14, 14); 
-} */
+
 
 /* footer */
-footer{
-  padding:10px 10px 10px 50px ;
-  background-color:var(--black-color);
+footer {
+    padding: 10px 10px 10px 50px;
+    background-color: var(--black-color);
 }
 
 /* media queries */
 
 @media screen and (min-width: 768px) {
-  body{
-    font-size: 1.6rem;
-  }
-  h2{
-    font-size: 2.5rem;
-  }
-  #burger_icon {
-    display: none;
-  }
-  #nav_header {
-    display: flex;
-    justify-content: space-between;
-    height: 80px;
-  }
-  #logo_and_title .logo {
-    height: 60px;
-  }
-  #logo_title {
-    padding-left: 10px;
-    font-weight: bold;
-  }
-  #nav_links ul {
-    display: flex;
-    margin-right: 10%;
-  }
-  #nav_links {
-    position: initial;
-    align-items: end;
-    width: auto;
-    height: 80px;
-    min-height: auto;
-    background-color: transparent;
-    opacity: 1;
-     margin-right: 2%;
-  }
-  #nav_links a {
-    /* height: 200px; */
-    padding: 10px 15px;
-  }
-  #nav_links a:hover {
-    background-color: rgba(255, 255, 255, 0.237);
-    border-radius: 15px;
-  }
-  /* position elements of header centered and define an height */
-  header {
-    /* min-height: 600px; */
-    /* max-height: 1200px; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  /* display off on header band mobile */
-  #mobile-header-band {
-    display: none;
-  }
-  #desktop-header-band {
-    display: flex;
-    position: relative;
-    margin-top: 90px;
-    width: 100%;
-  }
-  #desktop-header-band > svg {
-    width: 50%;
-    height: 12vh;
-  }
-  #left_button {
-    margin-right: 2.5px;
-  }
-  #right_button {
-    margin-left: 2.5px;
-  }
-  #desktop-header-band > p {
-    position: absolute;
-    font-size: 1.5rem;
-    letter-spacing: 1rem;
-    margin-top: 8px;
-    background-color:rgba(0, 0, 0, 0);
-    text-align: center;
-  }
-  #pokemon_left {
-    right: 54.5%;
-  }
-  #pokemon_right {
-    left: 55%;
-  }
-  /* displaying elements on a grid */
-  #hero {
-    /* width: 1200px; */
-    height: 100%;
-    display: grid;
-    grid-template: 15% auto auto 3fr 15% / 0.6fr 1fr 100px 1fr 0.6fr;
-    justify-items: center;
-  }
-  /* adjusting each elements in the grid */
-  #little-description {
-    grid-area: 4 / 2 / 5 / 3;
-    font-size: clamp(1rem, 2vw, 1.9rem);
-    line-height: 45px;
-    width: 100%
-  }
-  #hero > img {
-    grid-area: 1 / 4 / 6 /5;
-    width:clamp(300px, 40vw,800px);
-  }
-  #header-type {
-    grid-area: 3 / 2 / 4 /3;
-    font-size: clamp(0.5rem, 2vw, 1.7rem);
-  }
-  #hero > h1 {
-    display: initial;
-    letter-spacing: 0.6rem;
-    font-size: clamp(1rem, 5vw, 5rem);
-    margin: 5%;
-    grid-area: 2 / 2 / 3 / 3;
-  }
-  /* media queries legend section  */
-  /* diminution of the div revealed text height  */
-  #legend p {
-    height: 150px;
-  }
-  /* legend band picture modification */
-  .section-top-desktop {
-    display: initial;
-  }
-  .section-top-smartphone {
-    display: none;
-  }
-  .section-bottom-desktop {
-    display: initial;
-  }
-  .section-bottom-smartphone {
-    display: none;
-  }
-  /* localisation */
-  #map_wrapper {
-    width: clamp(300px, 50vw, 800px);
-    height: clamp(300px, 40vw, 800px);
-  }
-  #localisation-flex {
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin: 10%;
-    gap: 10%;
-  }
-  #localisation-text {
-   width: 50%
-  }
-  /* quiz desktop display  */
-  #quiz-container {
-    width: 60vw;
-  }
-  #quiz-answer1,
-  #quiz-answer2,
-  #quiz-answer3,
-  #quiz-answer4 {
-    height: 50px;
-  }
-  
-  /* Section sticky nav desktop*/
+    body {
+        font-size: 1.6rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    #burger_icon {
+        display: none;
+    }
+
+    #nav_header {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+    }
+
+    #logo_and_title .logo {
+        height: 60px;
+    }
+
+    #logo_title {
+        padding-left: 10px;
+        font-weight: bold;
+    }
+
+    #nav_links ul {
+        display: flex;
+        margin-right: 10%;
+    }
+
+    #nav_links {
+        position: initial;
+        align-items: end;
+        width: auto;
+        height: 80px;
+        min-height: auto;
+        background-color: transparent;
+        opacity: 1;
+        margin-right: 2%;
+    }
+
+    #nav_links a {
+        /* height: 200px; */
+        padding: 10px 15px;
+    }
+
+    #nav_links a:hover {
+        background-color: rgba(255, 255, 255, 0.237);
+        border-radius: 15px;
+    }
+
+    /* position elements of header centered and define an height */
+    header {
+        /* min-height: 600px; */
+        /* max-height: 1200px; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* display off on header band mobile */
+    #mobile-header-band {
+        display: none;
+    }
+
+    #desktop-header-band {
+        display: flex;
+        position: relative;
+        margin-top: 90px;
+        width: 100%;
+    }
+
+    #desktop-header-band>svg {
+        width: 50%;
+        height: 12vh;
+    }
+
+    #left_button {
+        margin-right: 2.5px;
+    }
+
+    #right_button {
+        margin-left: 2.5px;
+    }
+
+    #desktop-header-band>p {
+        position: absolute;
+        font-size: 1.5rem;
+        letter-spacing: 1rem;
+        margin-top: 8px;
+        background-color: rgba(0, 0, 0, 0);
+        text-align: center;
+    }
+
+    #pokemon_left {
+        right: 54.5%;
+    }
+
+    #pokemon_right {
+        left: 55%;
+    }
+
+    /* displaying elements on a grid */
+    #hero {
+        /* width: 1200px; */
+        height: 100%;
+        display: grid;
+        grid-template: 15% auto auto 3fr 15% / 0.6fr 1fr 100px 1fr 0.6fr;
+        justify-items: center;
+    }
+
+    /* adjusting each elements in the grid */
+    #little-description {
+        grid-area: 4 / 2 / 5 / 3;
+        font-size: clamp(1rem, 2vw, 1.9rem);
+        line-height: 45px;
+        width: 100%
+    }
+
+    #hero>img {
+        grid-area: 1 / 4 / 6 /5;
+        width: clamp(300px, 40vw, 800px);
+    }
+
+    #header-type {
+        grid-area: 3 / 2 / 4 /3;
+        font-size: clamp(0.5rem, 2vw, 1.7rem);
+    }
+
+    #hero>h1 {
+        display: initial;
+        letter-spacing: 0.6rem;
+        font-size: clamp(1rem, 5vw, 5rem);
+        margin: 5%;
+        grid-area: 2 / 2 / 3 / 3;
+    }
+
+    /* media queries legend section  */
+    /* diminution of the div revealed text height  */
+    #legend p {
+        height: 150px;
+    }
+
+    /* legend band picture modification */
+    .section-top-desktop {
+        display: initial;
+    }
+
+    .section-top-smartphone {
+        display: none;
+    }
+
+    .section-bottom-desktop {
+        display: initial;
+    }
+
+    .section-bottom-smartphone {
+        display: none;
+    }
+
+    /* localisation */
+    #map_wrapper {
+        width: clamp(300px, 50vw, 800px);
+        height: clamp(300px, 40vw, 800px);
+    }
+
+    #localisation-flex {
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 10%;
+        gap: 10%;
+    }
+
+    #localisation-text {
+        width: 50%
+    }
+
+    /* quiz desktop display  */
+    #quiz-container {
+        width: 60vw;
+    }
+
+    #quiz-answer1,
+    #quiz-answer2,
+    #quiz-answer3,
+    #quiz-answer4 {
+        height: 50px;
+    }
+
+    /* Section sticky nav desktop*/
     #sticky-nav {
         width: 65px;
         height: 300px;
@@ -723,88 +754,112 @@ footer{
         height: 50px;
         width: 50px;
     }
+
+    #sticky-nav circle {
+        opacity: 0.6;
+    }
+
+    #sticky-nav path {
+        fill: #000000;
+    }
 }
+
 /* style sectionc #caracteristics */
 #caracteristics {
-  background-color: var(--common-color);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* padding-bottom: 50px; */
+    background-color: var(--common-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding-bottom: 50px; */
 }
-#caracteristics > h2 {
-  text-align: center;
-  color: white;
-  margin-top: 4rem;
-  margin-bottom: 1rem;
+
+#caracteristics>h2 {
+    text-align: center;
+    color: white;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
 }
-#caracteristics > p {
-  color: white;
-  width: 80%;
-  margin: 1rem;
+
+#caracteristics>p {
+    color: white;
+    width: 80%;
+    margin: 1rem;
 }
+
 #stats {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
+
 #chart {
-  width: 100%;
-  height: 300px;
+    width: 100%;
+    height: 300px;
 }
+
 /* flex type et faiblesse */
 .type_weakness {
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
-  color: white;
-  text-align: center;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    text-align: center;
 }
+
 .type_weakness svg {
-  width: 80%;
+    width: 80%;
 }
+
 .type_weakness p {
-  margin-bottom: 1rem;
-  text-align: start;
-  margin-left: 10%;
+    margin-bottom: 1rem;
+    text-align: start;
+    margin-left: 10%;
 }
+
 /* flex attaques */
 #attacks {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  row-gap: 10px;
-  color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 10px;
+    color: white;
 }
-#attacks > p {
-  margin-bottom: 1rem;
-  text-align: center;
-  width: 100%;
-  grid-area: 1/1/2/3;
+
+#attacks>p {
+    margin-bottom: 1rem;
+    text-align: center;
+    width: 100%;
+    grid-area: 1/1/2/3;
 }
-#attacks > svg {
-  width: 80%;
-  margin: 0 auto;
-}
-@media screen and (min-width: 768px) {
-  #stats {
-    display: flex;
-    flex-direction: initial;
+
+#attacks>svg {
+    width: 80%;
     margin: 0 auto;
-    justify-content: center;
-    gap: 1.5rem;
-  }
-  #chart {
-    width: 45%;
-  }
-  .Type_Weakness_Attacks {
-    width: 45%;
-  }
-  .type_weakness p,
-  #attacks > p {
-    font-size: 2rem;
-  }
-  #caracteristics > p {
-    margin-bottom: 3rem;
-  }
+}
+
+@media screen and (min-width: 768px) {
+    #stats {
+        display: flex;
+        flex-direction: initial;
+        margin: 0 auto;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    #chart {
+        width: 45%;
+    }
+
+    .Type_Weakness_Attacks {
+        width: 45%;
+    }
+
+    .type_weakness p,
+    #attacks>p {
+        font-size: 2rem;
+    }
+
+    #caracteristics>p {
+        margin-bottom: 3rem;
+    }
 }
