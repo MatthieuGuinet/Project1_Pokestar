@@ -123,7 +123,13 @@ replayButton.addEventListener("click", () => {
 
 // Section sticky nav
 
-const stickyNavIcon = document.getElementsByClassName("sticky-nav-icon");
-stickyNavIcon.addEventListener("click", function () {
-  ;
-});
+// const stickyNavIcon = document.getElementsByClassName("sticky-nav-icon");
+// stickyNavIcon.addEventListener("click", function () {
+//   ;
+// });
+
+
+// document.addEventListener("scroll", function () {
+  
+
+// })

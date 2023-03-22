@@ -491,13 +491,18 @@ header {
     padding: 0 30px;
 }
 
+/* Section sticky nav mobile*/
+
 #sticky-nav {
     background-color: #000000;
+    opacity: 0.8;
+    /* backdrop-filter: blur(100px); */
     display: flex;
     justify-content: center;
     margin-top: 10px;
     position: sticky;
     bottom: 0;
+
 
 }
 
@@ -505,21 +510,24 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding: 10px;
+    padding: 5px;
 
     width: 80%;
+    max-width: 800px;
 
 }
 
 #sticky-nav li {
-    height: 60px;
-    width: 60px;
+    height: 40px;
+    width: 40px;
 }
 
-#sticky-nav svg:hover {
-    background-color: #b9812b;
+/* #sticky-nav circle:hover,
+#sticky-nav path:hover {
+    fill: rgb(233, 14, 14); 
 
-}
+
+} */
 
 /* media queries */
 
@@ -709,6 +717,28 @@ header {
     #quiz-answer4 {
         height: 50px;
     }
+
+    /* Section sticky nav desktop*/
+    #sticky-nav {
+        width: 65px;
+        height: 300px;
+        border-radius: 15px;
+        margin: 10px;
+        bottom: 30%;
+    }
+
+    #sticky-nav ul {
+        /* display: flex; */
+        /* flex-direction: column; */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #sticky-nav li {
+        height: 50px;
+        width: 50px;
+    }
+
 }
 
 /* style sectionc #caracteristics */
