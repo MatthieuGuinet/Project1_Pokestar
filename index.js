@@ -94,8 +94,7 @@ scrollableMap.addEventListener("mousedown", scrollTheMap);
 
 // Section "quiz" button "suivant"
 let nextButton = document.getElementById("quiz-button-next");
-console.log(nextButton);
-console.log("coucou")
+
 
 nextButton.addEventListener("click", () => {
   quizFunctions.nextQuestion();
@@ -125,7 +124,7 @@ replayButton.addEventListener("click", () => {
 
 //sticky-nav addEventListener
 
-const eeveeNavButton = document.getElementById("evee-nav-button");
+let eeveeNavButton = document.getElementById("evee-nav-button");
 console.log(eeveeNavButton);
 eeveeNavButton.addEventListener("click", () => {
   switchPokemon.eeveeContent.replaceContent();

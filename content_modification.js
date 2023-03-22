@@ -59,8 +59,8 @@ const vaporeonContent = new PokemonContent("AQUALI","#879cc6","#3a5d83","VOLTALI
 //A tous les endroits nécessaires, addEventListener(click, function(eeveeStyle,eeveeContent))
 
 export let switchPokemon = {
-    eeveeContent,
-    flareonContent,
-    jolteonContent,
-    vaporeonContent,
+    eeveeContent:eeveeContent,
+    flareonContent:flareonContent,
+    jolteonContent:jolteonContent,
+    vaporeonContent:vaporeonContent,
     };
