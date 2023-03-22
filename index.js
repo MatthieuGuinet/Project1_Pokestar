@@ -89,11 +89,13 @@ function scrollTheMap() {
 scrollableMap.addEventListener("mousedown", scrollTheMap);
 
 //Chart
-let chart = new ApexCharts(document.querySelector("#chart"), options);
-chart.render();
+// let chart = new ApexCharts(document.querySelector("#chart"), options);
+// chart.render();
 
 // Section "quiz" button "suivant"
 let nextButton = document.getElementById("quiz-button-next");
+console.log(nextButton);
+console.log("coucou")
 
 nextButton.addEventListener("click", () => {
   quizFunctions.nextQuestion();
@@ -125,18 +127,18 @@ replayButton.addEventListener("click", () => {
 
 const eeveeNavButton = document.getElementById("evee-nav-button");
 console.log(eeveeNavButton);
-// eeveeNavButton.addEventListener("click", () => {
-//   switchPokemon.eeveeContent.replaceContent();
-// });
-// let flareonNavButton = document.getElementById("flareon-nav-button");
-// flareonNavButton.addEventListener("click", () => {
-//   switchPokemon.flareonContent.replaceContent();
-// });
-// let jolteonNavButton = document.getElementById("jolteon-nav-button");
-// jolteonNavButton.addEventListener("click", () => {
-//   switchPokemon.jolteonContent.replaceContent();
-// });
-// let vaporeonNavButton = document.getElementById("vaporeon-nav-button");
-// vaporeonNavButton.addEventListener("click", () => {
-//   switchPokemon.vaporeonContent.replaceContent();
-// });
+eeveeNavButton.addEventListener("click", () => {
+  switchPokemon.eeveeContent.replaceContent();
+});
+let flareonNavButton = document.getElementById("flareon-nav-button");
+flareonNavButton.addEventListener("click", () => {
+  switchPokemon.flareonContent.replaceContent();
+});
+let jolteonNavButton = document.getElementById("jolteon-nav-button");
+jolteonNavButton.addEventListener("click", () => {
+  switchPokemon.jolteonContent.replaceContent();
+});
+let vaporeonNavButton = document.getElementById("vaporeon-nav-button");
+vaporeonNavButton.addEventListener("click", () => {
+  switchPokemon.vaporeonContent.replaceContent();
+});
