@@ -1,14 +1,14 @@
 //import of the displayText function to unwrap the legend section test
 import displayText from "./displayText.js";
 
-
 //import hoverButton to use the hovering on the buttons a the top of the pokemon
-import hoverButton from './header_button.js';
+
+import { headerFunctions } from "./header_button.js";
 import {options} from './chart.js';
 
 import { quizFunctions } from "./quiz.js";
 
-// import modify content function 
+// import modify content function
 import { switchPokemon } from "./content_modification.js";
 
 // ouverture et fermeture du menu burger + animation de l'icone
@@ -38,8 +38,8 @@ for (let i = 0; i < navElement.length; i++) {
 
 const textButtons = document.querySelectorAll(".text_button");
 const svgButtons = document.querySelectorAll(".lr_buttons");
-hoverButton(textButtons);
-hoverButton(svgButtons);
+headerFunctions.hoverButton(textButtons);
+headerFunctions.hoverButton(svgButtons);
 
 // Section "legend", button "poursuivre l'aventure"
 let legendButton = document.getElementById("legend-deployment");
@@ -89,14 +89,13 @@ function scrollTheMap() {
 // création d'un 'addeventlistener' appelant la fonction principale lorsque le clic gauche est enfoncé
 scrollableMap.addEventListener("mousedown", scrollTheMap);
 
-
-//Chart 
-let chart = new ApexCharts(document.querySelector("#chart"), options);
-chart.render();
-
+//Chart
+// let chart = new ApexCharts(document.querySelector("#chart"), options);
+// chart.render();
 
 // Section "quiz" button "suivant"
 let nextButton = document.getElementById("quiz-button-next");
+
 
 nextButton.addEventListener("click", () => {
   quizFunctions.nextQuestion();
@@ -124,8 +123,25 @@ replayButton.addEventListener("click", () => {
   quizFunctions.replay();
 });
 
+
+
 //sticky-nav addEventListener
 
+let eeveeNavButton = document.getElementById("eevee-nav-button");
+console.log(eeveeNavButton);
+eeveeNavButton.addEventListener("click", () => {
+  switchPokemon.eeveeContent.replaceContent();
+});
 let flareonNavButton = document.getElementById("flareon-nav-button");
-console.log(flareonNavButton);
-addEventListener("click", ()=>{switchPokemon.flareonContent.replaceContent()});
+flareonNavButton.addEventListener("click", () => {
+  switchPokemon.flareonContent.replaceContent();
+});
+let jolteonNavButton = document.getElementById("jolteon-nav-button");
+jolteonNavButton.addEventListener("click", () => {
+  switchPokemon.jolteonContent.replaceContent();
+});
+let vaporeonNavButton = document.getElementById("vaporeon-nav-button");
+vaporeonNavButton.addEventListener("click", () => {
+  switchPokemon.vaporeonContent.replaceContent();
+});
+
