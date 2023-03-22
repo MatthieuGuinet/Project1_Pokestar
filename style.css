@@ -398,7 +398,7 @@ header {
 
 #chart {
   width: clamp(300px, 50vw, 600px);
-  margin: 35px auto;
+  margin: 0;
 }
 
 /* style sectionc #caracteristics */
@@ -428,6 +428,7 @@ header {
 #stats {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100%;
 }
 
@@ -449,7 +450,7 @@ header {
 }
 
 .type_weakness p {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   text-align: start;
   margin-left: 10%;
 }
@@ -462,11 +463,13 @@ header {
   grid-template-rows: 1fr 1fr 1fr;
   row-gap: 10px;
   color: white;
+  margin-top: 20px;
 }
 
 #attacks > p {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   text-align: center;
+  align-self: center;
   width: 100%;
   grid-area: 1/1/2/3;
 }
@@ -806,7 +809,7 @@ footer {
   #localisation-flex {
     flex-direction: row;
     justify-content: space-evenly;
-    margin: 10%;
+    margin: 50px 10%;
     gap: 10%;
   }
 
@@ -852,7 +855,7 @@ footer {
     margin-bottom: 3rem;
   }
   .caracteristics-middle > p:last-of-type{
-    margin-bottom: 90px;
+    margin-bottom: 50px;
   }
 
   /* Section sticky nav desktop*/

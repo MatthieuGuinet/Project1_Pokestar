@@ -90,8 +90,8 @@ function scrollTheMap() {
 scrollableMap.addEventListener("mousedown", scrollTheMap);
 
 //Chart
-// let chart = new ApexCharts(document.querySelector("#chart"), options);
-// chart.render();
+let chart = new ApexCharts(document.querySelector("#chart"), options);
+chart.render();
 
 // Section "quiz" button "suivant"
 let nextButton = document.getElementById("quiz-button-next");
