@@ -8,9 +8,7 @@
 }
 
 * {
-  margin: 0;
   box-sizing: border-box;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body {
@@ -21,11 +19,15 @@ body {
   font-size: 1.2rem;
   color: white;
   background-color: var(--main-color);
+  line-height: 150%;
 }
 
 h2{
   letter-spacing: 0.1rem;
   font-size: 1.8rem;
+  text-align: center;
+  border: var(--secondary-color) solid ;
+  padding : 10px 3%;
 }
 
 /* Barre de navigation -> header */
@@ -48,22 +50,25 @@ h2{
 #logo_and_title {
   display: flex;
   align-items: center;
-  flex-grow: 1; 
+  flex-grow: 1;
+  
 }
 
 #logo_and_title .logo {
   padding-inline: 10px;
   height: 40px;
+  
 }
 
 /* Lien de navigation menu burger */
 #nav_links a {
   text-decoration: none;
-  color: rgb(252, 252, 252);
+  color: rgb(252, 252, 252)
+  
 }
 
 #nav_links a:hover {
-    color: darkgrey;
+  color: darkgrey;
 }
 
 #nav_links ul {
@@ -73,6 +78,7 @@ h2{
 
 #nav_links li {
   text-align: center;
+
 }
 
 /* Apparence du menu burger ouvert */
@@ -130,21 +136,21 @@ h2{
 
 /* animationBurger -> class ajouté en JS */
 #burger.animationOpen {
-    background: transparent;
+  background: transparent;
 }
 
 #burger.animationOpen::before {
-    transform: rotate(45deg);
-    top: 0;
+  transform: rotate(45deg);
+  top: 0;
 }
 
 #burger.animationOpen::after {
-    transform: rotate(-45deg);
-    top: 0;
+  transform: rotate(-45deg);
+  top: 0;
 }
 
 #burger_icon {
-    padding-right: 10px;
+  padding-right: 10px;
 }
 
 /* Position du menu burger ouvert */
@@ -158,29 +164,28 @@ h2{
 }
 
 header {
-    margin-top: 0px;
+  margin-top: 0px;
 }
-
 /* no display header desktop on mobile first */
 #desktop-header-band {
-    display: none;
-    margin-top: 60px;
+  display: none;
+  margin-top: 60px;
 }
 
 /* definition of the header img on mobile first */
 #mobile-header-band > img {
   width: 100%;
-  height: 6vh;
+  height: 9vh;
   margin-top: 50px;
 }
 
 /* displaying the header img and pokemon name on row direction and centered on mobile first and fixing the position to add text on it */
 #mobile-header-band {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    text-align: center;
-    color: white;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  color: white;
 }
 
 /* displaying the name of the pokemon on the img on mobile first */
@@ -190,16 +195,16 @@ header {
   left: 51%;
   transform: translate(-50%, -50%);
   margin-top:42px;
-  font-size : 1.7rem;
+  font-size : 1.5rem;
   letter-spacing: 0.8rem;
   font-weight:800;
 }
 
 /* displaying elements under the header bar as a column */
 #hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* defining the pokemon image resizing */
@@ -210,7 +215,7 @@ header {
 
 /* display off on pokemon name on mobile first */
 .pokemon-name {
-    display: none;
+  display: none;
 }
 
 /* adjusting position of pokemon type on top of the pokemon img */
@@ -245,20 +250,20 @@ header {
 }
 
 .section-top-smartphone {
-    fill: var(--common-color);
+  fill: var(--common-color);
 }
 
 .section-top-desktop {
-    display: none;
+  display: none;
 }
 
 #legend-middle {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #ffffff;
-    background-color: var(--common-color);
-    background-size: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+  background-color: var(--common-color);
+  background-size: 100%;
 }
 
 #legend h2 {
@@ -273,7 +278,6 @@ header {
   overflow: hidden;
   font-style: normal;
   font-weight: 400;
-  line-height: 150.02%;
   background: linear-gradient(
     180deg,
     #ffffff 0%,
@@ -301,98 +305,187 @@ header {
 }
 
 .section-bottom-smartphone {
-    fill: var(--common-color);
+  fill: var(--common-color);
 }
 
 .section-bottom-desktop {
-    display: none;
+  display: none;
 }
 
 /*style localisation */
 
+#localisation h2{
+  margin:0 auto;
+  margin-top: 20px;
+}
+
 #map_wrapper {
-    overflow: hidden;
-    width: 300px;
-    height: 300px;
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0 50%) 0 0 10px 5px;
+  overflow: hidden;
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 0 5px 5px;
+  margin-bottom: 20px;
 }
 
 #scrollable_map {
-    position: relative;
-    width: 200%;
+  position: relative;
+  width: 200%;
 }
 
 #map-image {
-    width: 100%;
+  width: 100%;
 }
 
 #pin-div {
-    position: absolute;
-    width: 10%;
-    top: 5%;
-    left: 80%;
+  position: absolute;
+  width: 10%;
+  top: 5%;
+  left: 80%;
 }
 
 #pokemon-pin {
-    width: 100%;
+  width: 100%;
 }
 
 #pin-div:hover,
 #pin-div:focus {
-    color: black;
+  color: black;
+}
+#pin-div > span {
+  position: absolute;
+  top: 100px;
+  right: -60px;
+  margin-top: 20px;
+  font-size: 1.4rem;
+  width: 200px;
+  color: antiquewhite;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 2px rgba(0, 0, 0 50%);
+  transform: scale(1) rotate(-15deg);
+  transition: all 0.25s;
+  opacity: 0;
+  z-index: 2;
 }
 
-#pin-div>span {
-    position: absolute;
-    top: 100px;
-    right: -60px;
-    margin-top: 20px;
-    font-size: 1.4rem;
-    width: 200px;
-    color: antiquewhite;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(10px);
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 0 2px rgba(0, 0, 0 50%);
-    transform: scale(1) rotate(-15deg);
-    transition: all 0.25s;
-    opacity: 0;
-    z-index: 2;
+#pin-div:hover > span,
+#pin-div:focus > span {
+  transform: scale(1) rotate(0);
+  opacity: 1;
 }
 
-#pin-div:hover>span,
-#pin-div:focus>span {
-    transform: scale(1) rotate(0);
-    opacity: 1;
+#localisation{
+  display: flex;
+  flex-direction: column;
 }
 
 #localisation-flex {
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: space-around;
-    align-items: center;
-    margin: 10%;
-    gap: 20px;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10%;
+  gap: 20px;
+}
+
+#localisation-text{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 
 /*Chart*/
 
 #chart {
-    width: clamp(300px, 50vw, 600px);
-    margin: 35px auto;
+  width : clamp(300px, 50vw, 600px);
+  margin: 35px auto;
 }
+
+/* style sectionc #caracteristics */
+
+ .caracteristics-middle {
+  background-color: var(--common-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 50px;
+  padding-top: 20px;
+}
+
+#caracteristics > h2 {
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+}
+
+.caracteristics-middle > p {
+  width: 80%;
+  margin: 1rem;
+  margin-bottom: 20px;
+}
+
+#stats {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#chart {
+  width: 100%;
+  height: 300px;
+}
+
+/* flex type et faiblesse */
+.type_weakness {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.type_weakness svg {
+  width: 80%;
+}
+
+.type_weakness p {
+  margin-bottom: 1rem;
+  text-align: start;
+  margin-left: 10%;
+}
+
+/* flex attaques */
+
+#attacks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  row-gap: 10px;
+  color: white;
+}
+
+#attacks > p {
+  margin-bottom: 1rem;
+  text-align: center;
+  width: 100%;
+  grid-area: 1/1/2/3;
+}
+#attacks > svg {
+  width: 80%;
+  margin: 0 auto;
+} 
 
 /* quiz section design  */
 
 #quiz {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
 }
 
 #quiz h2 {
@@ -400,9 +493,9 @@ header {
 }
 
 #quiz-title {
-  margin-top: 43px;
-  width: 55%;
-  height: 82px;
+  margin-top: 30px;
+  width: 60%;
+  height: auto;
   background-color: rgba(0, 0, 0 , 0.5);
   border-radius: 20px;
   text-align: center;
@@ -410,7 +503,7 @@ header {
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
-  padding: 0 15px
+  padding: 15px 15px
 }
 
 #quiz-container {
@@ -426,6 +519,7 @@ header {
 
 #quiz-question {
   margin: 20px 0 20px 0;
+  padding: 0 15px;
   width: 90%;
   height: 58px;
   border-radius: 10px;
@@ -448,14 +542,16 @@ header {
 #quiz-answer2,
 #quiz-answer3,
 #quiz-answer4 {
-    width: 70%;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    height: 34px;
-    margin-bottom: 22px;
+  width: 80%;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 34px;
+  margin-bottom: 22px;
+  background-color: var(--main-color);
+  padding : 0 10px
 }
 
 #quiz-button-next {
@@ -475,23 +571,24 @@ header {
   display: none;
   border : none;
   box-shadow: 0px 6px 10px 1px rgba(0, 0, 0 , 0.5);
+
 }
 
 /* display of the chosen answer */
 .isChosen {
-    filter: brightness(160%);
+  filter: brightness(160%);
 }
 
 #quiz-result-container {
-    width: 100%;
-    background-color: #000000;
+  width: 100%;
+  background-color: #000000;
 }
 
 #quiz-result-img {
-    display: none;
-    max-height: 300px;
-    max-width: 100%;
-    background-color: #000000;
+  display: none;
+  max-height: 300px;
+  max-width: 100%;
+  background-color: #000000;
 }
 
 #quiz-replay-button {
@@ -504,6 +601,7 @@ header {
   font-size: 1.1rem;
   padding: 0 30px;
 }
+
 /* Section sticky nav mobile*/
 
 #sticky-nav {
@@ -549,28 +647,36 @@ footer{
   body{
     font-size: 1.6rem;
   }
+
   h2{
     font-size: 2.5rem;
   }
+
   #burger_icon {
     display: none;
   }
+
+
   #nav_header {
     display: flex;
     justify-content: space-between;
     height: 80px;
   }
+
   #logo_and_title .logo {
     height: 60px;
   }
+
   #logo_title {
     padding-left: 10px;
     font-weight: bold;
   }
+
   #nav_links ul {
     display: flex;
     margin-right: 10%;
   }
+
   #nav_links {
     position: initial;
     align-items: end;
@@ -581,14 +687,20 @@ footer{
     opacity: 1;
      margin-right: 2%;
   }
+
+  
+
   #nav_links a {
+   
     /* height: 200px; */
     padding: 10px 15px;
   }
+  
   #nav_links a:hover {
     background-color: rgba(255, 255, 255, 0.237);
     border-radius: 15px;
   }
+
   /* position elements of header centered and define an height */
   header {
     /* min-height: 600px; */
@@ -596,27 +708,34 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
+    
   }
+
   /* display off on header band mobile */
   #mobile-header-band {
     display: none;
   }
+
   #desktop-header-band {
     display: flex;
     position: relative;
     margin-top: 90px;
     width: 100%;
   }
+
   #desktop-header-band > svg {
     width: 50%;
     height: 12vh;
   }
+
   #left_button {
     margin-right: 2.5px;
   }
+
   #right_button {
     margin-left: 2.5px;
   }
+
   #desktop-header-band > p {
     position: absolute;
     font-size: 1.5rem;
@@ -625,12 +744,15 @@ footer{
     background-color:rgba(0, 0, 0, 0);
     text-align: center;
   }
+
   #pokemon_left {
     right: 54.5%;
   }
+
   #pokemon_right {
     left: 55%;
   }
+
   /* displaying elements on a grid */
   #hero {
     /* width: 1200px; */
@@ -639,6 +761,7 @@ footer{
     grid-template: 15% auto auto 3fr 15% / 0.6fr 1fr 100px 1fr 0.6fr;
     justify-items: center;
   }
+
   /* adjusting each elements in the grid */
   #little-description {
     grid-area: 4 / 2 / 5 / 3;
@@ -646,6 +769,7 @@ footer{
     line-height: 45px;
     width: 100%
   }
+
   #hero > img {
     grid-area: 1 / 4 / 6 /5;
     width:clamp(300px, 40vw,800px);
@@ -654,6 +778,7 @@ footer{
     grid-area: 3 / 2 / 4 /3;
     font-size: clamp(0.5rem, 2vw, 1.7rem);
   }
+
   #hero > h1 {
     display: initial;
     letter-spacing: 0.6rem;
@@ -661,11 +786,14 @@ footer{
     margin: 5%;
     grid-area: 2 / 2 / 3 / 3;
   }
+
   /* media queries legend section  */
+
   /* diminution of the div revealed text height  */
   #legend p {
     height: 150px;
   }
+
   /* legend band picture modification */
   .section-top-desktop {
     display: initial;
@@ -679,115 +807,39 @@ footer{
   .section-bottom-smartphone {
     display: none;
   }
+
   /* localisation */
+
   #map_wrapper {
     width: clamp(300px, 50vw, 800px);
     height: clamp(300px, 40vw, 800px);
   }
+
   #localisation-flex {
     flex-direction: row;
     justify-content: space-evenly;
     margin: 10%;
     gap: 10%;
   }
+
   #localisation-text {
    width: 50%
   }
+
   /* quiz desktop display  */
+
   #quiz-container {
     width: 60vw;
   }
+
   #quiz-answer1,
   #quiz-answer2,
   #quiz-answer3,
   #quiz-answer4 {
     height: 50px;
   }
-  
-  /* Section sticky nav desktop*/
-    #sticky-nav {
-        width: 65px;
-        height: 300px;
-        border-radius: 15px;
-        margin: 10px;
-        bottom: 30%;
-    }
 
-    #sticky-nav ul {
-        /* display: flex; */
-        /* flex-direction: column; */
-        flex-direction: column;
-        align-items: center;
-    }
 
-    #sticky-nav li {
-        height: 50px;
-        width: 50px;
-    }
-}
-/* style sectionc #caracteristics */
-#caracteristics {
-  background-color: var(--common-color);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* padding-bottom: 50px; */
-}
-#caracteristics > h2 {
-  text-align: center;
-  color: white;
-  margin-top: 4rem;
-  margin-bottom: 1rem;
-}
-#caracteristics > p {
-  color: white;
-  width: 80%;
-  margin: 1rem;
-}
-#stats {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-#chart {
-  width: 100%;
-  height: 300px;
-}
-/* flex type et faiblesse */
-.type_weakness {
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
-  color: white;
-  text-align: center;
-}
-.type_weakness svg {
-  width: 80%;
-}
-.type_weakness p {
-  margin-bottom: 1rem;
-  text-align: start;
-  margin-left: 10%;
-}
-/* flex attaques */
-#attacks {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  row-gap: 10px;
-  color: white;
-}
-#attacks > p {
-  margin-bottom: 1rem;
-  text-align: center;
-  width: 100%;
-  grid-area: 1/1/2/3;
-}
-#attacks > svg {
-  width: 80%;
-  margin: 0 auto;
-}
-@media screen and (min-width: 768px) {
   #stats {
     display: flex;
     flex-direction: initial;
@@ -795,17 +847,42 @@ footer{
     justify-content: center;
     gap: 1.5rem;
   }
+
   #chart {
     width: 45%;
   }
+
   .Type_Weakness_Attacks {
     width: 45%;
   }
+
   .type_weakness p,
   #attacks > p {
     font-size: 2rem;
   }
+
   #caracteristics > p {
     margin-bottom: 3rem;
+  }
+
+    /* Section sticky nav desktop*/
+    #sticky-nav {
+      width: 65px;
+      height: 300px;
+      border-radius: 15px;
+      margin: 10px;
+      bottom: 30%;
+  }
+
+  #sticky-nav ul {
+      /* display: flex; */
+      /* flex-direction: column; */
+      flex-direction: column;
+      align-items: center;
+  }
+
+  #sticky-nav li {
+      height: 50px;
+      width: 50px;
   }
 }
