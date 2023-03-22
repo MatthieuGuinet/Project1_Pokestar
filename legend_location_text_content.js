@@ -2,24 +2,12 @@
 
 let eeveeLegend = `Il était une fois un petit Evoli, tout mignon avec ses grandes oreilles et sa fourrure douce. Il vivait dans une forêt paisible, entouré de ses amis Pokémon. Evoli rêvait de devenir plus fort, de pouvoir évoluer et devenir un Pokémon encore plus puissant. 
 
-
 Un jour, Evoli rencontra une dresseuse Pokémon qui l'observait attentivement. Elle voyait en lui un potentiel incroyable et décida de l'emmener avec elle pour l'entraîner. Au début, Evoli était un peu effrayé, mais il se laissa rapidement séduire par la gentillesse et la patience de la dresseuse.
-
-
-Ils commencèrent à s'entraîner tous les jours, travaillant dur pour améliorer les compétences d'Evoli. Il apprit de nouvelles techniques, renforça son corps et devint plus agile. Cependant, Evoli avait encore un long chemin à parcourir avant de pouvoir évoluer.
-
-
-Malgré les défis qu'il rencontra sur son chemin, Evoli ne baissa jamais les bras. Il était déterminé à atteindre son objectif et à devenir un Pokémon plus fort. La dresseuse était fière de lui et l'encourageait à chaque étape de son parcours.
-
+Ils commencèrent à s'entraîner tous les jours, travaillant dur pour améliorer les compétences d'Evoli. Il apprit de nouvelles techniques, renforça son corps et devint plus agile. Cependant, Evoli avait encore un long chemin à parcourir avant de pouvoir évoluer. Malgré les défis qu'il rencontra sur son chemin, Evoli ne baissa jamais les bras. Il était déterminé à atteindre son objectif et à devenir un Pokémon plus fort. La dresseuse était fière de lui et l'encourageait à chaque étape de son parcours.
 
 Finalement, le jour tant attendu arriva. Evoli avait travaillé très dur et avait accumulé assez de force pour évoluer. La dresseuse l'emmena dans un endroit spécial où il pourrait se transformer en une nouvelle forme. Evoli ferma les yeux et se concentra de toutes ses forces.
 
-
-Quand il les rouvrit, il était devenu un magnifique Aquali, un Pokémon aquatique. La dresseuse était émerveillée par sa beauté et sa force. Evoli était heureux de voir à quel point il avait progressé et se sentait fier de lui-même.
-
-
-Désormais, Evoli était prêt à explorer le monde avec sa nouvelle forme. Il savait qu'il avait encore beaucoup à apprendre, mais il était confiant dans ses capacités et le soutien de sa dresseuse. Ensemble, ils allaient vivre de grandes aventures et découvrir de nouveaux amis Pokémon.
-
+Quand il les rouvrit, il était devenu un magnifique Aquali, un Pokémon aquatique. La dresseuse était émerveillée par sa beauté et sa force. Evoli était heureux de voir à quel point il avait progressé et se sentait fier de lui-même.Désormais, Evoli était prêt à explorer le monde avec sa nouvelle forme. Il savait qu'il avait encore beaucoup à apprendre, mais il était confiant dans ses capacités et le soutien de sa dresseuse. Ensemble, ils allaient vivre de grandes aventures et découvrir de nouveaux amis Pokémon.
 
 Et c'est ainsi que se termine l'histoire d'Evoli, un petit Pokémon qui a réussi à réaliser son rêve grâce à sa détermination et à l'aide de ses amis`;
 
@@ -94,7 +82,9 @@ Aquali était très reconnaissant envers ses amis pour l'avoir sauvé. Il était
 Finalement, Aquali est retourné dans les vastes océans pour continuer à explorer et à aider les autres Pokémon en cas de besoin. Il était aimé et respecté de tous, et il avait prouvé que même les plus petits et les plus doux des Pokémon peuvent être des héros.`;
 
 // pokemon locations text declaration
-let eeveeLocation = `Evoli est un Pokémon populaire dans la franchise Pokémon. Il peut être trouvé dans plusieurs jeux vidéo Pokémon, notamment dans les versions Rouge, Bleu et Jaune. Dans ces versions, Evoli peut être obtenu en le capturant dans les hautes herbes ou en l'obtenant en échange d'un autre Pokémon. Dans les versions plus récentes, comme Pokémon Go, Evoli peut être trouvé dans la nature en se promenant dans les parcs et les zones de verdure. Evoli est également disponible dans les jeux de cartes à jouer Pokémon.`;
+let eeveeLocation = `Evoli est un Pokémon populaire dans la franchise Pokémon. Il peut être trouvé dans plusieurs jeux vidéo Pokémon, notamment dans les versions Rouge, Bleu et Jaune, en le capturant dans les hautes herbes ou en l'obtenant en échange d'un autre Pokémon. 
+
+Dans les versions plus récentes, comme Pokémon Go, Evoli peut être trouvé dans la nature en se promenant dans les parcs et les zones de verdure.`;
 
 let flareonLocation = `Pyroli est un Pokémon de type feu de la première génération. Pour le trouver dans les jeux Pokémon, il faut soit l'évoluer à partir d'un Évoli en utilisant une Pierre Feu, soit l'obtenir par échange avec un autre joueur. Dans les jeux plus récents, Pyroli peut également être trouvé dans la nature, en explorant des zones de feu ou des volcans. Il est également possible de rencontrer Pyroli dans les jeux mobiles Pokémon GO en le capturant dans la nature ou en l'obtenant dans des raids.`;
 
