@@ -458,6 +458,7 @@ header {
   align-items: center;
   height: 34px;
   margin-bottom: 22px;
+  background-color: var(--main-color);
 }
 
 #quiz-button-next {
