@@ -23,6 +23,10 @@ body {
   line-height: 150%;
 }
 
+p{
+max-width: 1000px;
+}
+
 h2 {
   letter-spacing: 0.1rem;
   font-size: 1.8rem;
