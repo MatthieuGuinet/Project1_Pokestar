@@ -4,7 +4,7 @@ import displayText from "./displayText.js";
 //import hoverButton to use the hovering on the buttons a the top of the pokemon
 
 import { headerFunctions } from "./header_button.js";
-import {options} from './chart.js';
+import { options } from './chart.js';
 
 import { quizFunctions } from "./quiz.js";
 
@@ -158,29 +158,53 @@ function hoverIcon(stickyIcon) {
     })
   }
 }
-hoverIcon(icon);
-hoverIcon(circle);
+// hoverIcon(icon);
+// hoverIcon(circle);
 
 // sticky_nav scroll
-const stickyNav = document.getElementById("sticky-nav");
-let firstScrollPosition = window.pageYOffset
-// let windowWidth = window.innerWidth
-// if (windowWidth < 768) {
-window.addEventListener('scroll', function () {
-  let secondScrollPosition = window.pageYOffset
-  if (firstScrollPosition < secondScrollPosition) {
-    stickyNav.style.bottom = "-200px"
-  } else {
-    stickyNav.style.bottom = "0"
-  }
-  firstScrollPosition = secondScrollPosition;
 
-});
-// };
+// let windowWidth = window.matchMedia("(max-width: 768px)")
+// while (windowWidth < 768) {
+
+// console.log(`${windowWidth} est la taille de l'écran`)
+
+const stickyNav = document.getElementById("sticky-nav");
+
+function scrollStickyNavMobile() {
+  let firstScrollPosition = window.pageYOffset
+  window.addEventListener('scroll', function () {
+    let secondScrollPosition = window.pageYOffset
+    if (firstScrollPosition < secondScrollPosition) {
+      stickyNav.style.bottom = "-200px"
+    } else {
+      stickyNav.style.bottom = "0"
+    }
+    firstScrollPosition = secondScrollPosition;
+  });
+}
+
+// let windowWidth = window.outerWidth
+//  windowWidth = window.outerWidth
+let mobile = window.matchMedia("(max-width: 768px)");
+let desktop = window.matchMedia("(min-width: 769px)");
+
+// window.addEventListener('resize', () => {
+//   console.log("desktop");
+// console.log("mobile");
+// })
+
+if (desktop.matches) {
+  hoverIcon(icon);
+  hoverIcon(circle);
+} else {
+  scrollStickyNavMobile()
+}
+
+
 
 //sticky-nav addEventListener
 
-let eeveeNavButton = document.getElementById("eevee-nav-button");
+let eeveeNavButton = document.getElementById("evee-nav-button");
 eeveeNavButton.addEventListener("click", () => {
   switchPokemon.eeveeContent.replaceContent();
 });
