@@ -34,18 +34,12 @@ for (let i = 0; i < navElement.length; i++) {
   });
 }
 
-//Hover on desktop header band
+//Hover and click on desktop header band
 
 const textButtons = document.querySelectorAll(".text_button");
 const svgButtons = document.querySelectorAll(".lr_buttons");
-headerFunctions.hoverButton(textButtons);
-headerFunctions.hoverButton(svgButtons);
-
-// click button to change pokemon
-const lbuttons = document.querySelectorAll(".lbutton");
-const rbuttons = document.querySelectorAll(".rbutton");
-headerFunctions.clickButtonL(lbuttons);
-headerFunctions.clickButtonR(rbuttons);
+headerFunctions.actionButton(textButtons);
+headerFunctions.actionButton(svgButtons);
 
 // Section "legend", button "poursuivre l'aventure"
 let legendButton = document.getElementById("legend-deployment");
@@ -164,8 +158,8 @@ hoverIcon(circle);
 // sticky_nav scroll
 const stickyNav = document.getElementById("sticky-nav");
 let firstScrollPosition = window.pageYOffset
-// let windowWidth = window.innerWidth
-// if (windowWidth < 768) {
+let windowWidth = window.outerWidth
+if (windowWidth < 768) {
 window.addEventListener('scroll', function () {
   let secondScrollPosition = window.pageYOffset
   if (firstScrollPosition < secondScrollPosition) {
@@ -176,25 +170,29 @@ window.addEventListener('scroll', function () {
   firstScrollPosition = secondScrollPosition;
 
 });
-// };
+};
 
 //sticky-nav addEventListener
 
-let eeveeNavButton = document.getElementById("eevee-nav-button");
+let eeveeNavButton = document.getElementById("evee-nav-button");
 eeveeNavButton.addEventListener("click", () => {
   switchPokemon.eeveeContent.replaceContent();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 let flareonNavButton = document.getElementById("flareon-nav-button");
 flareonNavButton.addEventListener("click", () => {
   switchPokemon.flareonContent.replaceContent();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 let jolteonNavButton = document.getElementById("jolteon-nav-button");
 jolteonNavButton.addEventListener("click", () => {
   switchPokemon.jolteonContent.replaceContent();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 let vaporeonNavButton = document.getElementById("vaporeon-nav-button");
 vaporeonNavButton.addEventListener("click", () => {
   switchPokemon.vaporeonContent.replaceContent();
+  window.scrollTo({ top: 0, behavior: 'smooth' })
 });
 
 
