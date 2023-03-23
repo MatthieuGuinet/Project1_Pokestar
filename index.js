@@ -46,6 +46,12 @@ const svgButtons = document.querySelectorAll(".lr_buttons");
 headerFunctions.hoverButton(textButtons);
 headerFunctions.hoverButton(svgButtons);
 
+// click button to change pokemon
+const lbuttons = document.querySelectorAll(".lbutton");
+const rbuttons = document.querySelectorAll(".rbutton");
+headerFunctions.clickButtonL(lbuttons);
+headerFunctions.clickButtonR(rbuttons);
+
 // Section "legend", button "poursuivre l'aventure"
 let legendButton = document.getElementById("legend-deployment");
 legendButton.addEventListener("click", () => {
@@ -130,7 +136,52 @@ replayButton.addEventListener("click", () => {
   quizFunctions.replay();
 });
 
+//sticky-nav hover
+const icon = document.getElementsByClassName("sticky-nav-icon");
+const circle = document.getElementsByClassName("sticky-nav-circle");
+const eeveeIcon = document.getElementById("eevee-icon");
+const vaporeonIcon = document.getElementById("vaporeon-icon");
+const jolteonIcon = document.getElementById("jolteon-icon");
+const flareonIcon = document.getElementById("flareon-icon");
 
+function hoverIcon(stickyIcon) {
+  for (let i = 0; i < stickyIcon.length; i++) {
+    const nav = stickyIcon[i]
+    nav.addEventListener("mouseover", function () {
+      icon[i].style.fill = "white";
+      eeveeIcon.style.fill = "#C38F5C";
+      vaporeonIcon.style.fill = "#54ADFF";
+      jolteonIcon.style.fill = "#FFCA42";
+      flareonIcon.style.fill = "#FF7D05";
+      circle[i].style.opacity = "1";
+      icon[i].style.cursor = "pointer"
+      circle[i].style.cursor = "pointer"
+    });
+    nav.addEventListener("mouseout", function () {
+      icon[i].style.fill = "black";
+      circle[i].style.opacity = "0.6";
+    })
+  }
+}
+hoverIcon(icon);
+hoverIcon(circle);
+
+// sticky_nav scroll
+const stickyNav = document.getElementById("sticky-nav");
+let firstScrollPosition = window.pageYOffset
+// let windowWidth = window.innerWidth
+// if (windowWidth < 768) {
+window.addEventListener('scroll', function () {
+  let secondScrollPosition = window.pageYOffset
+  if (firstScrollPosition < secondScrollPosition) {
+    stickyNav.style.bottom = "-200px"
+  } else {
+    stickyNav.style.bottom = "0"
+  }
+  firstScrollPosition = secondScrollPosition;
+
+});
+// };
 
 //sticky-nav addEventListener
 

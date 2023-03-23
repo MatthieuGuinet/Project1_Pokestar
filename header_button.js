@@ -1,3 +1,5 @@
+import { switchPokemon } from "./content_modification.js";
+
 function hoverButton(myArr) {
   const textButtons = document.querySelectorAll(".text_button");
   const svgButtons = document.querySelectorAll(".lr_buttons");
@@ -14,18 +16,69 @@ function hoverButton(myArr) {
   }
 }
 
-function clickButton(myArray) {
-  const textButtons = document.querySelectorAll(".button_pokemon");
+function clickButtonL(myArray) {
   for (let i = 0; i < myArray.length; i++) {
     const elem = myArray[i];
     elem.addEventListener("click", () => {
-      pokemonToSwitch = document.querySelector("text_button").textContent;
+      const pokemonToSwitchL = document.querySelector("#pokemon_left").textContent;
+      switch (pokemonToSwitchL) {
+            case "EVOLI":
+              switchPokemon.eeveeContent.replaceContent();
+            break;
+        
+            case "PYROLI":
+              switchPokemon.flareonContent.replaceContent();
+            break;
+        
+            case "AQUALI":
+              switchPokemon.vaporeonContent.replaceContent();
+            break;
+        
+            case "VOLTALI":
+              switchPokemon.jolteonContent.replaceContent();
+            break;
+            default:
+              break;
+      }
     })
+
   }
-  return pokemonToSwitch
 }
+function clickButtonR(myArray) {
+  for (let i = 0; i < myArray.length; i++) {
+    const elem = myArray[i];
+    elem.addEventListener("click", () => {
+      const pokemonToSwitchR = document.querySelector("#pokemon_right").textContent;
+      switch (pokemonToSwitchR) {
+            case "EVOLI":
+              switchPokemon.eeveeContent.replaceContent();
+            break;
+        
+            case "PYROLI":
+              switchPokemon.flareonContent.replaceContent();
+            break;
+        
+            case "AQUALI":
+              switchPokemon.vaporeonContent.replaceContent();
+            break;
+        
+            case "VOLTALI":
+              switchPokemon.jolteonContent.replaceContent();
+            break;
+            default:
+              break;
+      }
+    })
+
+  }
+}
+
+
+
 
 export let headerFunctions = {
   hoverButton: hoverButton,
-  clickButton: clickButton,
+  clickButtonL: clickButtonL,
+  clickButtonR: clickButtonR,
 };
+

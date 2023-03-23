@@ -26,7 +26,7 @@ h2 {
   letter-spacing: 0.1rem;
   font-size: 1.8rem;
   text-align: center;
-  border: var(--secondary-color) solid;
+  border: 3px solid var(--secondary-color) ;
   padding: 10px 3%;
 }
 
@@ -350,8 +350,8 @@ header {
 }
 #pin-div > span {
   position: absolute;
-  top: 100px;
-  right: -60px;
+  top: 150px;
+  right: -40px;
   margin-top: 20px;
   font-size: 1.4rem;
   width: 200px;
@@ -362,15 +362,15 @@ header {
   padding: 15px;
   border-radius: 5px;
   box-shadow: 0 0 2px rgba(0, 0, 0 50%);
-  transform: scale(1) rotate(-15deg);
-  transition: all 0.25s;
+  transform: scale(1) rotate(-360deg);
+  transition: all 0.5s;
   opacity: 0;
   z-index: 2;
 }
 
 #pin-div:hover > span,
 #pin-div:focus > span {
-  transform: scale(1) rotate(0);
+  transform: scale(1.5) rotate(0);
   opacity: 1;
 }
 
@@ -434,7 +434,6 @@ header {
 
 #chart {
   width: 100%;
-  height: 300px;
 }
 
 /* flex type et faiblesse */
@@ -607,35 +606,29 @@ header {
 /* Section sticky nav mobile*/
 
 #sticky-nav {
-  background-color: #000000;
-  opacity: 0.8;
-  /* backdrop-filter: blur(100px); */
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-  position: sticky;
-  bottom: 0;
+    background-color: var(--black-color);
+    opacity: 0.8;
+    /* backdrop-filter: blur(100px); */
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    position: sticky;
+    bottom: 0;
+    transition: bottom 0.5s;
 }
 
 #sticky-nav ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  padding: 5px;
-
-  width: 80%;
-  max-width: 800px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 5px;
+    width: 60%;
 }
 
 #sticky-nav li {
   height: 40px;
   width: 40px;
 }
-
-/* #sticky-nav circle:hover,
-#sticky-nav path:hover {
-    fill: rgb(233, 14, 14); 
-} */
 
 /* footer */
 footer {
@@ -740,6 +733,10 @@ footer {
     text-align: center;
   }
 
+   .text_button{
+    user-select: none;
+  }
+  
   #pokemon_left {
     right: 54.5%;
   }
@@ -863,24 +860,32 @@ footer {
     margin-bottom: 50px;
   }
 
-  /* Section sticky nav desktop*/
-  #sticky-nav {
-    width: 65px;
-    height: 300px;
-    border-radius: 15px;
-    margin: 10px;
-    bottom: 30%;
-  }
+   /* Section sticky nav desktop*/
+    #sticky-nav {
+        width: 65px;
+        height: 300px;
+        border-radius: 15px;
+        margin: 10px;
+        bottom: 30%;
+    }
 
-  #sticky-nav ul {
-    /* display: flex; */
-    /* flex-direction: column; */
-    flex-direction: column;
-    align-items: center;
-  }
+    #sticky-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
 
-  #sticky-nav li {
-    height: 50px;
-    width: 50px;
-  }
+    #sticky-nav li {
+        height: 50px;
+        width: 50px;
+    }
+
+    #sticky-nav circle {
+        opacity: 0.6;
+    }
+
+    #sticky-nav path {
+        fill: #000000;
+    }
 }
+
+
