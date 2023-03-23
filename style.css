@@ -23,10 +23,6 @@ body {
   line-height: 150%;
 }
 
-p{
-max-width: 1000px;
-}
-
 h2 {
   letter-spacing: 0.1rem;
   font-size: 1.8rem;
@@ -166,14 +162,14 @@ h2 {
 }
 
 /*adding offset when click on href localisation and quiz*/
-#localisation,
-#quiz {
+#localisation, #quiz{
   scroll-margin-top: 80px;
 }
 
 header {
   margin-top: 0px;
 }
+
 /* no display header desktop on mobile first */
 #desktop-header-band {
   display: none;
@@ -181,7 +177,7 @@ header {
 }
 
 /* definition of the header img on mobile first */
-#mobile-header-band > img {
+#mobile-header-band>img {
   width: 100%;
   height: 70px;
   margin-top: 55px;
@@ -216,7 +212,7 @@ header {
 }
 
 /* defining the pokemon image resizing */
-#hero > img {
+#hero>img {
   width: clamp(150px, 80%, 450px);
   margin-bottom: 15px;
 }
@@ -285,11 +281,9 @@ header {
   overflow: hidden;
   font-style: normal;
   font-weight: 400;
-  background: linear-gradient(
-    180deg,
-    #ffffff 0%,
-    rgba(255, 255, 255, 0) 95.91%
-  );
+  background: linear-gradient(180deg,
+      #ffffff 0%,
+      rgba(255, 255, 255, 0) 95.91%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -359,7 +353,8 @@ header {
 #pin-div:focus {
   color: black;
 }
-#pin-div > span {
+
+#pin-div>span {
   position: absolute;
   top: 150px;
   right: -40px;
@@ -379,8 +374,8 @@ header {
   z-index: 2;
 }
 
-#pin-div:hover > span,
-#pin-div:focus > span {
+#pin-div:hover>span,
+#pin-div:focus>span {
   transform: scale(1.5) rotate(0);
   opacity: 1;
 }
@@ -427,13 +422,13 @@ header {
   padding-top: 20px;
 }
 
-.caracteristics-middle > h2 {
+.caracteristics-middle>h2 {
   text-align: center;
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
-.caracteristics-middle > p {
+.caracteristics-middle>p {
   width: 80%;
   margin: 1rem;
   margin-bottom: 20px;
@@ -479,14 +474,16 @@ header {
   margin-top: 20px;
 }
 
-#attacks > p {
+#attacks>p {
   margin-bottom: 0.5rem;
   text-align: center;
   align-self: center;
   width: 100%;
   grid-area: 1/1/2/3;
 }
+
 #attacks > img {
+
   width: 80%;
   margin: 0 auto;
 }
@@ -564,7 +561,7 @@ header {
   margin-bottom: 22px;
   background-color: grey;
   padding: 0 10px;
-  cursor: pointer;
+  cursor : pointer;
 }
 
 #quiz-button-next {
@@ -577,7 +574,7 @@ header {
   font-size: 1.1rem;
   border: none;
   box-shadow: 0px 6px 10px 1px rgba(0, 0, 0, 0.5);
-  cursor: pointer;
+  cursor : pointer ;
 }
 
 #quiz-button-next:active {
@@ -590,7 +587,6 @@ header {
   font-size: 0.8rem;
   margin-bottom: 10px;
 }
-
 
 #quiz-replay-button {
   display: none;
@@ -659,7 +655,7 @@ footer {
 
 /* media queries */
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   body {
     font-size: 1.6rem;
   }
@@ -732,7 +728,7 @@ footer {
     width: 100%;
   }
 
-  #desktop-header-band > svg {
+  #desktop-header-band>svg {
     width: 50%;
     height: 100px;
   }
@@ -745,7 +741,7 @@ footer {
     margin-left: 2.5px;
   }
 
-  #desktop-header-band > p {
+  #desktop-header-band>p {
     position: absolute;
     font-size: 1.5rem;
     letter-spacing: 1rem;
@@ -783,16 +779,17 @@ footer {
     width: 100%;
   }
 
-  #hero > img {
+  #hero>img {
     grid-area: 1 / 4 / 6 /5;
     width: clamp(300px, 40vw, 800px);
   }
+
   #header-type {
     grid-area: 3 / 2 / 4 /3;
     font-size: clamp(0.5rem, 2vw, 1.7rem);
   }
 
-  #hero > h1 {
+  #hero>h1 {
     display: initial;
     letter-spacing: 0.6rem;
     font-size: clamp(1rem, 5vw, 5rem);
@@ -805,19 +802,22 @@ footer {
 
   /* diminution of the div revealed text height  */
   #legend p {
-    height: 300px;
+    height: 150px;
   }
 
   /* legend band picture modification */
   .section-top-desktop {
     display: initial;
   }
+
   .section-top-smartphone {
     display: none;
   }
+
   .section-bottom-desktop {
     display: initial;
   }
+
   .section-bottom-smartphone {
     display: none;
   }
@@ -870,24 +870,28 @@ footer {
   }
 
   .type_weakness p,
-  #attacks > p {
+  #attacks>p {
     font-size: 2rem;
   }
 
-  .caracteristics-middle > p {
+  .caracteristics-middle>p {
     margin-bottom: 3rem;
   }
+
   .caracteristics-middle > p:last-of-type {
+
     margin-bottom: 50px;
   }
 
   /* Section sticky nav desktop*/
+
   #sticky-nav {
     width: 65px;
     height: 300px;
     border-radius: 15px;
     margin: 10px;
-    bottom: 30%;
+    position: fixed;
+    bottom: 25%
   }
 
   #sticky-nav ul {

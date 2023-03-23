@@ -1,74 +1,146 @@
 <!DOCTYPE html>
 <html lang="fr en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css" />
-    <title>Pokestar</title>
-  </head>
 
-  <body>
-    <!-- barre de navigation  -->
-    <nav id="nav_header">
-      <div id="logo_and_title">
-        <img src="assets/logo.png" alt="logo pokestar" class="logo" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css" />
+  <title>Pokestar</title>
+</head>
 
-        <!-- titre pour la version desktop -->
-        <p id="logo_title">POKESTAR</p>
+<body>
+  <!-- barre de navigation  -->
+  <nav id="nav_header">
+    <div id="logo_and_title">
+      <img src="assets/logo.png" alt="logo pokestar" class="logo" />
+
+      <!-- titre pour la version desktop -->
+      <p id="logo_title">POKESTAR</p>
+    </div>
+
+    <!-- Menu burger -->
+    <span id="burger_icon">
+      <span id="burger"></span>
+    </span>
+    <!-- Liens de navigation vers sections -->
+    <div id="nav_links" class="burger_close">
+      <ul>
+        <li class="nav"><a href="#legend">Légende</a></li>
+        <li class="nav"><a href="#localisation">Localisation</a></li>
+        <li class="nav"><a href="#caracteristics">Caractéristiques</a></li>
+        <li class="nav"><a href="#quiz">Quiz</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header>
+    <!-- bandeau desktop  -->
+    <div id="desktop-header-band">
+      <!-- prévoir affichage dynamique du nom de deux autres pokemons en fonction de celui affiché (de manière carroussel) -->
+      <svg id="left_button" preserveAspectRatio="none" width="1075" height="120" viewBox="0 0 1075 120" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path class="lr_buttons button_pokemon lbutton"
+          d="M0.784668 0H1074.5V67.5H358.285C279.314 69.2291 194.431 120 113 120C31.5694 120 0.784668 120 0.784668 120V0Z"
+          fill="white" fill-opacity="0.25" />
+      </svg>
+      <svg id="right_button" preserveAspectRatio="none" width="1074" height="120" viewBox="0 0 1074 120" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path class="lr_buttons button_pokemon rbutton"
+          d="M1073.72 0H0V67.5H716.215C795.186 69.2291 880.069 120 961.5 120C1042.93 120 1073.72 120 1073.72 120V0Z"
+          fill="white" fill-opacity="0.25" />
+      </svg>
+      <p id="pokemon_left" class="button_pokemon text_button lbutton">AQUALI</p>
+      <p id="pokemon_right" class="button_pokemon text_button rbutton">PYROLI</p>
+    </div>
+
+    <!-- bandeau mobile  -->
+    <div id="mobile-header-band">
+      <img src="./assets/header.png" alt="header" srcset="" />
+      <h1 class="pokemon-name-mobile">EVOLI</h1>
+    </div>
+
+    <!-- commun aux deux versions  -->
+    <div id="hero">
+      <img id="hero-header-img" src="./assets/EeveePokeball-img.png" alt="header image pokemon" />
+      <h1 class="pokemon-name">EVOLI</h1>
+      <div id="header-type">
+        <p>Normal</p>
       </div>
-
-      <!-- Menu burger -->
-      <span id="burger_icon">
-        <span id="burger"></span>
-      </span>
-      <!-- Liens de navigation vers sections -->
-      <div id="nav_links" class="burger_close">
-        <ul>
-          <li class="nav"><a href="#legend">Légende</a></li>
-          <li class="nav"><a href="#localisation">Localisation</a></li>
-          <li class="nav"><a href="#caracteristics">Caractéristiques</a></li>
-          <li class="nav"><a href="#quiz">Quiz</a></li>
-        </ul>
+      <div id="little-description">
+        <p>
+          Brun, Yeux ébène<br />
+          0.3m pour 6.5kg<br />
+          Fourrure soyeuse
+        </p>
       </div>
-    </nav>
-
-    <header>
-      <!-- bandeau desktop  -->
-      <div id="desktop-header-band">
-        <!-- prévoir affichage dynamique du nom de deux autres pokemons en fonction de celui affiché (de manière carroussel) -->
-        <svg
-          id="left_button"
-          preserveAspectRatio="none"
-          width="1075"
-          height="120"
-          viewBox="0 0 1075 120"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            class="lr_buttons button_pokemon lbutton"
-            d="M0.784668 0H1074.5V67.5H358.285C279.314 69.2291 194.431 120 113 120C31.5694 120 0.784668 120 0.784668 120V0Z"
-            fill="white"
-            fill-opacity="0.25"
-          />
+    </div>
+  </header>
+  <main>
+    <section id="legend">
+      <div id="legend-top" class="section-top">
+        <svg class="section-top-smartphone" height="100%" width="100%" preserveAspectRatio="none" viewBox="0 0 874 107"
+          fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_293_10)">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M112.051 0.990997L0 0.991997V107H874V0.990997C874 0.990997 828.689 -1.24 773.154 0.991997C745.795 2.091 731.58 20.0912 717.117 38.4043C702.222 57.2647 687.065 76.4574 657.017 77.8635H437H218.5C194.298 77.8635 179.99 58.7646 165.637 39.6064C151.196 20.3288 136.709 0.990997 112.051 0.990997Z" />
+          </g>
+          <defs>
+            <clipPath id="clip0_293_10">
+              <rect width="874" height="100" fill="white" transform="matrix(1 0 0 -1 0 107)" />
+            </clipPath>
+          </defs>
         </svg>
-        <svg
-          id="right_button"
-          preserveAspectRatio="none"
-          width="1074"
-          height="120"
-          viewBox="0 0 1074 120"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg class="section-top-desktop" height="100%" width="100%" preserveAspectRatio="none" viewBox="0 0 2164 139"
+          fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_295_8)">
+            <path
+              d="M2164 0.595993C2164 0.595993 2046.03 -0.745007 1908.53 0.595993C1840.83 1.25599 1807.04 21.334 1772.68 41.749C1737.24 62.8024 1701.2 84.2145 1626.76 85.0598H1082H541C481.076 85.0598 443.926 64.4078 406.662 43.6917C369.165 22.847 331.552 1.936 270.5 1.937C148.775 1.937 0 0.595993 0 0.595993V139L2164 139V120.216V0.595993Z"
+              fill="#282828" />
+          </g>
+          <defs>
+            <clipPath id="clip0_295_8">
+              <rect width="2164" height="139" fill="white" transform="matrix(1 0 0 -1 0 139)" />
+            </clipPath>
+          </defs>
+        </svg>
+      </div>
+      <div id="legend-middle">
+        <h2>LEGENDE</h2>
+        <p>Il y avait autrefois une forêt magique où les arbres brillaient de mille feux et où les rivières étaient
+          remplies d'eau cristalline. Dans cette forêt, vivait un petit Pokémon appelé Évoli.<br>
+          Évoli était un Pokémon très spécial car il avait la capacité de changer d'apparence en fonction de son
+          environnement. Lorsqu'il se cachait parmi les feuilles vertes des arbres, sa fourrure devenait également verte
+          pour mieux se camoufler. Lorsqu'il se baignait dans une rivière, sa fourrure devenait bleue pour se fondre
+          dans l'eau. Évoli avait une grande intelligence et était très observateur, ce qui lui permettait de s'adapter
+          à toutes sortes de situations.Un jour, une grande menace est apparue dans la forêt magique. Un Pokémon
+          maléfique, qui cherchait à détruire toute forme de vie, avait envahi les lieux. Tous les habitants de la forêt
+          étaient terrifiés et ne savaient pas quoi faire.<br>
+          C'est alors qu'Évoli a décidé de mettre ses capacités à profit. Il a utilisé son pouvoir pour se fondre dans
+          l'environnement et se glisser à travers les lignes ennemies. Il a réussi à atteindre le cœur de la forêt, où
+          se trouvait le Pokémon maléfique. Sans hésiter, Évoli a utilisé toute sa force pour combattre le mal qui
+          menaçait son foyer.<br>
+          Le combat a été long et difficile, mais grâce à son intelligence et sa ruse, Évoli a finalement triomphé. La
+          forêt magique a été sauvée et Évoli est devenu un héros pour tous les habitants.<br>
+          Depuis ce jour, Évoli est vénéré comme un Pokémon très spécial. Sa capacité à s'adapter à toutes les
+          situations en fait un allié précieux pour tous ceux qui croisent sa route. Et même s'il n'est pas le Pokémon
+          le plus puissant de tous, son courage et sa détermination en font un ami fidèle pour tous ceux qui ont la
+          chance de le rencontrer.
+        </p>
+        <button id="legend-deployment">Poursuivre l'aventure</button>
+      </div>
+      <div id="legend-bottom" class="section-bottom">
+        <svg class="section-bottom-smartphone" height="100%" width="100%" preserveAspectRatio="none"
+          viewBox="0 0 874 107" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
-            class="lr_buttons button_pokemon rbutton"
-            d="M1073.72 0H0V67.5H716.215C795.186 69.2291 880.069 120 961.5 120C1042.93 120 1073.72 120 1073.72 120V0Z"
-            fill="white"
-            fill-opacity="0.25"
-          />
+            d="M112.051 106.009L0 106.008V-8.93604e-07H874V106.009C874 106.009 828.689 108.24 773.154 106.008C745.795 104.909 731.58 86.9088 717.117 68.5957C702.222 49.7353 687.065 30.5426 657.017 29.1365H437H218.5C194.298 29.1365 179.99 48.2354 165.637 67.3936C151.196 86.6712 136.709 106.009 112.051 106.009Z" />
+        </svg>
+        <svg class="section-bottom-desktop" height="100%" width="100%" preserveAspectRatio="none" viewBox="0 0 2164 139"
+          fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M2164 138.404C2164 138.404 2046.03 139.745 1908.53 138.404C1840.83 137.744 1807.04 117.666 1772.68 97.251C1737.24 76.1976 1701.2 54.7855 1626.76 53.9402H1082H541C481.076 53.9402 443.926 74.5922 406.662 95.3083C369.165 116.153 331.552 137.064 270.5 137.063C148.775 137.063 0 138.404 0 138.404V0L2164 0V18.7838V138.404Z"
+            fill="#282828" />
         </svg>
         <p id="pokemon_left" class="button_pokemon text_button lbutton">AQUALI</p>
         <p id="pokemon_right" class="button_pokemon text_button rbutton">PYROLI</p>
@@ -153,37 +225,9 @@
           <h2>LEGENDE</h2>
           <p id="legend-text">
           </p>
-          <button id="legend-deployment">Poursuivre l'aventure</button>
+          <p>Mon terrier douillet se trouve à 2 kilomètres au Nord-Ouest.</p>
         </div>
-        <div id="legend-bottom" class="section-bottom">
-          <svg
-            class="section-bottom-smartphone"
-            height="100%"
-            width="100%"
-            preserveAspectRatio="none"
-            viewBox="0 0 874 107"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M112.051 106.009L0 106.008V-8.93604e-07H874V106.009C874 106.009 828.689 108.24 773.154 106.008C745.795 104.909 731.58 86.9088 717.117 68.5957C702.222 49.7353 687.065 30.5426 657.017 29.1365H437H218.5C194.298 29.1365 179.99 48.2354 165.637 67.3936C151.196 86.6712 136.709 106.009 112.051 106.009Z"
-            />
-          </svg>
-          <svg
-            class="section-bottom-desktop"
-            height="100%"
-            width="100%"
-            preserveAspectRatio="none"
-            viewBox="0 0 2164 139"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-            d="M2164 138.404C2164 138.404 2046.03 139.745 1908.53 138.404C1840.83 137.744 1807.04 117.666 1772.68 97.251C1737.24 76.1976 1701.2 54.7855 1626.76 53.9402H1082H541C481.076 53.9402 443.926 74.5922 406.662 95.3083C369.165 116.153 331.552 137.064 270.5 137.063C148.775 137.063 0 138.404 0 138.404V0L2164 0V18.7838V138.404Z"
-              fill="#282828"
-            />
-          </svg>
-        </div>
+
       </section>
       <section id="localisation">
         <h2>Localisation</h2>
@@ -208,51 +252,34 @@
                 alt="carte pokémon"
                 draggable="false"
               />
+
             </div>
+
+            <img id="map-image" src="assets/image poké ok.jpg" alt="carte pokémon" draggable="false" />
           </div>
         </div>
-      </section>
-      <section id="caracteristics">
-        <div id="caracteristics-top" class="section-top">
-          <svg
-            class="section-top-smartphone"
-            height="100%"
-            width="100%"
-            preserveAspectRatio="none"
-            viewBox="0 0 874 107"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g clip-path="url(#clip0_293_10)">
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M112.051 0.990997L0 0.991997V107H874V0.990997C874 0.990997 828.689 -1.24 773.154 0.991997C745.795 2.091 731.58 20.0912 717.117 38.4043C702.222 57.2647 687.065 76.4574 657.017 77.8635H437H218.5C194.298 77.8635 179.99 58.7646 165.637 39.6064C151.196 20.3288 136.709 0.990997 112.051 0.990997Z"
-              />
-            </g>
-            <defs>
-              <clipPath id="clip0_293_10">
-                <rect
-                  width="874"
-                  height="100"
-                  fill="white"
-                  transform="matrix(1 0 0 -1 0 107)"
-                />
-              </clipPath>
-            </defs>
-          </svg>
-          <svg
-            class="section-top-desktop"
-            height="100%"
-            width="100%"
-            preserveAspectRatio="none"
-            viewBox="0 0 2164 139"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g clip-path="url(#clip0_295_8)">
-              <path
+      </div>
+    </section>
+    <section id="caracteristics">
+      <div id="caracteristics-top" class="section-top">
+        <svg class="section-top-smartphone" height="100%" width="100%" preserveAspectRatio="none" viewBox="0 0 874 107"
+          fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_293_10)">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M112.051 0.990997L0 0.991997V107H874V0.990997C874 0.990997 828.689 -1.24 773.154 0.991997C745.795 2.091 731.58 20.0912 717.117 38.4043C702.222 57.2647 687.065 76.4574 657.017 77.8635H437H218.5C194.298 77.8635 179.99 58.7646 165.637 39.6064C151.196 20.3288 136.709 0.990997 112.051 0.990997Z" />
+          </g>
+          <defs>
+            <clipPath id="clip0_293_10">
+              <rect width="874" height="100" fill="white" transform="matrix(1 0 0 -1 0 107)" />
+            </clipPath>
+          </defs>
+        </svg>
+        <svg class="section-top-desktop" height="100%" width="100%" preserveAspectRatio="none" viewBox="0 0 2164 139"
+          fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_295_8)">
+            <path
               d="M2164 0.595993C2164 0.595993 2046.03 -0.745007 1908.53 0.595993C1840.83 1.25599 1807.04 21.334 1772.68 41.749C1737.24 62.8024 1701.2 84.2145 1626.76 85.0598H1082H541C481.076 85.0598 443.926 64.4078 406.662 43.6917C369.165 22.847 331.552 1.936 270.5 1.937C148.775 1.937 0 0.595993 0 0.595993V139L2164 139V120.216V0.595993Z"
+
                 fill="#282828"
               />
             </g>
@@ -293,66 +320,50 @@
  <img id = "attack3" src="assets\SVG_Attacks\ATT Coup d'jus.svg" alt="">
  <img id = "attack4" src="assets\SVG_Attacks\ATT Coup d'jus.svg" alt="">
               </div>
-            </div>
-          </section>
-        </div>
-        <div id="caracteristics-bottom" class="section-bottom">
-          <svg
-            class="section-bottom-smartphone"
-            height="100%"
-            width="100%"
-            preserveAspectRatio="none"
-            viewBox="0 0 874 107"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M112.051 106.009L0 106.008V-8.93604e-07H874V106.009C874 106.009 828.689 108.24 773.154 106.008C745.795 104.909 731.58 86.9088 717.117 68.5957C702.222 49.7353 687.065 30.5426 657.017 29.1365H437H218.5C194.298 29.1365 179.99 48.2354 165.637 67.3936C151.196 86.6712 136.709 106.009 112.051 106.009Z"
-            />
-          </svg>
-          <svg
-            class="section-bottom-desktop"
-            height="100%"
-            width="100%"
-            preserveAspectRatio="none"
-            viewBox="0 0 2164 139"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-            d="M2164 138.404C2164 138.404 2046.03 139.745 1908.53 138.404C1840.83 137.744 1807.04 117.666 1772.68 97.251C1737.24 76.1976 1701.2 54.7855 1626.76 53.9402H1082H541C481.076 53.9402 443.926 74.5922 406.662 95.3083C369.165 116.153 331.552 137.064 270.5 137.063C148.775 137.063 0 138.404 0 138.404V0L2164 0V18.7838V138.404Z"
-              fill="#282828"
-            />
-          </svg>
-        </div>
-      </section>
-      <section id="quiz">
-        <h2>QUIZ</h2>
-        <div id="quiz-title">QUELLE VERSION DE POKEMON ES-TU ?</div>
-        <div id="quiz-container">
-          <div id="quiz-question">Quelle est ton activité préférée ?</div>
-          <div id="quiz-answers-container">
-            <div id="quiz-answer1" class="quiz-answer eevee">La nature</div>
-            <div id="quiz-answer2" class="quiz-answer vaporeon">La pêche</div>
-            <div id="quiz-answer3" class="quiz-answer jolteon">
-              Le bricolage
-            </div>
-            <div id="quiz-answer4" class="quiz-answer flareon">
-              Un livre au coin du feu
-            </div>
-            <div id="quiz-result-container">
-              <img id="quiz-result-img" src="" alt="" />
+
             </div>
           </div>
-          <button id="quiz-button-next">Suivant</button>
-          <p id="quiz-error">Merci de sélectionner une valeur</p>
-
-          <button id="quiz-replay-button">On rejoue ?</button>
+        </section>
+      </div>
+      <div id="caracteristics-bottom" class="section-bottom">
+        <svg class="section-bottom-smartphone" height="100%" width="100%" preserveAspectRatio="none"
+          viewBox="0 0 874 107" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M112.051 106.009L0 106.008V-8.93604e-07H874V106.009C874 106.009 828.689 108.24 773.154 106.008C745.795 104.909 731.58 86.9088 717.117 68.5957C702.222 49.7353 687.065 30.5426 657.017 29.1365H437H218.5C194.298 29.1365 179.99 48.2354 165.637 67.3936C151.196 86.6712 136.709 106.009 112.051 106.009Z" />
+        </svg>
+        <svg class="section-bottom-desktop" height="100%" width="100%" preserveAspectRatio="none" viewBox="0 0 2164 139"
+          fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M2164 138.404C2164 138.404 2046.03 139.745 1908.53 138.404C1840.83 137.744 1807.04 117.666 1772.68 97.251C1737.24 76.1976 1701.2 54.7855 1626.76 53.9402H1082H541C481.076 53.9402 443.926 74.5922 406.662 95.3083C369.165 116.153 331.552 137.064 270.5 137.063C148.775 137.063 0 138.404 0 138.404V0L2164 0V18.7838V138.404Z"
+            fill="#282828" />
+        </svg>
+      </div>
+    </section>
+    <section id="quiz">
+      <h2>QUIZ</h2>
+      <div id="quiz-title">QUELLE VERSION DE POKEMON ES-TU ?</div>
+      <div id="quiz-container">
+        <div id="quiz-question">Quelle est ton activité préférée ?</div>
+        <div id="quiz-answers-container">
+          <div id="quiz-answer1" class="quiz-answer eevee">La nature</div>
+          <div id="quiz-answer2" class="quiz-answer vaporeon">La pêche</div>
+          <div id="quiz-answer3" class="quiz-answer jolteon">
+            Le bricolage
+          </div>
+          <div id="quiz-answer4" class="quiz-answer flareon">
+            Un livre au coin du feu
+          </div>
+          <div id="quiz-result-container">
+            <img id="quiz-result-img" src="" alt="" />
+          </div>
         </div>
-      </section>
+        <button id="quiz-button-next">Suivant</button>
+        <p id="quiz-error">Merci de sélectionner une valeur</p>
 
+        <button id="quiz-replay-button">On rejoue ?</button>
+      </div>
+    </section>
+    <!-- <div id="sticky-nav-div"> -->
     <nav id="sticky-nav">
       <ul>
 
@@ -370,7 +381,6 @@
         </li>
 
         <li><svg id="vaporeon-nav-button" width="100%" height="100%" viewBox="0 0 258 258" fill="none"
-
             xmlns="http://www.w3.org/2000/svg">
             <g filter="url(#filter0_d_347_18)">
               <circle id="vaporeon-icon" class="sticky-nav-circle" cx="129" cy="125" r="125" fill="#54ADFF" />
@@ -383,7 +393,6 @@
         </li>
 
         <li><svg id="jolteon-nav-button" width="100%" height="100%" viewBox="0 0 258 258" fill="none"
-
             xmlns="http://www.w3.org/2000/svg">
             <g filter="url(#filter0_d_347_21)">
               <circle id="jolteon-icon" class="sticky-nav-circle" cx="129" cy="125" r="125" fill="#FFCA42" />
@@ -396,7 +405,6 @@
         </li>
 
         <li><svg id="flareon-nav-button" width="100%" height="100%" viewBox="0 0 258 258" fill="none"
-
             xmlns="http://www.w3.org/2000/svg">
             <g filter="url(#filter0_d_347_24)">
               <circle id="flareon-icon" class="sticky-nav-circle" cx="129" cy="125" r="125" fill="#FF7D05" />
@@ -409,6 +417,8 @@
         </li>
       </ul>
     </nav>
+    <!-- </div> -->
+
   </main>
   <footer>&#169; 2023 POKESTAR, All Rights Reserved - WCS Project 1</footer>
   <script src="index.js" type="module"></script>
