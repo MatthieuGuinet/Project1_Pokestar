@@ -9,14 +9,12 @@
 
 * {
   box-sizing: border-box;
-  /*******TO ADD********/
-  scroll-behavior: smooth;
-  /*******TO ADD********/
 }
 
 body {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
   box-sizing: border-box;
   font-family: raleway;
   font-size: 1.2rem;
@@ -404,11 +402,9 @@ header {
   margin: 0;
 }
 
-/**************************TO ADD******************************/
 .apexcharts-tooltip {
   color: var(--black-color);
 }
-/**************************TO ADD******************************/
 
 /* style sectionc #caracteristics */
 
