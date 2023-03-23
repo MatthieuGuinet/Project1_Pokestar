@@ -11,6 +11,11 @@ import { quizFunctions } from "./quiz.js";
 // import modify content function
 import { switchPokemon } from "./content_modification.js";
 
+// loading eevee display when opening the website for the first time
+window.addEventListener("load", ()=> {
+  switchPokemon.eeveeContent.replaceContent();
+});
+
 // ouverture et fermeture du menu burger + animation de l'icone
 const burgerIcon = document.getElementById("burger_icon");
 const burgerMenu = document.getElementById("nav_links");
@@ -190,6 +195,13 @@ let vaporeonNavButton = document.getElementById("vaporeon-nav-button");
 vaporeonNavButton.addEventListener("click", () => {
   switchPokemon.vaporeonContent.replaceContent();
 });
+
+//some styling features to get backlines in document's specific places
+
+document.getElementById("caracteristics-text").setAttribute('style', 'white-space: pre-line;');
+document.getElementById("legend-text").setAttribute('style', 'white-space: pre-line;');
+document.getElementById("localisation-text").setAttribute('style', 'white-space: pre-line;');
+document.getElementById("little-description-text").setAttribute('style', 'white-space: pre-line;');
 
 
 
