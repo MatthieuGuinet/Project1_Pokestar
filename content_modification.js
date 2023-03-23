@@ -2,6 +2,8 @@
 
 import { legends } from "./legend_location_text_content.js";
 import { locations } from "./legend_location_text_content.js";
+import { caracteristics } from "./caracteristics.js";
+import { littleDescription } from "./little-description.js";
 import {vaporeonAttacks} from "./attacks_svg.js";
 
 // constructor taking into account every text content, url and colors that we want to change 
@@ -40,26 +42,26 @@ replaceContent(){
     document.getElementById("pokemon_left").textContent = `${this.headerLeftName}`;
     document.getElementById("pokemon_right").textContent = `${this.headerRightName}`;  
     document.getElementById("header-type").textContent = `${this.pokemonType}`;
-    document.getElementById("little-description").textContent = `${this.littleDescription}`;
+    document.getElementById("little-description-text").textContent = `${this.littleDescription}`;
     document.getElementById("hero-header-img").src = `${this.mainImgSrc}`;
     document.getElementById("legend-text").textContent = `${this.legend}`;
     document.getElementById("localisation-text").textContent = `${this.locationInstructions}`;
     // document.getElementById("map-image").src = `${this.mapImgSrc}`;
-    // document.getElementById("caracteristics-text").textContent = `${this.caracteristics}`;
+    document.getElementById("caracteristics-text").textContent = `${this.caracteristics}`;
     // // idem pour type, weakness, attacks, etc... mettre les bons IDs
-    // document.querySelector("header").style.backgroundColor = `${this.mainColorVarName}`;
-    // document.getElementById("hero").style.backgroundColor = `${this.mainColorVarName}`;
     document.documentElement.style.setProperty('--main-color',`${this.mainColorVarName}`);
     document.documentElement.style.setProperty('--secondary-color',`${this.secondaryColorVarName}`);
+    document.querySelector("#attacks>svg:first-child").textContent = `${this.attack4Src}`
 }
 }
 
 // declaration of the four pokemon contents 
 
-const eeveeContent = new PokemonContent("EVOLI","#3a3129","#c5915d","AQUALI","PYROLI","FEU","Brun, les yeux marrons, pour 0.63m de douceur","assets\\EeveePokeball-img.png",legends.eeveeLegend,locations.eeveeLocation,"assets\\aqua_nav.png", "Il a plein de caractéristiques super chouettes","assets\\pins map.png", "blabla","blabla","blabla","blabla","blabla");
-const flareonContent = new PokemonContent("PYROLI","#ffa948","#fb7c26","EVOLI","VOLTALI","FEU","Roux, les yeux bleus, pour 0.58m de brasier","assets\\Flareon_Pokeball.png",legends.flareonLegend,locations.flareonLocation,"assets\\aqua_nav.png", "Il a plein de caractéristiques super chouettes","assets\\pins map.png", "blabla","blabla","blabla","blabla","blabla");
-const jolteonContent = new PokemonContent("VOLTALI","#e9bc2e","#b9812b","PYROLI","AQUALI","ELECTRIQUE","Roux, les yeux bleus, pour 0.58m de brasier","assets\\Volteon_Pokeball.png",legends.jolteonLegend,locations.jolteonLocation,"assets\\aqua_nav.png", "Il a plein de caractéristiques super chouettes","assets\\pins map.png", "blabla","blabla","blabla","blabla","blabla");
-const vaporeonContent = new PokemonContent("AQUALI","#879cc6","#3a5d83","VOLTALI","EVOLI","EAU","Roux, les yeux bleus, pour 0.58m de brasier","assets\\Vaporeon_Pokeball.png",legends.vaporeonLegend,locations.vaporeonLocation,"assets\\aqua_nav.png", "Il a plein de caractéristiques super chouettes","assets\\pins map.png", "blabla","blabla","blabla","blabla",vaporeonAttacks.vaporeonAttack4);
+
+const eeveeContent = new PokemonContent("EVOLI","#3a3129","#c5915d","AQUALI","PYROLI","Normal",littleDescription.eeveeLittleDescription,"assets\\EeveePokeball-img.png",legends.eeveeLegend,locations.eeveeLocation,"assets\\aqua_nav.png", caracteristics.eeveeCaracteristics,"assets\\pins map.png", "blabla","blabla","blabla","blabla","blabla");
+const flareonContent = new PokemonContent("PYROLI","#ffa948","#fb7c26","EVOLI","VOLTALI","Feu",littleDescription.flareonLittleDescription,"assets\\Flareon_Pokeball.png",legends.flareonLegend,locations.flareonLocation,"assets\\aqua_nav.png", caracteristics.flareonCaracteristics,"assets\\pins map.png", "blabla","blabla","blabla","blabla","blabla");
+const jolteonContent = new PokemonContent("VOLTALI","#e9bc2e","#b9812b","PYROLI","AQUALI", "Electricité", littleDescription.jolteonLittleDescription,"assets\\Volteon_Pokeball.png",legends.jolteonLegend,locations.jolteonLocation,"assets\\aqua_nav.png", caracteristics.jolteonCaracteristics,"assets\\pins map.png", "blabla","blabla","blabla","blabla","blabla");
+const vaporeonContent = new PokemonContent("AQUALI","#879cc6","#3a5d83","VOLTALI","EVOLI","Eau",littleDescription.vaporeonLittleDescription,"assets\\Vaporeon_Pokeball.png",legends.vaporeonLegend,locations.vaporeonLocation,"assets\\aqua_nav.png", caracteristics.vaporeonCaracteristics,"assets\\pins map.png", "blabla","blabla","blabla","blabla",vaporeonAttacks.vaporeonAttack4);
 
 
 export let switchPokemon = {
