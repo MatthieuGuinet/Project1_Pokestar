@@ -24,7 +24,7 @@ class Question {
   }
 }
 
-let question1 = new Question("Quelle est ton activité préférée ?","La nature","eevee","La pêche","vaporeon","Le bricolage","jolteon","Un livre au coin du feu","flareon");
+let question1 = new Question("Quelle est ton activité préférée ?","La nature","eevee","La pêche","vaporeon","Le bricolage","jolteon","Lire au coin du feu","flareon");
 
 let question2 = new Question("Quelle est ta couleur préférée ?","Bleu","vaporeon","Jaune","jolteon","Beige","eevee","Rouge","flareon");
 

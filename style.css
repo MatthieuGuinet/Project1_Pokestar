@@ -23,6 +23,10 @@ body {
   line-height: 150%;
 }
 
+p{
+max-width: 1000px;
+}
+
 h2 {
   letter-spacing: 0.1rem;
   font-size: 1.8rem;
@@ -159,6 +163,12 @@ h2 {
 .burger_open li,
 .burger_close li {
   padding: 7% 0;
+}
+
+/*adding offset when click on href localisation and quiz*/
+#localisation,
+#quiz {
+  scroll-margin-top: 80px;
 }
 
 header {
@@ -323,6 +333,7 @@ header {
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.2) 0 0 5px 5px;
   margin-bottom: 20px;
+  scroll-behavior: initial;
 }
 
 #scrollable_map {
@@ -558,7 +569,7 @@ header {
   margin-bottom: 22px;
   background-color: grey;
   padding: 0 10px;
-  cursor : pointer;
+  cursor: pointer;
 }
 
 #quiz-button-next {
@@ -571,7 +582,7 @@ header {
   font-size: 1.1rem;
   border: none;
   box-shadow: 0px 6px 10px 1px rgba(0, 0, 0, 0.5);
-  cursor : pointer ;
+  cursor: pointer;
 }
 
 #quiz-button-next:active {
@@ -584,6 +595,7 @@ header {
   font-size: 0.8rem;
   margin-bottom: 10px;
 }
+
 
 #quiz-replay-button {
   display: none;
@@ -802,7 +814,7 @@ footer {
 
   /* diminution of the div revealed text height  */
   #legend p {
-    height: 150px;
+    height: 300px;
   }
 
   /* legend band picture modification */
