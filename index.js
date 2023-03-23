@@ -177,22 +177,18 @@ window.addEventListener('scroll', function () {
 let eeveeNavButton = document.getElementById("evee-nav-button");
 eeveeNavButton.addEventListener("click", () => {
   switchPokemon.eeveeContent.replaceContent();
-  window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 let flareonNavButton = document.getElementById("flareon-nav-button");
 flareonNavButton.addEventListener("click", () => {
   switchPokemon.flareonContent.replaceContent();
-  window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 let jolteonNavButton = document.getElementById("jolteon-nav-button");
 jolteonNavButton.addEventListener("click", () => {
   switchPokemon.jolteonContent.replaceContent();
-  window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 let vaporeonNavButton = document.getElementById("vaporeon-nav-button");
 vaporeonNavButton.addEventListener("click", () => {
   switchPokemon.vaporeonContent.replaceContent();
-  window.scrollTo({ top: 0, behavior: 'smooth' })
 });
 
 

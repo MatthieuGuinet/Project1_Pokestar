@@ -49,6 +49,7 @@ replaceContent(){
     // document.getElementById("hero").style.backgroundColor = `${this.mainColorVarName}`;
     document.documentElement.style.setProperty('--main-color',`${this.mainColorVarName}`);
     document.documentElement.style.setProperty('--secondary-color',`${this.secondaryColorVarName}`);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 }
 
