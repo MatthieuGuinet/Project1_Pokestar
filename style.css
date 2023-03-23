@@ -628,7 +628,7 @@ header {
 
 #sticky-nav {
   background-color: var(--black-color);
-  opacity: 0.8;
+  opacity: 1;
   /* backdrop-filter: blur(100px); */
   display: flex;
   justify-content: center;
@@ -643,12 +643,12 @@ header {
   flex-direction: row;
   justify-content: space-around;
   padding: 5px;
-  width: 60%;
+  width: 80%;
 }
 
 #sticky-nav li {
-  height: 40px;
-  width: 40px;
+  height: 45px;
+  width: 45px;
 }
 
 /* footer */
