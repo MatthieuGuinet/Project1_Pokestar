@@ -165,7 +165,7 @@ function nextQuestion() {
   }
   else {
     document.getElementById("quiz-error").style.display = "initial";
-    document.getElementById("quiz-button-next").style.marginBottom = "20px";
+    document.getElementById("quiz-button-next").style.marginBottom = "10px";
   }
 }
 

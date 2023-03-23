@@ -444,7 +444,7 @@ header {
   text-align: center;
 }
 
-.type_weakness svg {
+.type_weakness img {
   width: 80%;
 }
 
@@ -472,7 +472,7 @@ header {
   width: 100%;
   grid-area: 1/1/2/3;
 }
-#attacks > svg {
+#attacks > img {
   width: 80%;
   margin: 0 auto;
 }
