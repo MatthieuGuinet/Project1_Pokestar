@@ -11,6 +11,11 @@ import { quizFunctions } from "./quiz.js";
 // import modify content function
 import { switchPokemon } from "./content_modification.js";
 
+// loading eevee display when opening the website for the first time
+window.addEventListener("load", ()=> {
+  switchPokemon.eeveeContent.replaceContent();
+});
+
 // ouverture et fermeture du menu burger + animation de l'icone
 const burgerIcon = document.getElementById("burger_icon");
 const burgerMenu = document.getElementById("nav_links");
@@ -34,18 +39,12 @@ for (let i = 0; i < navElement.length; i++) {
   });
 }
 
-//Hover on desktop header band
+//Hover and click on desktop header band
 
 const textButtons = document.querySelectorAll(".text_button");
 const svgButtons = document.querySelectorAll(".lr_buttons");
-headerFunctions.hoverButton(textButtons);
-headerFunctions.hoverButton(svgButtons);
-
-// click button to change pokemon
-const lbuttons = document.querySelectorAll(".lbutton");
-const rbuttons = document.querySelectorAll(".rbutton");
-headerFunctions.clickButtonL(lbuttons);
-headerFunctions.clickButtonR(rbuttons);
+headerFunctions.actionButton(textButtons);
+headerFunctions.actionButton(svgButtons);
 
 // Section "legend", button "poursuivre l'aventure"
 let legendButton = document.getElementById("legend-deployment");
@@ -170,6 +169,7 @@ function hoverIcon(stickyIcon) {
 
 const stickyNav = document.getElementById("sticky-nav");
 
+
 function scrollStickyNavMobile() {
   let firstScrollPosition = window.pageYOffset
   window.addEventListener('scroll', function () {
@@ -204,7 +204,7 @@ if (desktop.matches) {
 
 //sticky-nav addEventListener
 
-let eeveeNavButton = document.getElementById("evee-nav-button");
+let eeveeNavButton = document.getElementById("eevee-nav-button");
 eeveeNavButton.addEventListener("click", () => {
   switchPokemon.eeveeContent.replaceContent();
 });
@@ -221,5 +221,9 @@ vaporeonNavButton.addEventListener("click", () => {
   switchPokemon.vaporeonContent.replaceContent();
 });
 
+//some styling features to get backlines in document's specific places
 
-
+document.getElementById("caracteristics-text").setAttribute('style', 'white-space: pre-line;');
+document.getElementById("legend-text").setAttribute('style', 'white-space: pre-line;');
+document.getElementById("localisation-text").setAttribute('style', 'white-space: pre-line;');
+document.getElementById("little-description-text").setAttribute('style', 'white-space: pre-line;');
