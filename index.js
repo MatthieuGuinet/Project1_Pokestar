@@ -179,7 +179,7 @@ window.addEventListener('scroll', function () {
 
 //sticky-nav addEventListener
 
-let eeveeNavButton = document.getElementById("evee-nav-button");
+let eeveeNavButton = document.getElementById("eevee-nav-button");
 eeveeNavButton.addEventListener("click", () => {
   switchPokemon.eeveeContent.replaceContent();
 });
