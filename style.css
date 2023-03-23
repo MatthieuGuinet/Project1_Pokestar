@@ -375,6 +375,10 @@ header {
   opacity: 1;
 }
 
+#localisation, #quiz{
+  scroll-margin-top: 80px;
+}
+
 #localisation {
   display: flex;
   flex-direction: column;
@@ -625,6 +629,10 @@ header {
   position: sticky;
   bottom: 0;
   transition: bottom 0.5s;
+}
+
+body:not(.scroll) #sticky-nav{
+  display: block;   
 }
 
 #sticky-nav ul {

@@ -173,7 +173,6 @@ window.addEventListener('scroll', function () {
     stickyNav.style.bottom = "0"
   }
   firstScrollPosition = secondScrollPosition;
-
 });
 };
 
