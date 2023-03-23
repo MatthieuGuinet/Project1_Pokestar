@@ -473,7 +473,7 @@ header {
   width: 100%;
   grid-area: 1/1/2/3;
 }
-#attacks > svg {
+#attacks > img {
   width: 80%;
   margin: 0 auto;
 }

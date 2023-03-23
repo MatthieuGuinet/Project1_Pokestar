@@ -4,7 +4,9 @@ import { legends } from "./legend_location_text_content.js";
 import { locations } from "./legend_location_text_content.js";
 import { caracteristics } from "./caracteristics.js";
 import { littleDescription } from "./little-description.js";
-import {vaporeonAttacks} from "./attacks_svg.js";
+import { attackSrc } from "./attacks_svg.js";
+
+// import { vaporeonAttacks } from "./attacks_svg.js";
 
 // constructor taking into account every text content, url and colors that we want to change 
 
@@ -51,17 +53,23 @@ replaceContent(){
     // // idem pour type, weakness, attacks, etc... mettre les bons IDs
     document.documentElement.style.setProperty('--main-color',`${this.mainColorVarName}`);
     document.documentElement.style.setProperty('--secondary-color',`${this.secondaryColorVarName}`);
-    document.querySelector("#attacks>svg:first-child").textContent = `${this.attack4Src}`
+    document.querySelector("#attack1").src = `${this.attack1Src}`
+    document.querySelector("#attack2").src = `${this.attack2Src}`
+    document.querySelector("#attack3").src = `${this.attack3Src}`
+    document.querySelector("#attack4").src = `${this.attack4Src}`
 }
 }
 
 // declaration of the four pokemon contents 
 
 
-const eeveeContent = new PokemonContent("EVOLI","#3a3129","#c5915d","AQUALI","PYROLI","Normal",littleDescription.eeveeLittleDescription,"assets\\EeveePokeball-img.png",legends.eeveeLegend,locations.eeveeLocation,"assets\\aqua_nav.png", caracteristics.eeveeCaracteristics,"assets\\pins map.png", "blabla","blabla","blabla","blabla","blabla");
-const flareonContent = new PokemonContent("PYROLI","#ffa948","#fb7c26","EVOLI","VOLTALI","Feu",littleDescription.flareonLittleDescription,"assets\\Flareon_Pokeball.png",legends.flareonLegend,locations.flareonLocation,"assets\\aqua_nav.png", caracteristics.flareonCaracteristics,"assets\\pins map.png", "blabla","blabla","blabla","blabla","blabla");
-const jolteonContent = new PokemonContent("VOLTALI","#e9bc2e","#b9812b","PYROLI","AQUALI", "Electricité", littleDescription.jolteonLittleDescription,"assets\\Volteon_Pokeball.png",legends.jolteonLegend,locations.jolteonLocation,"assets\\aqua_nav.png", caracteristics.jolteonCaracteristics,"assets\\pins map.png", "blabla","blabla","blabla","blabla","blabla");
-const vaporeonContent = new PokemonContent("AQUALI","#879cc6","#3a5d83","VOLTALI","EVOLI","Eau",littleDescription.vaporeonLittleDescription,"assets\\Vaporeon_Pokeball.png",legends.vaporeonLegend,locations.vaporeonLocation,"assets\\aqua_nav.png", caracteristics.vaporeonCaracteristics,"assets\\pins map.png", "blabla","blabla","blabla","blabla",vaporeonAttacks.vaporeonAttack4);
+const eeveeContent = new PokemonContent("EVOLI","#3a3129","#c5915d","AQUALI","PYROLI","Normal",littleDescription.eeveeLittleDescription,"assets\\EeveePokeball-img.png",legends.eeveeLegend,locations.eeveeLocation,"assets\\aqua_nav.png", caracteristics.eeveeCaracteristics,"assets\\pins map.png", "blabla",attackSrc.eeveeAttack1,attackSrc.eeveeAttack2,attackSrc.eeveeAttack3,attackSrc.eeveeAttack4);
+
+const flareonContent = new PokemonContent("PYROLI","#ffa948","#fb7c26","EVOLI","VOLTALI","Feu",littleDescription.flareonLittleDescription,"assets\\Flareon_Pokeball.png",legends.flareonLegend,locations.flareonLocation,"assets\\aqua_nav.png", caracteristics.flareonCaracteristics,"assets\\pins map.png", "blabla",attackSrc.flareonAttack1,attackSrc.flareonAttack2,attackSrc.flareonAttack3,attackSrc.flareonAttack4);
+
+const jolteonContent = new PokemonContent("VOLTALI","#e9bc2e","#b9812b","PYROLI","AQUALI", "Electricité", littleDescription.jolteonLittleDescription,"assets\\Volteon_Pokeball.png",legends.jolteonLegend,locations.jolteonLocation,"assets\\aqua_nav.png", caracteristics.jolteonCaracteristics,"assets\\pins map.png", "blabla",attackSrc.jolteonAttack1,attackSrc.jolteonAttack2,attackSrc.jolteonAttack3,attackSrc.jolteonAttack4);
+
+const vaporeonContent = new PokemonContent("AQUALI","#879cc6","#3a5d83","VOLTALI","EVOLI","Eau",littleDescription.vaporeonLittleDescription,"assets\\Vaporeon_Pokeball.png",legends.vaporeonLegend,locations.vaporeonLocation,"assets\\aqua_nav.png", caracteristics.vaporeonCaracteristics,"assets\\pins map.png", "blabla",attackSrc.vaporeonAttack1,attackSrc.vaporeonAttack2,attackSrc.vaporeonAttack3,attackSrc.vaporeonAttack4);
 
 
 export let switchPokemon = {
