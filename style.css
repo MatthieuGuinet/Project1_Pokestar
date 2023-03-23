@@ -161,6 +161,11 @@ h2 {
   padding: 7% 0;
 }
 
+/*adding offset when click on href localisation and quiz*/
+#localisation, #quiz{
+  scroll-margin-top: 80px;
+}
+
 header {
   margin-top: 0px;
 }
