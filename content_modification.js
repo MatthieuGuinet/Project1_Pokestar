@@ -2,6 +2,7 @@
 
 import { legends } from "./legend_location_text_content.js";
 import { locations } from "./legend_location_text_content.js";
+import {vaporeonAttacks} from "./attacks_svg.js";
 
 // constructor taking into account every text content, url and colors that we want to change 
 
@@ -58,7 +59,7 @@ replaceContent(){
 const eeveeContent = new PokemonContent("EVOLI","#3a3129","#c5915d","AQUALI","PYROLI","FEU","Brun, les yeux marrons, pour 0.63m de douceur","assets\\EeveePokeball-img.png",legends.eeveeLegend,locations.eeveeLocation,"assets\\aqua_nav.png", "Il a plein de caractéristiques super chouettes","assets\\pins map.png", "blabla","blabla","blabla","blabla","blabla");
 const flareonContent = new PokemonContent("PYROLI","#ffa948","#fb7c26","EVOLI","VOLTALI","FEU","Roux, les yeux bleus, pour 0.58m de brasier","assets\\Flareon_Pokeball.png",legends.flareonLegend,locations.flareonLocation,"assets\\aqua_nav.png", "Il a plein de caractéristiques super chouettes","assets\\pins map.png", "blabla","blabla","blabla","blabla","blabla");
 const jolteonContent = new PokemonContent("VOLTALI","#e9bc2e","#b9812b","PYROLI","AQUALI","ELECTRIQUE","Roux, les yeux bleus, pour 0.58m de brasier","assets\\Volteon_Pokeball.png",legends.jolteonLegend,locations.jolteonLocation,"assets\\aqua_nav.png", "Il a plein de caractéristiques super chouettes","assets\\pins map.png", "blabla","blabla","blabla","blabla","blabla");
-const vaporeonContent = new PokemonContent("AQUALI","#879cc6","#3a5d83","VOLTALI","EVOLI","EAU","Roux, les yeux bleus, pour 0.58m de brasier","assets\\Vaporeon_Pokeball.png",legends.vaporeonLegend,locations.vaporeonLocation,"assets\\aqua_nav.png", "Il a plein de caractéristiques super chouettes","assets\\pins map.png", "blabla","blabla","blabla","blabla","blabla");
+const vaporeonContent = new PokemonContent("AQUALI","#879cc6","#3a5d83","VOLTALI","EVOLI","EAU","Roux, les yeux bleus, pour 0.58m de brasier","assets\\Vaporeon_Pokeball.png",legends.vaporeonLegend,locations.vaporeonLocation,"assets\\aqua_nav.png", "Il a plein de caractéristiques super chouettes","assets\\pins map.png", "blabla","blabla","blabla","blabla",vaporeonAttacks.vaporeonAttack4);
 
 
 export let switchPokemon = {
