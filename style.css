@@ -634,7 +634,6 @@ header {
 #sticky-nav-mobile {
   background-color: var(--black-color);
   opacity: 0.9;
-  border-radius: 10px 10px 0px 0px;
   display: flex;
   justify-content: center;
   margin-top: 10px;
