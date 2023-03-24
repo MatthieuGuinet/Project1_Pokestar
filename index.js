@@ -4,7 +4,7 @@ import displayText from "./displayText.js";
 //import hoverButton to use the hovering on the buttons a the top of the pokemon
 
 import { headerFunctions } from "./header_button.js";
-import {options} from './chart.js';
+import { options } from "./chart.js";
 
 import { quizFunctions } from "./quiz.js";
 
@@ -12,7 +12,7 @@ import { quizFunctions } from "./quiz.js";
 import { switchPokemon } from "./content_modification.js";
 
 // loading eevee display when opening the website for the first time
-window.addEventListener("load", ()=> {
+window.addEventListener("load", () => {
   switchPokemon.eeveeContent.replaceContent();
 });
 
@@ -101,7 +101,6 @@ chart.render();
 // Section "quiz" button "suivant"
 let nextButton = document.getElementById("quiz-button-next");
 
-
 nextButton.addEventListener("click", () => {
   quizFunctions.nextQuestion();
 });
@@ -131,16 +130,16 @@ replayButton.addEventListener("click", () => {
 });
 
 //sticky-nav hover
-const icon = document.getElementsByClassName("sticky-nav-icon");
-const circle = document.getElementsByClassName("sticky-nav-circle");
-const eeveeIcon = document.getElementById("eevee-icon");
-const vaporeonIcon = document.getElementById("vaporeon-icon");
-const jolteonIcon = document.getElementById("jolteon-icon");
-const flareonIcon = document.getElementById("flareon-icon");
+const icon = document.getElementsByClassName("sticky-nav-icon-desktop");
+const circle = document.getElementsByClassName("sticky-nav-circle-desktop");
+const eeveeIcon = document.getElementById("eevee-icon-desktop");
+const vaporeonIcon = document.getElementById("vaporeon-icon-desktop");
+const jolteonIcon = document.getElementById("jolteon-icon-desktop");
+const flareonIcon = document.getElementById("flareon-icon-desktop");
 
 function hoverIcon(stickyIcon) {
   for (let i = 0; i < stickyIcon.length; i++) {
-    const nav = stickyIcon[i]
+    const nav = stickyIcon[i];
     nav.addEventListener("mouseover", function () {
       icon[i].style.fill = "white";
       eeveeIcon.style.fill = "#C38F5C";
@@ -148,36 +147,45 @@ function hoverIcon(stickyIcon) {
       jolteonIcon.style.fill = "#FFCA42";
       flareonIcon.style.fill = "#FF7D05";
       circle[i].style.opacity = "1";
-      icon[i].style.cursor = "pointer"
-      circle[i].style.cursor = "pointer"
+      icon[i].style.cursor = "pointer";
+      circle[i].style.cursor = "pointer";
     });
     nav.addEventListener("mouseout", function () {
       icon[i].style.fill = "black";
       circle[i].style.opacity = "0.6";
-    })
+    });
   }
 }
-hoverIcon(icon);
-hoverIcon(circle);
 
-// sticky_nav scroll
-const stickyNav = document.getElementById("sticky-nav");
-let firstScrollPosition = window.pageYOffset
-let windowWidth = window.outerWidth
-if (windowWidth < 768) {
-window.addEventListener('scroll', function () {
-  let secondScrollPosition = window.pageYOffset
-  if (firstScrollPosition < secondScrollPosition) {
-    stickyNav.style.bottom = "-200px"
-  } else {
-    stickyNav.style.bottom = "0"
-  }
-  firstScrollPosition = secondScrollPosition;
+const stickyNavMobile = document.getElementById("sticky-nav-mobile");
+const stickyNavDesktop = document.getElementById("sticky-nav-desktop");
 
-});
-};
+function scrollStickyNavMobile() {
+  let firstScrollPosition = window.pageYOffset;
+  window.addEventListener("scroll", function () {
+    let secondScrollPosition = window.pageYOffset;
+    if (firstScrollPosition < secondScrollPosition) {
+      stickyNavMobile.classList.add("down");
+      // stickyNavMobile.style.bottom = "-50px"
+    } else {
+      stickyNavMobile.classList.remove("down");
+      // stickyNavMobile.style.bottom = "0"
+    }
+    firstScrollPosition = secondScrollPosition;
+  });
+}
 
-//sticky-nav addEventListener
+let mobile = window.matchMedia("(max-width: 768px)");
+let desktop = window.matchMedia("(min-width: 769px)");
+
+if (desktop.matches) {
+  hoverIcon(icon);
+  hoverIcon(circle);
+} else {
+  scrollStickyNavMobile();
+}
+
+//sticky-nav addEventListener desktop
 
 let eeveeNavButton = document.getElementById("eevee-nav-button");
 eeveeNavButton.addEventListener("click", () => {
@@ -196,12 +204,44 @@ vaporeonNavButton.addEventListener("click", () => {
   switchPokemon.vaporeonContent.replaceContent();
 });
 
+//sticky-nav addEventListener smartphone
+
+let eeveeNavButtonSmartphone = document.getElementById(
+  "eevee-nav-button-smartphone"
+);
+eeveeNavButtonSmartphone.addEventListener("click", () => {
+  switchPokemon.eeveeContent.replaceContent();
+});
+let flareonNavButtonSmartphone = document.getElementById(
+  "flareon-nav-button-smartphone"
+);
+flareonNavButtonSmartphone.addEventListener("click", () => {
+  switchPokemon.flareonContent.replaceContent();
+});
+let jolteonNavButtonSmartphone = document.getElementById(
+  "jolteon-nav-button-smartphone"
+);
+jolteonNavButtonSmartphone.addEventListener("click", () => {
+  switchPokemon.jolteonContent.replaceContent();
+});
+let vaporeonNavButtonSmartphone = document.getElementById(
+  "vaporeon-nav-button-smartphone"
+);
+vaporeonNavButtonSmartphone.addEventListener("click", () => {
+  switchPokemon.vaporeonContent.replaceContent();
+});
+
 //some styling features to get backlines in document's specific places
 
-document.getElementById("caracteristics-text").setAttribute('style', 'white-space: pre-line;');
-document.getElementById("legend-text").setAttribute('style', 'white-space: pre-line;');
-document.getElementById("localisation-text").setAttribute('style', 'white-space: pre-line;');
-document.getElementById("little-description-text").setAttribute('style', 'white-space: pre-line;');
-
-
-
+document
+  .getElementById("caracteristics-text")
+  .setAttribute("style", "white-space: pre-line;");
+document
+  .getElementById("legend-text")
+  .setAttribute("style", "white-space: pre-line;");
+document
+  .getElementById("localisation-text")
+  .setAttribute("style", "white-space: pre-line;");
+document
+  .getElementById("little-description-text")
+  .setAttribute("style", "white-space: pre-line;");
