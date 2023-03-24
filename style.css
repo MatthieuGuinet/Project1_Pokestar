@@ -182,7 +182,7 @@ header {
 }
 
 /* definition of the header img on mobile first */
-#mobile-header-band>img {
+#mobile-header-band > img {
   width: 100%;
   height: 70px;
   margin-top: 55px;
@@ -217,7 +217,7 @@ header {
 }
 
 /* defining the pokemon image resizing */
-#hero>img {
+#hero > img {
   width: clamp(150px, 80%, 450px);
   margin-bottom: 15px;
 }
@@ -286,9 +286,11 @@ header {
   overflow: hidden;
   font-style: normal;
   font-weight: 400;
-  background: linear-gradient(180deg,
-      #ffffff 0%,
-      rgba(255, 255, 255, 0) 95.91%);
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0) 95.91%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -360,7 +362,7 @@ header {
   color: black;
 }
 
-#pin-div>span {
+#pin-div > span {
   position: absolute;
   top: 150px;
   right: -40px;
@@ -380,8 +382,8 @@ header {
   z-index: 2;
 }
 
-#pin-div:hover>span,
-#pin-div:focus>span {
+#pin-div:hover > span,
+#pin-div:focus > span {
   transform: scale(1.5) rotate(0);
   opacity: 1;
 }
@@ -428,13 +430,13 @@ header {
   padding-top: 20px;
 }
 
-.caracteristics-middle>h2 {
+.caracteristics-middle > h2 {
   text-align: center;
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
-.caracteristics-middle>p {
+.caracteristics-middle > p {
   width: 80%;
   margin: 1rem;
   margin-bottom: 20px;
@@ -480,7 +482,7 @@ header {
   margin-top: 20px;
 }
 
-#attacks>p {
+#attacks > p {
   margin-bottom: 0.5rem;
   text-align: center;
   align-self: center;
@@ -488,7 +490,7 @@ header {
   grid-area: 1/1/2/3;
 }
 
-#attacks>img {
+#attacks > img {
   width: 80%;
   margin: 0 auto;
 }
@@ -593,7 +595,6 @@ header {
   font-size: 0.8rem;
   margin-bottom: 10px;
 }
-
 
 #quiz-replay-button {
   display: none;
@@ -745,7 +746,7 @@ footer {
     width: 100%;
   }
 
-  #desktop-header-band>svg {
+  #desktop-header-band > svg {
     width: 50%;
     height: 100px;
   }
@@ -758,7 +759,7 @@ footer {
     margin-left: 2.5px;
   }
 
-  #desktop-header-band>p {
+  #desktop-header-band > p {
     position: absolute;
     font-size: 1.5rem;
     letter-spacing: 1rem;
@@ -796,7 +797,7 @@ footer {
     width: 100%;
   }
 
-  #hero>img {
+  #hero > img {
     grid-area: 1 / 4 / 6 /5;
     width: clamp(300px, 40vw, 800px);
   }
@@ -806,7 +807,7 @@ footer {
     font-size: clamp(0.5rem, 2vw, 1.7rem);
   }
 
-  #hero>h1 {
+  #hero > h1 {
     display: initial;
     letter-spacing: 0.6rem;
     font-size: clamp(1rem, 5vw, 5rem);
@@ -887,15 +888,15 @@ footer {
   }
 
   .type_weakness p,
-  #attacks>p {
+  #attacks > p {
     font-size: 2rem;
   }
 
-  .caracteristics-middle>p {
+  .caracteristics-middle > p {
     margin-bottom: 3rem;
   }
 
-  .caracteristics-middle>p:last-of-type {
+  .caracteristics-middle > p:last-of-type {
     margin-bottom: 50px;
   }
 

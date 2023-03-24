@@ -1,353 +1,605 @@
 <!DOCTYPE html>
 <html lang="fr en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Pokestar</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="reset.css">
-  <link rel="stylesheet" href="style.css" />
-  <title>Pokestar</title>
-</head>
+  <body>
+    <!-- barre de navigation  -->
+    <nav id="nav_header">
+      <div id="logo_and_title">
+        <img src="assets/logo.png" alt="logo pokestar" class="logo" />
 
-<body>
-  <!-- barre de navigation  -->
-  <nav id="nav_header">
-    <div id="logo_and_title">
-      <img src="assets/logo.png" alt="logo pokestar" class="logo" />
-
-      <!-- titre pour la version desktop -->
-      <p id="logo_title">POKESTAR</p>
-    </div>
-
-    <!-- Menu burger -->
-    <span id="burger_icon">
-      <span id="burger"></span>
-    </span>
-    <!-- Liens de navigation vers sections -->
-    <div id="nav_links" class="burger_close">
-      <ul>
-        <li class="nav"><a href="#legend">Légende</a></li>
-        <li class="nav"><a href="#localisation">Localisation</a></li>
-        <li class="nav"><a href="#caracteristics">Caractéristiques</a></li>
-        <li class="nav"><a href="#quiz">Quiz</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <header>
-    <!-- bandeau desktop  -->
-    <div id="desktop-header-band">
-      <!-- prévoir affichage dynamique du nom de deux autres pokemons en fonction de celui affiché (de manière carroussel) -->
-      <svg id="left_button" preserveAspectRatio="none" width="1075" height="120" viewBox="0 0 1075 120" fill="none"
-        xmlns="http://www.w3.org/2000/svg">
-        <path class="lr_buttons button_pokemon lbutton"
-          d="M0.784668 0H1074.5V67.5H358.285C279.314 69.2291 194.431 120 113 120C31.5694 120 0.784668 120 0.784668 120V0Z"
-          fill="white" fill-opacity="0.25" />
-      </svg>
-      <svg id="right_button" preserveAspectRatio="none" width="1074" height="120" viewBox="0 0 1074 120" fill="none"
-        xmlns="http://www.w3.org/2000/svg">
-        <path class="lr_buttons button_pokemon rbutton"
-          d="M1073.72 0H0V67.5H716.215C795.186 69.2291 880.069 120 961.5 120C1042.93 120 1073.72 120 1073.72 120V0Z"
-          fill="white" fill-opacity="0.25" />
-      </svg>
-      <p id="pokemon_left" class="button_pokemon text_button lbutton">AQUALI</p>
-      <p id="pokemon_right" class="button_pokemon text_button rbutton">PYROLI</p>
-    </div>
-
-    <!-- bandeau mobile  -->
-    <div id="mobile-header-band">
-      <img src="./assets/header.png" alt="header" srcset="" />
-      <h1 class="pokemon-name-mobile pokemon-title">EVOLI</h1>
-    </div>
-
-    <!-- commun aux deux versions  -->
-    <div id="hero">
-      <img id="hero-header-img" src="./assets/EeveePokeball-img.png" alt="header image pokemon" />
-      <h1 class="pokemon-name pokemon-title">EVOLI</h1>
-      <div id="header-type">
-        <p>Normal</p>
+        <!-- titre pour la version desktop -->
+        <p id="logo_title">POKESTAR</p>
       </div>
-      <div id="little-description">
-        <p id="little-description-text"></p>
+
+      <!-- Menu burger -->
+      <span id="burger_icon">
+        <span id="burger"></span>
+      </span>
+      <!-- Liens de navigation vers sections -->
+      <div id="nav_links" class="burger_close">
+        <ul>
+          <li class="nav"><a href="#legend">Légende</a></li>
+          <li class="nav"><a href="#localisation">Localisation</a></li>
+          <li class="nav"><a href="#caracteristics">Caractéristiques</a></li>
+          <li class="nav"><a href="#quiz">Quiz</a></li>
+        </ul>
       </div>
-    </div>
-  </header>
-  <main>
-    <section id="legend">
-      <div id="legend-top" class="section-top">
-        <svg class="section-top-smartphone" height="100%" width="100%" preserveAspectRatio="none" viewBox="0 0 874 107"
-          fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g clip-path="url(#clip0_293_10)">
-            <path fill-rule="evenodd" clip-rule="evenodd"
-              d="M112.051 0.990997L0 0.991997V107H874V0.990997C874 0.990997 828.689 -1.24 773.154 0.991997C745.795 2.091 731.58 20.0912 717.117 38.4043C702.222 57.2647 687.065 76.4574 657.017 77.8635H437H218.5C194.298 77.8635 179.99 58.7646 165.637 39.6064C151.196 20.3288 136.709 0.990997 112.051 0.990997Z" />
-          </g>
-          <defs>
-            <clipPath id="clip0_293_10">
-              <rect width="874" height="100" fill="white" transform="matrix(1 0 0 -1 0 107)" />
-            </clipPath>
-          </defs>
+    </nav>
+
+    <header>
+      <!-- bandeau desktop  -->
+      <div id="desktop-header-band">
+        <!-- prévoir affichage dynamique du nom de deux autres pokemons en fonction de celui affiché (de manière carroussel) -->
+        <svg
+          id="left_button"
+          preserveAspectRatio="none"
+          width="1075"
+          height="120"
+          viewBox="0 0 1075 120"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            class="lr_buttons button_pokemon lbutton"
+            d="M0.784668 0H1074.5V67.5H358.285C279.314 69.2291 194.431 120 113 120C31.5694 120 0.784668 120 0.784668 120V0Z"
+            fill="white"
+            fill-opacity="0.25"
+          />
         </svg>
-        <svg class="section-top-desktop" height="100%" width="100%" preserveAspectRatio="none" viewBox="0 0 2164 139"
-          fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g clip-path="url(#clip0_295_8)">
-            <path
-              d="M2164 0.595993C2164 0.595993 2046.03 -0.745007 1908.53 0.595993C1840.83 1.25599 1807.04 21.334 1772.68 41.749C1737.24 62.8024 1701.2 84.2145 1626.76 85.0598H1082H541C481.076 85.0598 443.926 64.4078 406.662 43.6917C369.165 22.847 331.552 1.936 270.5 1.937C148.775 1.937 0 0.595993 0 0.595993V139L2164 139V120.216V0.595993Z"
-              fill="#282828" />
-          </g>
-          <defs>
-            <clipPath id="clip0_295_8">
-              <rect width="2164" height="139" fill="white" transform="matrix(1 0 0 -1 0 139)" />
-            </clipPath>
-          </defs>
+        <svg
+          id="right_button"
+          preserveAspectRatio="none"
+          width="1074"
+          height="120"
+          viewBox="0 0 1074 120"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            class="lr_buttons button_pokemon rbutton"
+            d="M1073.72 0H0V67.5H716.215C795.186 69.2291 880.069 120 961.5 120C1042.93 120 1073.72 120 1073.72 120V0Z"
+            fill="white"
+            fill-opacity="0.25"
+          />
         </svg>
-      </div>
-      <div id="legend-middle">
-        <h2>LEGENDE</h2>
-        <p id="legend-text">
+        <p id="pokemon_left" class="button_pokemon text_button lbutton">
+          AQUALI
         </p>
-        <button id="legend-deployment">Poursuivre l'aventure</button>
+        <p id="pokemon_right" class="button_pokemon text_button rbutton">
+          PYROLI
+        </p>
       </div>
-      <div id="legend-bottom" class="section-bottom">
-        <svg class="section-bottom-smartphone" height="100%" width="100%" preserveAspectRatio="none"
-          viewBox="0 0 874 107" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M112.051 106.009L0 106.008V-8.93604e-07H874V106.009C874 106.009 828.689 108.24 773.154 106.008C745.795 104.909 731.58 86.9088 717.117 68.5957C702.222 49.7353 687.065 30.5426 657.017 29.1365H437H218.5C194.298 29.1365 179.99 48.2354 165.637 67.3936C151.196 86.6712 136.709 106.009 112.051 106.009Z" />
-        </svg>
-        <svg class="section-bottom-desktop" height="100%" width="100%" preserveAspectRatio="none" viewBox="0 0 2164 139"
-          fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M2164 138.404C2164 138.404 2046.03 139.745 1908.53 138.404C1840.83 137.744 1807.04 117.666 1772.68 97.251C1737.24 76.1976 1701.2 54.7855 1626.76 53.9402H1082H541C481.076 53.9402 443.926 74.5922 406.662 95.3083C369.165 116.153 331.552 137.064 270.5 137.063C148.775 137.063 0 138.404 0 138.404V0L2164 0V18.7838V138.404Z"
-            fill="#282828" />
-        </svg>
-      </div>
-    </section>
-    <div id="sticky-desktop-div">
-      <section id="localisation">
-        <h2>Localisation</h2>
-        <div id="localisation-flex">
-          <div id="localisation-text">
-            </p>
-          </div>
-          <div id="map_wrapper">
-            <div id="scrollable_map">
-              <div id="pin-div">
-                <img id="pokemon-pin" src="assets/pins map.png" alt="localisation du pokémon" draggable="false" />
-                <span>Oh, un pokémon sauvage apparait!</span>
-              </div>
 
-              <img id="map-image" src="assets/image poké ok.jpg" alt="carte pokémon" draggable="false" />
-            </div>
-          </div>
+      <!-- bandeau mobile  -->
+      <div id="mobile-header-band">
+        <img src="./assets/header.png" alt="header" srcset="" />
+        <h1 class="pokemon-name-mobile pokemon-title">EVOLI</h1>
+      </div>
+
+      <!-- commun aux deux versions  -->
+      <div id="hero">
+        <img
+          id="hero-header-img"
+          src="./assets/EeveePokeball-img.png"
+          alt="header image pokemon"
+        />
+        <h1 class="pokemon-name pokemon-title">EVOLI</h1>
+        <div id="header-type">
+          <p>Normal</p>
         </div>
-      </section>
-      <section id="caracteristics">
-        <div id="caracteristics-top" class="section-top">
-          <svg class="section-top-smartphone" height="100%" width="100%" preserveAspectRatio="none"
-            viewBox="0 0 874 107" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div id="little-description">
+          <p id="little-description-text"></p>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section id="legend">
+        <div id="legend-top" class="section-top">
+          <svg
+            class="section-top-smartphone"
+            height="100%"
+            width="100%"
+            preserveAspectRatio="none"
+            viewBox="0 0 874 107"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <g clip-path="url(#clip0_293_10)">
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M112.051 0.990997L0 0.991997V107H874V0.990997C874 0.990997 828.689 -1.24 773.154 0.991997C745.795 2.091 731.58 20.0912 717.117 38.4043C702.222 57.2647 687.065 76.4574 657.017 77.8635H437H218.5C194.298 77.8635 179.99 58.7646 165.637 39.6064C151.196 20.3288 136.709 0.990997 112.051 0.990997Z" />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M112.051 0.990997L0 0.991997V107H874V0.990997C874 0.990997 828.689 -1.24 773.154 0.991997C745.795 2.091 731.58 20.0912 717.117 38.4043C702.222 57.2647 687.065 76.4574 657.017 77.8635H437H218.5C194.298 77.8635 179.99 58.7646 165.637 39.6064C151.196 20.3288 136.709 0.990997 112.051 0.990997Z"
+              />
             </g>
             <defs>
               <clipPath id="clip0_293_10">
-                <rect width="874" height="100" fill="white" transform="matrix(1 0 0 -1 0 107)" />
+                <rect
+                  width="874"
+                  height="100"
+                  fill="white"
+                  transform="matrix(1 0 0 -1 0 107)"
+                />
               </clipPath>
             </defs>
           </svg>
-          <svg class="section-top-desktop" height="100%" width="100%" preserveAspectRatio="none" viewBox="0 0 2164 139"
-            fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg
+            class="section-top-desktop"
+            height="100%"
+            width="100%"
+            preserveAspectRatio="none"
+            viewBox="0 0 2164 139"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <g clip-path="url(#clip0_295_8)">
               <path
                 d="M2164 0.595993C2164 0.595993 2046.03 -0.745007 1908.53 0.595993C1840.83 1.25599 1807.04 21.334 1772.68 41.749C1737.24 62.8024 1701.2 84.2145 1626.76 85.0598H1082H541C481.076 85.0598 443.926 64.4078 406.662 43.6917C369.165 22.847 331.552 1.936 270.5 1.937C148.775 1.937 0 0.595993 0 0.595993V139L2164 139V120.216V0.595993Z"
-                fill="#282828" />
+                fill="#282828"
+              />
             </g>
             <defs>
               <clipPath id="clip0_295_8">
-                <rect width="2164" height="139" fill="white" transform="matrix(1 0 0 -1 0 139)" />
+                <rect
+                  width="2164"
+                  height="139"
+                  fill="white"
+                  transform="matrix(1 0 0 -1 0 139)"
+                />
               </clipPath>
             </defs>
           </svg>
         </div>
-        <div class="caracteristics-middle">
-          <h2>Caractéristiques</h2>
-          <p id="caracteristics-text">
-          </p>
-          <section id="stats">
-            <div id="chart"></div>
-            <!-- voir le comportement des images en responsive et des textes, voir avec article -->
-            <div class="Type_Weakness_Attacks">
-              <div class="type_weakness" data-info="Type+Weakness">
-                <div data-info="Type">
-                  <p>Type</p>
-                  <img id="caracteristics-type" src="" alt="">
-                </div>
-                <div data-info="Weakness">
-                  <p>Faiblesse</p>
-                  <img id="caracteristics-weakness" src="" alt="">
-                </div>
-              </div>
-              <div id="attacks" data-info="Attacks">
-                <p>Attaques</p>
-                <img id="attack1" src="assets\SVG_Attacks\ATT charme.svg" alt="">
-                <img id="attack2" src="assets\SVG_Attacks\ATT Coup d'jus.svg" alt="">
-                <img id="attack3" src="assets\SVG_Attacks\ATT Coup d'jus.svg" alt="">
-                <img id="attack4" src="assets\SVG_Attacks\ATT Coup d'jus.svg" alt="">
-              </div>
-            </div>
-          </section>
+        <div id="legend-middle">
+          <h2>LEGENDE</h2>
+          <p id="legend-text"></p>
+          <button id="legend-deployment">Poursuivre l'aventure</button>
         </div>
-        <div id="caracteristics-bottom" class="section-bottom">
-          <svg class="section-bottom-smartphone" height="100%" width="100%" preserveAspectRatio="none"
-            viewBox="0 0 874 107" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd"
-              d="M112.051 106.009L0 106.008V-8.93604e-07H874V106.009C874 106.009 828.689 108.24 773.154 106.008C745.795 104.909 731.58 86.9088 717.117 68.5957C702.222 49.7353 687.065 30.5426 657.017 29.1365H437H218.5C194.298 29.1365 179.99 48.2354 165.637 67.3936C151.196 86.6712 136.709 106.009 112.051 106.009Z" />
+        <div id="legend-bottom" class="section-bottom">
+          <svg
+            class="section-bottom-smartphone"
+            height="100%"
+            width="100%"
+            preserveAspectRatio="none"
+            viewBox="0 0 874 107"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M112.051 106.009L0 106.008V-8.93604e-07H874V106.009C874 106.009 828.689 108.24 773.154 106.008C745.795 104.909 731.58 86.9088 717.117 68.5957C702.222 49.7353 687.065 30.5426 657.017 29.1365H437H218.5C194.298 29.1365 179.99 48.2354 165.637 67.3936C151.196 86.6712 136.709 106.009 112.051 106.009Z"
+            />
           </svg>
-          <svg class="section-bottom-desktop" height="100%" width="100%" preserveAspectRatio="none"
-            viewBox="0 0 2164 139" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg
+            class="section-bottom-desktop"
+            height="100%"
+            width="100%"
+            preserveAspectRatio="none"
+            viewBox="0 0 2164 139"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <path
               d="M2164 138.404C2164 138.404 2046.03 139.745 1908.53 138.404C1840.83 137.744 1807.04 117.666 1772.68 97.251C1737.24 76.1976 1701.2 54.7855 1626.76 53.9402H1082H541C481.076 53.9402 443.926 74.5922 406.662 95.3083C369.165 116.153 331.552 137.064 270.5 137.063C148.775 137.063 0 138.404 0 138.404V0L2164 0V18.7838V138.404Z"
-              fill="#282828" />
+              fill="#282828"
+            />
           </svg>
         </div>
       </section>
-      <section id="quiz">
-        <h2>QUIZ</h2>
-        <div id="quiz-title">QUELLE VERSION DE POKEMON ES-TU ?</div>
-        <div id="quiz-container">
-          <div id="quiz-question">Quelle est ton activité préférée ?</div>
-          <div id="quiz-answers-container">
-            <div id="quiz-answer1" class="quiz-answer eevee">La nature</div>
-            <div id="quiz-answer2" class="quiz-answer vaporeon">La pêche</div>
-            <div id="quiz-answer3" class="quiz-answer jolteon">
-              Le bricolage
-            </div>
-            <div id="quiz-answer4" class="quiz-answer flareon">
-              Un livre au coin du feu
-            </div>
-            <div id="quiz-result-container">
-              <img id="quiz-result-img" src="" alt="" />
+      <div id="sticky-desktop-div">
+        <section id="localisation">
+          <h2>Localisation</h2>
+          <div id="localisation-flex">
+            <div id="localisation-text"></div>
+            <div id="map_wrapper">
+              <div id="scrollable_map">
+                <div id="pin-div">
+                  <img
+                    id="pokemon-pin"
+                    src="assets/pins map.png"
+                    alt="localisation du pokémon"
+                    draggable="false"
+                  />
+                  <span>Oh, un pokémon sauvage apparait!</span>
+                </div>
+
+                <img
+                  id="map-image"
+                  src="assets/image poké ok.jpg"
+                  alt="carte pokémon"
+                  draggable="false"
+                />
+              </div>
             </div>
           </div>
-          <button id="quiz-button-next">Suivant</button>
-          <p id="quiz-error">Merci de sélectionner une valeur</p>
+        </section>
+        <section id="caracteristics">
+          <div id="caracteristics-top" class="section-top">
+            <svg
+              class="section-top-smartphone"
+              height="100%"
+              width="100%"
+              preserveAspectRatio="none"
+              viewBox="0 0 874 107"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_293_10)">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M112.051 0.990997L0 0.991997V107H874V0.990997C874 0.990997 828.689 -1.24 773.154 0.991997C745.795 2.091 731.58 20.0912 717.117 38.4043C702.222 57.2647 687.065 76.4574 657.017 77.8635H437H218.5C194.298 77.8635 179.99 58.7646 165.637 39.6064C151.196 20.3288 136.709 0.990997 112.051 0.990997Z"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_293_10">
+                  <rect
+                    width="874"
+                    height="100"
+                    fill="white"
+                    transform="matrix(1 0 0 -1 0 107)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+            <svg
+              class="section-top-desktop"
+              height="100%"
+              width="100%"
+              preserveAspectRatio="none"
+              viewBox="0 0 2164 139"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_295_8)">
+                <path
+                  d="M2164 0.595993C2164 0.595993 2046.03 -0.745007 1908.53 0.595993C1840.83 1.25599 1807.04 21.334 1772.68 41.749C1737.24 62.8024 1701.2 84.2145 1626.76 85.0598H1082H541C481.076 85.0598 443.926 64.4078 406.662 43.6917C369.165 22.847 331.552 1.936 270.5 1.937C148.775 1.937 0 0.595993 0 0.595993V139L2164 139V120.216V0.595993Z"
+                  fill="#282828"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_295_8">
+                  <rect
+                    width="2164"
+                    height="139"
+                    fill="white"
+                    transform="matrix(1 0 0 -1 0 139)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+          <div class="caracteristics-middle">
+            <h2>Caractéristiques</h2>
+            <p id="caracteristics-text"></p>
+            <section id="stats">
+              <div id="chart"></div>
+              <!-- voir le comportement des images en responsive et des textes, voir avec article -->
+              <div class="Type_Weakness_Attacks">
+                <div class="type_weakness" data-info="Type+Weakness">
+                  <div data-info="Type">
+                    <p>Type</p>
+                    <img id="caracteristics-type" src="" alt="" />
+                  </div>
+                  <div data-info="Weakness">
+                    <p>Faiblesse</p>
+                    <img id="caracteristics-weakness" src="" alt="" />
+                  </div>
+                </div>
+                <div id="attacks" data-info="Attacks">
+                  <p>Attaques</p>
+                  <img
+                    id="attack1"
+                    src="assets\SVG_Attacks\ATT charme.svg"
+                    alt=""
+                  />
+                  <img
+                    id="attack2"
+                    src="assets\SVG_Attacks\ATT Coup d'jus.svg"
+                    alt=""
+                  />
+                  <img
+                    id="attack3"
+                    src="assets\SVG_Attacks\ATT Coup d'jus.svg"
+                    alt=""
+                  />
+                  <img
+                    id="attack4"
+                    src="assets\SVG_Attacks\ATT Coup d'jus.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </section>
+          </div>
+          <div id="caracteristics-bottom" class="section-bottom">
+            <svg
+              class="section-bottom-smartphone"
+              height="100%"
+              width="100%"
+              preserveAspectRatio="none"
+              viewBox="0 0 874 107"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M112.051 106.009L0 106.008V-8.93604e-07H874V106.009C874 106.009 828.689 108.24 773.154 106.008C745.795 104.909 731.58 86.9088 717.117 68.5957C702.222 49.7353 687.065 30.5426 657.017 29.1365H437H218.5C194.298 29.1365 179.99 48.2354 165.637 67.3936C151.196 86.6712 136.709 106.009 112.051 106.009Z"
+              />
+            </svg>
+            <svg
+              class="section-bottom-desktop"
+              height="100%"
+              width="100%"
+              preserveAspectRatio="none"
+              viewBox="0 0 2164 139"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2164 138.404C2164 138.404 2046.03 139.745 1908.53 138.404C1840.83 137.744 1807.04 117.666 1772.68 97.251C1737.24 76.1976 1701.2 54.7855 1626.76 53.9402H1082H541C481.076 53.9402 443.926 74.5922 406.662 95.3083C369.165 116.153 331.552 137.064 270.5 137.063C148.775 137.063 0 138.404 0 138.404V0L2164 0V18.7838V138.404Z"
+                fill="#282828"
+              />
+            </svg>
+          </div>
+        </section>
+        <section id="quiz">
+          <h2>QUIZ</h2>
+          <div id="quiz-title">QUELLE VERSION DE POKEMON ES-TU ?</div>
+          <div id="quiz-container">
+            <div id="quiz-question">Quelle est ton activité préférée ?</div>
+            <div id="quiz-answers-container">
+              <div id="quiz-answer1" class="quiz-answer eevee">La nature</div>
+              <div id="quiz-answer2" class="quiz-answer vaporeon">La pêche</div>
+              <div id="quiz-answer3" class="quiz-answer jolteon">
+                Le bricolage
+              </div>
+              <div id="quiz-answer4" class="quiz-answer flareon">
+                Un livre au coin du feu
+              </div>
+              <div id="quiz-result-container">
+                <img id="quiz-result-img" src="" alt="" />
+              </div>
+            </div>
+            <button id="quiz-button-next">Suivant</button>
+            <p id="quiz-error">Merci de sélectionner une valeur</p>
 
-          <button id="quiz-replay-button">On rejoue ?</button>
-        </div>
-      </section>
-      <nav id="sticky-nav-desktop">
+            <button id="quiz-replay-button">On rejoue ?</button>
+          </div>
+        </section>
+        <nav id="sticky-nav-desktop">
+          <ul>
+            <li>
+              <svg
+                id="eevee-nav-button"
+                width="100%"
+                height="100%"
+                viewBox="0 0 258 258"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g filter="url(#filter0_d_347_15)">
+                  <circle
+                    id="eevee-icon-desktop"
+                    class="sticky-nav-circle-desktop"
+                    cx="129"
+                    cy="125"
+                    r="125"
+                    fill="#C38F5C"
+                  />
+                </g>
+                <path
+                  class="sticky-nav-icon-desktop"
+                  d="M100.273 50.544C109.902 49.1761 120.102 59.5565 123.04 73.8799C125.978 88.1228 120.673 100.837 111.044 102.285C101.497 103.734 91.2145 93.3532 88.1952 79.0298C85.1759 64.7869 90.6433 52.0729 100.273 50.544ZM158.619 50.544C168.33 52.0729 173.716 64.7869 170.86 79.0298C167.759 93.3532 157.558 103.734 147.929 102.285C138.218 100.837 132.914 88.1228 135.933 73.8799C138.871 59.5565 149.071 49.1761 158.619 50.544ZM56.6146 87.5595C65.9174 83.6166 78.566 90.7782 85.1759 103.251C91.3777 115.965 89.256 129.323 80.0348 133.266C70.8137 137.209 58.2467 130.127 51.8 117.494C45.3534 104.86 47.6383 91.422 56.6146 87.5595ZM203.501 87.5595C212.477 91.422 214.762 104.86 208.316 117.494C201.869 130.127 189.302 137.209 180.081 133.266C170.86 129.323 168.738 115.965 174.94 103.251C181.55 90.7782 194.198 83.6166 203.501 87.5595ZM189.873 174.304C190.2 181.868 184.324 190.237 177.306 193.376C162.699 199.974 145.399 186.294 129.16 186.294C112.921 186.294 95.4579 200.537 81.0957 193.376C72.9353 189.433 67.3047 178.972 68.3655 170.281C69.8344 158.291 84.4414 151.854 93.0914 143.083C104.597 131.737 112.758 110.413 129.16 110.413C145.481 110.413 154.131 131.415 165.147 143.083C174.205 152.9 189.302 161.188 189.873 174.304Z"
+                  fill="white"
+                />
+              </svg>
+            </li>
+
+            <li>
+              <svg
+                id="vaporeon-nav-button"
+                width="100%"
+                height="100%"
+                viewBox="0 0 258 258"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g filter="url(#filter0_d_347_18)">
+                  <circle
+                    id="vaporeon-icon-desktop"
+                    class="sticky-nav-circle-desktop"
+                    cx="129"
+                    cy="125"
+                    r="125"
+                    fill="#54ADFF"
+                  />
+                </g>
+                <path
+                  class="sticky-nav-icon-desktop"
+                  d="M129 203.123C112.464 203.123 97.9142 197.253 85.3517 185.512C72.784 173.765 66.5001 157.874 66.5001 137.837C66.5001 125.23 71.1876 111.563 80.5626 96.8334C89.9376 82.1041 104.13 66.1805 123.141 49.0627C123.922 48.3992 124.833 47.8684 125.875 47.4703C126.917 47.0722 127.958 46.8732 129 46.8732C130.042 46.8732 131.083 47.0722 132.125 47.4703C133.167 47.8684 134.078 48.3992 134.859 49.0627C153.87 66.1805 168.063 82.1041 177.438 96.8334C186.813 111.563 191.5 125.23 191.5 137.837C191.5 157.874 185.216 173.765 172.649 185.512C160.086 197.253 145.537 203.123 129 203.123ZM131.149 179.238C132.711 179.105 134.047 178.476 135.156 177.351C136.261 176.22 136.813 174.859 136.813 173.266C136.813 171.409 136.227 169.917 135.055 168.792C133.883 167.661 132.386 167.162 130.563 167.295C125.224 167.693 119.56 166.202 113.57 162.821C107.581 159.434 103.805 153.296 102.242 144.405C101.982 142.945 101.297 141.751 100.188 140.822C99.0835 139.893 97.8152 139.429 96.3829 139.429C94.56 139.429 93.0626 140.124 91.8907 141.515C90.7189 142.911 90.3282 144.538 90.7189 146.395C92.9324 158.471 98.1408 167.096 106.344 172.271C114.547 177.446 122.815 179.769 131.149 179.238Z"
+                  fill="white"
+                />
+              </svg>
+            </li>
+
+            <li>
+              <svg
+                id="jolteon-nav-button"
+                width="100%"
+                height="100%"
+                viewBox="0 0 258 258"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g filter="url(#filter0_d_347_21)">
+                  <circle
+                    id="jolteon-icon-desktop"
+                    class="sticky-nav-circle-desktop"
+                    cx="129"
+                    cy="125"
+                    r="125"
+                    fill="#FFCA42"
+                  />
+                </g>
+                <path
+                  class="sticky-nav-icon-desktop"
+                  d="M147.64 50.985C147.64 50.1782 147.408 49.3892 146.973 48.7163C146.538 48.0434 145.919 47.5164 145.194 47.2008C144.468 46.8852 143.668 46.795 142.893 46.9415C142.117 47.088 141.401 47.4646 140.834 48.0246L126.546 62.0866C105.277 83.0165 87.3049 107.192 73.2692 133.754C72.9238 134.379 72.7446 135.086 72.7494 135.804C72.7541 136.523 72.9427 137.227 73.2962 137.848C73.6498 138.468 74.1561 138.983 74.7647 139.341C75.3732 139.699 76.0628 139.888 76.7647 139.888H111.399V199.006C111.398 199.804 111.623 200.585 112.048 201.253C112.473 201.922 113.079 202.45 113.792 202.772C114.505 203.095 115.294 203.198 116.063 203.07C116.833 202.941 117.549 202.587 118.125 202.049L124.513 196.087C146.89 175.227 165.881 150.855 180.771 123.885L184.725 116.731C185.072 116.105 185.253 115.398 185.249 114.678C185.245 113.959 185.057 113.253 184.703 112.631C184.35 112.009 183.843 111.493 183.233 111.135C182.623 110.776 181.932 110.588 181.229 110.588H147.64V50.985Z"
+                  fill="white"
+                />
+              </svg>
+            </li>
+
+            <li>
+              <svg
+                id="flareon-nav-button"
+                width="100%"
+                height="100%"
+                viewBox="0 0 258 258"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g filter="url(#filter0_d_347_24)">
+                  <circle
+                    id="flareon-icon-desktop"
+                    class="sticky-nav-circle-desktop"
+                    cx="129"
+                    cy="125"
+                    r="125"
+                    fill="#FF7D05"
+                  />
+                </g>
+                <path
+                  class="sticky-nav-icon-desktop"
+                  d="M125.836 60.8205L117.633 55.9052L116.07 65.3387C113.583 80.2346 103.408 94.0757 92.1835 103.802C70.2109 122.852 65.3997 143.555 72.2031 160.645C78.7135 176.999 95.2369 188.197 112.008 190.065L115.888 190.495C106.292 184.629 100.133 170.925 102.281 160.684C104.404 150.619 111.643 141.192 125.549 132.494L132.561 128.119L135.178 135.964C136.721 140.599 139.391 144.323 142.105 148.106C143.408 149.929 144.729 151.771 145.94 153.731C150.126 160.534 151.233 168.099 148.531 175.606C146.07 182.429 142.008 187.793 136.422 190.768L142.737 190.065C158.479 188.314 170.035 182.93 177.542 173.926C184.983 165 187.594 153.509 187.594 141.276C187.594 129.883 182.913 118.138 177.392 108.366C170.921 96.9208 162.477 87.4156 153.258 78.2033C151.663 81.3934 151.786 82.6825 148.505 87.8062C144.246 76.4898 136.248 66.9685 125.836 60.8205Z"
+                  fill="white"
+                />
+              </svg>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <nav id="sticky-nav-mobile">
         <ul>
-
-          <li><svg id="eevee-nav-button" width="100%" height="100%" viewBox="0 0 258 258" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
+          <li>
+            <svg
+              id="eevee-nav-button-smartphone"
+              width="100%"
+              height="100%"
+              viewBox="0 0 258 258"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
               <g filter="url(#filter0_d_347_15)">
-                <circle id="eevee-icon-desktop" class="sticky-nav-circle-desktop" cx="129" cy="125" r="125"
-                  fill="#C38F5C" />
+                <circle
+                  id="eevee-icon"
+                  class="sticky-nav-circle"
+                  cx="129"
+                  cy="125"
+                  r="125"
+                  fill="#C38F5C"
+                />
               </g>
-              <path class="sticky-nav-icon-desktop"
+              <path
+                class="sticky-nav-icon"
                 d="M100.273 50.544C109.902 49.1761 120.102 59.5565 123.04 73.8799C125.978 88.1228 120.673 100.837 111.044 102.285C101.497 103.734 91.2145 93.3532 88.1952 79.0298C85.1759 64.7869 90.6433 52.0729 100.273 50.544ZM158.619 50.544C168.33 52.0729 173.716 64.7869 170.86 79.0298C167.759 93.3532 157.558 103.734 147.929 102.285C138.218 100.837 132.914 88.1228 135.933 73.8799C138.871 59.5565 149.071 49.1761 158.619 50.544ZM56.6146 87.5595C65.9174 83.6166 78.566 90.7782 85.1759 103.251C91.3777 115.965 89.256 129.323 80.0348 133.266C70.8137 137.209 58.2467 130.127 51.8 117.494C45.3534 104.86 47.6383 91.422 56.6146 87.5595ZM203.501 87.5595C212.477 91.422 214.762 104.86 208.316 117.494C201.869 130.127 189.302 137.209 180.081 133.266C170.86 129.323 168.738 115.965 174.94 103.251C181.55 90.7782 194.198 83.6166 203.501 87.5595ZM189.873 174.304C190.2 181.868 184.324 190.237 177.306 193.376C162.699 199.974 145.399 186.294 129.16 186.294C112.921 186.294 95.4579 200.537 81.0957 193.376C72.9353 189.433 67.3047 178.972 68.3655 170.281C69.8344 158.291 84.4414 151.854 93.0914 143.083C104.597 131.737 112.758 110.413 129.16 110.413C145.481 110.413 154.131 131.415 165.147 143.083C174.205 152.9 189.302 161.188 189.873 174.304Z"
-                fill="white" />
-
+                fill="white"
+              />
             </svg>
           </li>
 
-          <li><svg id="vaporeon-nav-button" width="100%" height="100%" viewBox="0 0 258 258" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
+          <li>
+            <svg
+              id="vaporeon-nav-button-smartphone"
+              width="100%"
+              height="100%"
+              viewBox="0 0 258 258"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
               <g filter="url(#filter0_d_347_18)">
-                <circle id="vaporeon-icon-desktop" class="sticky-nav-circle-desktop" cx="129" cy="125" r="125"
-                  fill="#54ADFF" />
+                <circle
+                  id="vaporeon-icon"
+                  class="sticky-nav-circle"
+                  cx="129"
+                  cy="125"
+                  r="125"
+                  fill="#54ADFF"
+                />
               </g>
-              <path class="sticky-nav-icon-desktop"
+              <path
+                class="sticky-nav-icon"
                 d="M129 203.123C112.464 203.123 97.9142 197.253 85.3517 185.512C72.784 173.765 66.5001 157.874 66.5001 137.837C66.5001 125.23 71.1876 111.563 80.5626 96.8334C89.9376 82.1041 104.13 66.1805 123.141 49.0627C123.922 48.3992 124.833 47.8684 125.875 47.4703C126.917 47.0722 127.958 46.8732 129 46.8732C130.042 46.8732 131.083 47.0722 132.125 47.4703C133.167 47.8684 134.078 48.3992 134.859 49.0627C153.87 66.1805 168.063 82.1041 177.438 96.8334C186.813 111.563 191.5 125.23 191.5 137.837C191.5 157.874 185.216 173.765 172.649 185.512C160.086 197.253 145.537 203.123 129 203.123ZM131.149 179.238C132.711 179.105 134.047 178.476 135.156 177.351C136.261 176.22 136.813 174.859 136.813 173.266C136.813 171.409 136.227 169.917 135.055 168.792C133.883 167.661 132.386 167.162 130.563 167.295C125.224 167.693 119.56 166.202 113.57 162.821C107.581 159.434 103.805 153.296 102.242 144.405C101.982 142.945 101.297 141.751 100.188 140.822C99.0835 139.893 97.8152 139.429 96.3829 139.429C94.56 139.429 93.0626 140.124 91.8907 141.515C90.7189 142.911 90.3282 144.538 90.7189 146.395C92.9324 158.471 98.1408 167.096 106.344 172.271C114.547 177.446 122.815 179.769 131.149 179.238Z"
-                fill="white" />
-
+                fill="white"
+              />
             </svg>
           </li>
 
-          <li><svg id="jolteon-nav-button" width="100%" height="100%" viewBox="0 0 258 258" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
+          <li>
+            <svg
+              id="jolteon-nav-button-smartphone"
+              width="100%"
+              height="100%"
+              viewBox="0 0 258 258"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
               <g filter="url(#filter0_d_347_21)">
-                <circle id="jolteon-icon-desktop" class="sticky-nav-circle-desktop" cx="129" cy="125" r="125"
-                  fill="#FFCA42" />
+                <circle
+                  id="jolteon-icon"
+                  class="sticky-nav-circle"
+                  cx="129"
+                  cy="125"
+                  r="125"
+                  fill="#FFCA42"
+                />
               </g>
-              <path class="sticky-nav-icon-desktop"
+              <path
+                class="sticky-nav-icon"
                 d="M147.64 50.985C147.64 50.1782 147.408 49.3892 146.973 48.7163C146.538 48.0434 145.919 47.5164 145.194 47.2008C144.468 46.8852 143.668 46.795 142.893 46.9415C142.117 47.088 141.401 47.4646 140.834 48.0246L126.546 62.0866C105.277 83.0165 87.3049 107.192 73.2692 133.754C72.9238 134.379 72.7446 135.086 72.7494 135.804C72.7541 136.523 72.9427 137.227 73.2962 137.848C73.6498 138.468 74.1561 138.983 74.7647 139.341C75.3732 139.699 76.0628 139.888 76.7647 139.888H111.399V199.006C111.398 199.804 111.623 200.585 112.048 201.253C112.473 201.922 113.079 202.45 113.792 202.772C114.505 203.095 115.294 203.198 116.063 203.07C116.833 202.941 117.549 202.587 118.125 202.049L124.513 196.087C146.89 175.227 165.881 150.855 180.771 123.885L184.725 116.731C185.072 116.105 185.253 115.398 185.249 114.678C185.245 113.959 185.057 113.253 184.703 112.631C184.35 112.009 183.843 111.493 183.233 111.135C182.623 110.776 181.932 110.588 181.229 110.588H147.64V50.985Z"
-                fill="white" />
-
+                fill="white"
+              />
             </svg>
           </li>
 
-          <li><svg id="flareon-nav-button" width="100%" height="100%" viewBox="0 0 258 258" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
+          <li>
+            <svg
+              id="flareon-nav-button-smartphone"
+              width="100%"
+              height="100%"
+              viewBox="0 0 258 258"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
               <g filter="url(#filter0_d_347_24)">
-                <circle id="flareon-icon-desktop" class="sticky-nav-circle-desktop" cx="129" cy="125" r="125"
-                  fill="#FF7D05" />
+                <circle
+                  id="flareon-icon"
+                  class="sticky-nav-circle"
+                  cx="129"
+                  cy="125"
+                  r="125"
+                  fill="#FF7D05"
+                />
               </g>
-              <path class="sticky-nav-icon-desktop"
+              <path
+                class="sticky-nav-icon"
                 d="M125.836 60.8205L117.633 55.9052L116.07 65.3387C113.583 80.2346 103.408 94.0757 92.1835 103.802C70.2109 122.852 65.3997 143.555 72.2031 160.645C78.7135 176.999 95.2369 188.197 112.008 190.065L115.888 190.495C106.292 184.629 100.133 170.925 102.281 160.684C104.404 150.619 111.643 141.192 125.549 132.494L132.561 128.119L135.178 135.964C136.721 140.599 139.391 144.323 142.105 148.106C143.408 149.929 144.729 151.771 145.94 153.731C150.126 160.534 151.233 168.099 148.531 175.606C146.07 182.429 142.008 187.793 136.422 190.768L142.737 190.065C158.479 188.314 170.035 182.93 177.542 173.926C184.983 165 187.594 153.509 187.594 141.276C187.594 129.883 182.913 118.138 177.392 108.366C170.921 96.9208 162.477 87.4156 153.258 78.2033C151.663 81.3934 151.786 82.6825 148.505 87.8062C144.246 76.4898 136.248 66.9685 125.836 60.8205Z"
-                fill="white" />
-
+                fill="white"
+              />
             </svg>
           </li>
         </ul>
       </nav>
-    </div>
-    <nav id="sticky-nav-mobile">
-      <ul>
-
-        <li><svg id="eevee-nav-button-smartphone" width="100%" height="100%" viewBox="0 0 258 258" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <g filter="url(#filter0_d_347_15)">
-              <circle id="eevee-icon" class="sticky-nav-circle" cx="129" cy="125" r="125" fill="#C38F5C" />
-            </g>
-            <path class="sticky-nav-icon"
-              d="M100.273 50.544C109.902 49.1761 120.102 59.5565 123.04 73.8799C125.978 88.1228 120.673 100.837 111.044 102.285C101.497 103.734 91.2145 93.3532 88.1952 79.0298C85.1759 64.7869 90.6433 52.0729 100.273 50.544ZM158.619 50.544C168.33 52.0729 173.716 64.7869 170.86 79.0298C167.759 93.3532 157.558 103.734 147.929 102.285C138.218 100.837 132.914 88.1228 135.933 73.8799C138.871 59.5565 149.071 49.1761 158.619 50.544ZM56.6146 87.5595C65.9174 83.6166 78.566 90.7782 85.1759 103.251C91.3777 115.965 89.256 129.323 80.0348 133.266C70.8137 137.209 58.2467 130.127 51.8 117.494C45.3534 104.86 47.6383 91.422 56.6146 87.5595ZM203.501 87.5595C212.477 91.422 214.762 104.86 208.316 117.494C201.869 130.127 189.302 137.209 180.081 133.266C170.86 129.323 168.738 115.965 174.94 103.251C181.55 90.7782 194.198 83.6166 203.501 87.5595ZM189.873 174.304C190.2 181.868 184.324 190.237 177.306 193.376C162.699 199.974 145.399 186.294 129.16 186.294C112.921 186.294 95.4579 200.537 81.0957 193.376C72.9353 189.433 67.3047 178.972 68.3655 170.281C69.8344 158.291 84.4414 151.854 93.0914 143.083C104.597 131.737 112.758 110.413 129.16 110.413C145.481 110.413 154.131 131.415 165.147 143.083C174.205 152.9 189.302 161.188 189.873 174.304Z"
-              fill="white" />
-
-          </svg>
-        </li>
-
-        <li><svg id="vaporeon-nav-button-smartphone" width="100%" height="100%" viewBox="0 0 258 258" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <g filter="url(#filter0_d_347_18)">
-              <circle id="vaporeon-icon" class="sticky-nav-circle" cx="129" cy="125" r="125" fill="#54ADFF" />
-            </g>
-            <path class="sticky-nav-icon"
-              d="M129 203.123C112.464 203.123 97.9142 197.253 85.3517 185.512C72.784 173.765 66.5001 157.874 66.5001 137.837C66.5001 125.23 71.1876 111.563 80.5626 96.8334C89.9376 82.1041 104.13 66.1805 123.141 49.0627C123.922 48.3992 124.833 47.8684 125.875 47.4703C126.917 47.0722 127.958 46.8732 129 46.8732C130.042 46.8732 131.083 47.0722 132.125 47.4703C133.167 47.8684 134.078 48.3992 134.859 49.0627C153.87 66.1805 168.063 82.1041 177.438 96.8334C186.813 111.563 191.5 125.23 191.5 137.837C191.5 157.874 185.216 173.765 172.649 185.512C160.086 197.253 145.537 203.123 129 203.123ZM131.149 179.238C132.711 179.105 134.047 178.476 135.156 177.351C136.261 176.22 136.813 174.859 136.813 173.266C136.813 171.409 136.227 169.917 135.055 168.792C133.883 167.661 132.386 167.162 130.563 167.295C125.224 167.693 119.56 166.202 113.57 162.821C107.581 159.434 103.805 153.296 102.242 144.405C101.982 142.945 101.297 141.751 100.188 140.822C99.0835 139.893 97.8152 139.429 96.3829 139.429C94.56 139.429 93.0626 140.124 91.8907 141.515C90.7189 142.911 90.3282 144.538 90.7189 146.395C92.9324 158.471 98.1408 167.096 106.344 172.271C114.547 177.446 122.815 179.769 131.149 179.238Z"
-              fill="white" />
-
-          </svg>
-        </li>
-
-        <li><svg id="jolteon-nav-button-smartphone" width="100%" height="100%" viewBox="0 0 258 258" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <g filter="url(#filter0_d_347_21)">
-              <circle id="jolteon-icon" class="sticky-nav-circle" cx="129" cy="125" r="125" fill="#FFCA42" />
-            </g>
-            <path class="sticky-nav-icon"
-              d="M147.64 50.985C147.64 50.1782 147.408 49.3892 146.973 48.7163C146.538 48.0434 145.919 47.5164 145.194 47.2008C144.468 46.8852 143.668 46.795 142.893 46.9415C142.117 47.088 141.401 47.4646 140.834 48.0246L126.546 62.0866C105.277 83.0165 87.3049 107.192 73.2692 133.754C72.9238 134.379 72.7446 135.086 72.7494 135.804C72.7541 136.523 72.9427 137.227 73.2962 137.848C73.6498 138.468 74.1561 138.983 74.7647 139.341C75.3732 139.699 76.0628 139.888 76.7647 139.888H111.399V199.006C111.398 199.804 111.623 200.585 112.048 201.253C112.473 201.922 113.079 202.45 113.792 202.772C114.505 203.095 115.294 203.198 116.063 203.07C116.833 202.941 117.549 202.587 118.125 202.049L124.513 196.087C146.89 175.227 165.881 150.855 180.771 123.885L184.725 116.731C185.072 116.105 185.253 115.398 185.249 114.678C185.245 113.959 185.057 113.253 184.703 112.631C184.35 112.009 183.843 111.493 183.233 111.135C182.623 110.776 181.932 110.588 181.229 110.588H147.64V50.985Z"
-              fill="white" />
-
-          </svg>
-        </li>
-
-        <li><svg id="flareon-nav-button-smartphone" width="100%" height="100%" viewBox="0 0 258 258" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <g filter="url(#filter0_d_347_24)">
-              <circle id="flareon-icon" class="sticky-nav-circle" cx="129" cy="125" r="125" fill="#FF7D05" />
-            </g>
-            <path class="sticky-nav-icon"
-              d="M125.836 60.8205L117.633 55.9052L116.07 65.3387C113.583 80.2346 103.408 94.0757 92.1835 103.802C70.2109 122.852 65.3997 143.555 72.2031 160.645C78.7135 176.999 95.2369 188.197 112.008 190.065L115.888 190.495C106.292 184.629 100.133 170.925 102.281 160.684C104.404 150.619 111.643 141.192 125.549 132.494L132.561 128.119L135.178 135.964C136.721 140.599 139.391 144.323 142.105 148.106C143.408 149.929 144.729 151.771 145.94 153.731C150.126 160.534 151.233 168.099 148.531 175.606C146.07 182.429 142.008 187.793 136.422 190.768L142.737 190.065C158.479 188.314 170.035 182.93 177.542 173.926C184.983 165 187.594 153.509 187.594 141.276C187.594 129.883 182.913 118.138 177.392 108.366C170.921 96.9208 162.477 87.4156 153.258 78.2033C151.663 81.3934 151.786 82.6825 148.505 87.8062C144.246 76.4898 136.248 66.9685 125.836 60.8205Z"
-              fill="white" />
-
-          </svg>
-        </li>
-      </ul>
-    </nav>
-  </main>
-  <footer>&#169; 2023 POKESTAR, All Rights Reserved - WCS Project 1</footer>
-  <script src="index.js" type="module"></script>
-  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-</body>
-
+    </main>
+    <footer>&#169; 2023 POKESTAR, All Rights Reserved - WCS Project 1</footer>
+    <script src="index.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  </body>
 </html>
