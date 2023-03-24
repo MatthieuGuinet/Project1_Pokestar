@@ -333,6 +333,7 @@ header {
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.2) 0 0 5px 5px;
   margin-bottom: 20px;
+  scroll-behavior: initial;
 }
 
 #scrollable_map {
