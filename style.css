@@ -412,12 +412,16 @@ header {
 /*Chart*/
 
 #chart {
-  width: clamp(300px, 50vw, 600px);
+  width: 100%;
   margin: 0;
 }
 
 .apexcharts-tooltip {
   color: var(--black-color);
+}
+
+.apexcharts-menu-icon {
+  display : none;
 }
 
 /* style sectionc #caracteristics */
@@ -447,10 +451,6 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-}
-
-#chart {
   width: 100%;
 }
 
