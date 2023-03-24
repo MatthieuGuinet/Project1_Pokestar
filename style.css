@@ -338,7 +338,7 @@ header {
 
 #scrollable_map {
   position: relative;
-  width: 200%;
+  width: 100%;
 }
 
 #map-image {
@@ -362,16 +362,17 @@ header {
 }
 #pin-div > span {
   position: absolute;
-  top: 150px;
-  right: -40px;
+  top: 30px;
+  right: -10px;
   margin-top: 20px;
-  font-size: 1.4rem;
-  width: 200px;
+  font-size: 0.6rem;
+  width: 50px;
+  line-height: 1rem;
   color: antiquewhite;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(10px);
-  padding: 15px;
+  padding: 3px;
   border-radius: 5px;
   box-shadow: 0 0 2px rgba(0, 0, 0 50%);
   transform: scale(1) rotate(-360deg);
@@ -652,10 +653,12 @@ header {
   width: 45px;
 }
 
-/* footer */
+/* footer mobile*/
 footer {
-  padding: 10px 10px 10px 50px;
+  padding: 5px 0;
   background-color: var(--black-color);
+  font-size: 0.7rem;
+  text-align: center;
 }
 
 /* media queries */
@@ -830,6 +833,21 @@ footer {
     height: clamp(300px, 40vw, 800px);
   }
 
+  #scrollable_map {
+    position: relative;
+    width: 200%;
+  }
+
+  #pin-div > span {
+    top: 150px;
+    line-height: 2.5rem;
+    right: -40px;
+    margin-top: 20px;
+    font-size: 1.4rem;
+    width: 200px;
+    padding: 15px;
+  }
+
   #localisation-flex {
     flex-direction: row;
     justify-content: space-evenly;
@@ -908,4 +926,13 @@ footer {
   #sticky-nav path {
     fill: #000000;
   }
+
+  /* footer desktop */
+footer {
+  padding: 5px 5px 5px 50px;
+  background-color: var(--black-color);
+  font-size: 1rem;
+  text-align: left;
+}
+  
 }
